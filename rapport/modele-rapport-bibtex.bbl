@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{article}
+Wayne Cheng-Wei Huang, Herman Batelaan, and Markus Arndt.
+\newblock Kapitza-dirac blockade: A universal tool for the deterministic
+  preparation of non-gaussian oscillator states.
+\newblock {\em Phys. Rev. Lett.}, 126:253601, Jun 2021.
+
+\bibitem{livre}
+Auteur.e.s.
+\newblock {\em Titre du livre}.
+\newblock Maison d'\'edition, Ville de la maison d'\'edition, Ann\'ee de
+  publication.
+
+\bibitem{chapitre}
+Auteur.e.s du~chapitre.
+\newblock Titre du chapitre.
+\newblock In Editeur.e.s du~livre, editor, {\em Titre du livre}. Maison
+  d'\'edition, Ville de la maison d'\'edition, Ann\'ee de publication.
+
+\bibitem{cours}
+Mon/ma professeur.e.
+\newblock {\em Polycopi\'e du cours "Tr\`es belle physique"}.
+\newblock Ecole Normale Sup\'erieure de Lyon, 2003.
+
+\bibitem{video}
+Super-s\'eminariste.
+\newblock Titre du seminaire que j'ai vu en ligne.
+\newblock
+  \url{https://www.youtube.com/watch?v=-kFOXP026eE&list=PLS3_1JNX8dEh5YcO-Y05stU0u_T9nqIlF}.
+
+\end{thebibliography}

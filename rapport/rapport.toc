@@ -1,0 +1,10 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Couplage de la fibre à cristaux/al? photoniques}{1}{section.2}%
+\contentsline {section}{\numberline {3}Principe de la génération de seconde harmonique (SHG)}{2}{section.3}%
+\contentsline {section}{\numberline {4}Réalisation de la génération de seconde harmonique}{3}{section.4}%
+\contentsline {section}{\numberline {5}Étude à basse puissance}{6}{section.5}%
+\contentsline {section}{\numberline {6}Étude à haute puissance}{7}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{7}{section.7}%
+\contentsline {section}{\numberline {A}\'Equation d'onde non-linéaire}{7}{appendix.A}%
+\contentsline {section}{\numberline {B}Efficacité de conversion dans un cristal périodiquement pôlé}{7}{appendix.B}%

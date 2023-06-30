@@ -1,0 +1,186 @@
+\UseRawInputEncoding
+\documentclass[11pt,a4pape,longbibliography]{article}
+
+% Modèle de rapport de stage et conseils de rédaction, mise en page...
+% L. Bellon, avril 2010
+
+% définition des marges du document
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0.4cm}
+\setlength{\headsep}{0.8cm}
+\setlength{\footskip}{1cm}
+\setlength{\textwidth}{17cm}
+\setlength{\textheight}{25cm}
+\setlength{\voffset}{-1.5cm}
+\setlength{\hoffset}{-0.5cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+
+
+
+\usepackage{cite}
+
+% quelques package utiles
+\usepackage{graphicx}				% inclusion des figures
+
+\usepackage{amsmath}				% collection de symboles mathématiques
+\usepackage{amssymb}				% collection de symboles mathématiques
+
+%\usepackage[applemac]{inputenc}       	% utilisation directe des caractères accentués sur mac
+%\usepackage[latin1]{inputenc}       		% utilisation directe des caractères accentués sur pc
+\usepackage[T1]{fontenc}				% codage moderne des caractères sous Latex
+
+\usepackage[francais]{babel}          		% style français
+
+\usepackage{tabularx}				% gestion avancée des tableaux
+
+\usepackage{psfrag}					% remplacement du texte d'une figure ps par du texte latex
+\usepackage{sistyle}					% mise en forme des unités
+
+\usepackage{eurosym}				% symbole €
+\def\€{\euro{}}
+
+\usepackage{color}					% gestion de différentes couleurs
+
+\definecolor{linkcolor}{rgb}{0,0,0.6}		% définition de la couleur des liens pdf
+\usepackage[	pdftex,colorlinks=true,	
+			pdfstartview=FitV,
+			linkcolor= linkcolor,
+			citecolor= linkcolor,
+			urlcolor= linkcolor,
+			hyperindex=true,
+			hyperfigures=false]
+			{hyperref}				% fichiers pdf 'intelligents', avec des liens entre les références, etc.
+
+\usepackage{fancyhdr}				% entêtes et pieds de pages personnalisés 
+
+% définition de l'entête et du pied de page
+\pagestyle{fancy}
+\fancyhead[L]{\scriptsize \textsc{Titre du rapport}}
+\fancyhead[R]{\scriptsize \textsc{Nom de l'Ètudiant}}
+\fancyfoot[C]{ \thepage}
+
+% commande d'annulation du correcteur typographique du package [francais]{babel} qui force l'espace avant ':' (parfois utile pour la bibliographie)
+\makeatletter
+\@ifpackageloaded{babel}%
+        {\newcommand{\nospace}[1]{{\NoAutoSpaceBeforeFDP{}#1}}}%  % !! double {{}} pour cantonner l'effet à l'argument #1 !!
+        {\newcommand{\nospace}[1]{#1}}
+\makeatother
+
+% commande de déplacement d'un objet 
+\newcommand{\drawat}[3]{\makebox[0pt][l]{\raisebox{#2}{\hspace*{#1}#3}}}
+
+\begin{document}
+
+% Pour faciliter la mise en forme de la page du titre, on supprime l'indentation automatique en début de paragraphe
+\setlength{\parindent}{0pt}
+
+% Pas d'entête ni de pied pour la première page
+\thispagestyle{empty}
+
+\includegraphics[height=2cm]{logoens.eps} \hfill \includegraphics[height=2cm]{logoucbl.eps} \hfill \includegraphics[height=2cm]{logounivlyon.eps}
+
+\vspace{0.5cm}
+
+\begin{tabularx}{\textwidth}{@{} l X l @{} }
+{\sc Licence / Master Science de la matiËre} 	&	& Stage 2009--2010 \\
+{\it …cole Normale SupÈrieure de Lyon}		&	& Nom de l'Ètudiant \\
+{\it UniversitÈ Claude Bernard Lyon I}		& 	& L3/M1/M2 Chimie/Physique
+\end{tabularx}
+
+\begin{center}
+
+\vspace{1.5cm}
+
+\rule[11pt]{5cm}{0.5pt}
+
+\textbf{\huge Titre du rapport}
+
+\rule{5cm}{0.5pt}
+
+\vspace{1.5cm}
+
+\parbox{15cm}{\small
+\textbf{RÈsumÈ}: \it Un rÈsumÈ de 10 lignes environ du contenu du rapport, permettant de situer le sujet et les rÈsultats principaux du stage
+
+\vspace{0.5cm}
+\rm Ce qui suit est un ensemble de conseils de rÈdaction, mise en page\ldots Le but est de prÈsenter de faÁon claire et synthÈtique le travail effectuÈ au cours du stage (dans la limite de 20 pages maximum, hors annexes). De faÁon gÈnÈrale, le lecteur du rapport ne sera pas spÈcialiste du sujet. Un effort de pÈdagogie est donc nÈcessaire.
+} %fin de la commande \parbox du résumé
+
+
+\vspace{0.5cm}
+
+\parbox{15cm}{
+\textbf{Mots clefs} : \it 4 ‡ 5 mots clefs
+} %fin de la commande \parbox des mots clefs
+
+\vspace{0.5cm}
+
+\parbox{15cm}{
+Stage encadrÈ par :
+
+{\bf Nom de l'encadrant}
+
+\href{mailto:mail.encadrant@universite}{\tt mail.encadrant@universite} / tÈl. (+33) 4 72 72 80 00
+
+Nom du Laboratoire d'accueil
+
+{\it Adresse
+
+Postale}
+
+\url{http://adresse.web.du/laboratoire/}
+} %fin de la commande \parbox encadrant / laboratoire d'accueil
+
+\vspace{0.5cm}
+
+\includegraphics[height=3cm]{LogoCNRS.eps}
+
+{\tiny \it Logos du laboratoire, de l'universitÈ d'accueil,\\ de l'organisme\ldots (Èventuellement)}
+\end{center}
+
+\vfill
+\hfill \today
+\newpage
+% Pas d'entête ni de pied pour la page de sommaire
+\thispagestyle{empty}
+\section*{Remerciements}
+Il est d'usage d'Ècrire quelques lignes pour remercier l'Èquipe d'encadrement du stage\footnote{Cette partie sera l'une des plus lues par vos collËgues du laboratoire, qui connaissent dÈj‡ votre travail scientifique... Soignez la :-)}.
+\tableofcontents
+\newpage
+
+% Première page du rapport
+\setcounter{page}{1}
+
+% on rétablit l'indentation automatique en début de paragraphe
+\setlength{\parindent}{16pt}
+
+\section{Quelques petites rËgles}
+
+Votre rapport doit faire une longueur maximale de {\bf 20 pages}, hors annexes Èventuels -- en utilisant la taille de la police de ce document (11pt).  
+
+Il est utile de le commencer par une introduction gÈnÈrale au sujet scientifique, qui motive son intÈrÍt. Il faut en suite dÈcrire bien la mÈthodologie (le montage expÈrimentale/ la mÈthode numÈrique) utilisÈe pendant le stage; et en suite illustrer les rÈsultats de faÁon critique. Il est souhaitable d'avoir un paragraphe de conclusions, quel que soit la quantitÈ de rÈsultats, plus ou moins convaincants, qu'on aura obtenu!
+
+
+\section{Citation avec BibTeX}
+
+Voici la citation d'un article \cite{article} (citation .bib issue directement de la revue en ligne), ou encore la citation d'un livre \cite{livre}, du chapitre d'un livre \cite{chapitre}, d'un cours \cite{cours}, d'une r\'esource en ligne \cite{video}, etc. 
+Avec le format pr\'esent, les citations apparaissent dans l'ordre d'appel, sans besoin que vous les ordonniez dans le fichier de la bibliographie. 
+
+Le fichier {\tt rapport.bib} invoqu\'e par ce document doit \^etre pr\'epar\'e \`a part. En suite le fichier .tex du rapport doit \^etre compil\'e 4 fois
+
+\noindent
+{\tt{latex <nom du fichier>.tex}} \\
+{\tt{bibtex <nom du fichier>.tex}} \\
+{\tt{latex <nom du fichier>.tex}} \\
+{\tt{latex <nom du fichier>.tex}}
+
+
+\bibliography{rapport.bib}
+\bibliographystyle{unsrt}
+
+\end{document}
+
+
+
+

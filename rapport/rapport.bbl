@@ -1,8 +1,50 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{boyd}
+\bibitem[Bakkali-Hassani(2021)]{brice}
+Brice Bakkali-Hassani.
+\newblock \emph{{Testing scale invariance in a two-dimensional Bose gas :
+  preparation and characterization of solitary waves}}.
+\newblock Theses, {Sorbonne Universit{\'e}}, December 2021.
+\newblock URL \url{https://theses.hal.science/tel-03591031}.
+
+\bibitem[Grimm et~al.(2000)Grimm, Weidemüller, and Ovchinnikov]{grimm}
+Rudolf Grimm, Matthias Weidemüller, and Yurii~B. Ovchinnikov.
+\newblock Optical dipole traps for neutral atoms.
+\newblock volume~42 of \emph{Advances In Atomic, Molecular, and Optical
+  Physics}, pages 95--170. Academic Press, 2000.
+\newblock \doi{https://doi.org/10.1016/S1049-250X(08)60186-X}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S1049250X0860186X}.
+
+\bibitem[Russell(2006)]{russell2006}
+Philip~St.J. Russell.
+\newblock Photonic-crystal fibers.
+\newblock \emph{Journal of Lightwave Technology}, 24\penalty0 (12):\penalty0
+  4729--4749, 2006.
+\newblock \doi{10.1109/JLT.2006.885258}.
+
+\bibitem[Russell(2007)]{russell2007}
+Philip Russell.
+\newblock Photonic crystal fiber:finding the holey grail.
+\newblock \emph{Opt. Photon. News}, 18\penalty0 (7):\penalty0 26--31, Jul 2007.
+\newblock \doi{10.1364/OPN.18.7.000026}.
+\newblock URL \url{https://www.optica-opn.org/abstract.cfm?URI=opn-18-7-26}.
+
+\bibitem[Joffre(2010)]{joffre}
+Manuel Joffre.
+\newblock {Optique non-lin{\'e}aire en r{\'e}gimes continu et femtoseconde}.
+\newblock Lecture, 2010.
+\newblock URL \url{https://cel.hal.science/cel-00092964}.
+
+\bibitem[Boyd(2008)]{boyd}
 Robert~W. Boyd.
-\newblock {\em Nonlinear Optics, Third Edition}.
+\newblock \emph{Nonlinear Optics, Third Edition}.
 \newblock Academic Press, Inc., USA, 3rd edition, 2008.
+\newblock ISBN 0123694701.
 
 \end{thebibliography}

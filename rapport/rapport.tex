@@ -370,28 +370,31 @@ Cette équation est beaucoup plus abordable dans l'approximation d'une onde plan
 \end{align}
 en sortie du cristal en $z=L$ avec $\A_2(0)=0$ à l'entrée.
 
-Cette équation se comprend très bien en considérant que le carré de l'onde incidente, de nombre d'onde $2k_1$, génère un rayonnement qui se déplace ensuite à $k_2$, de sorte qu'en un point $z$ une onde de phase $2k_1z$ vient s'ajouter à une onde se propageant à $k_2$. Ainsi, l'onde à la seconde harmonique générée en $z$ aura à la sortie du cristal en $z=L$ la phase $2k_1 z + k_2 (L-z) = k_2 L - \Delta k z$ (modulo une constante universelle), de sorte que les ondes générées en $z$ et en $z+L_\mathsc{coh} =z + \frac{\pi}{\Delta k}$ interfèrent destructivement, ce qui conduit à une amplitude nulle en sortie, comme illustré figure \ref{fig:agen}. \footnote{Avec le cristal de niobate de lithium utilisé, $L_\mathsc{coh}$ vaut à peine $\SI{3}{\micro\meter}$ alors que le cristal fait $\SI{2}{cm}$}.
+Cette équation se comprend très bien en considérant que le carré de l'onde incidente, de nombre d'onde $2k_1$, génère un rayonnement qui se déplace ensuite à $k_2$, de sorte qu'en un point $z$ une onde de phase $2k_1z$ vient s'ajouter à une onde se propageant à $k_2$. Ainsi, l'onde à la seconde harmonique générée en $z$ aura à la sortie du cristal en $z=L$ la phase $2k_1 z + k_2 (L-z) = k_2 L - \Delta k z$ (modulo une constante universelle), de sorte que les ondes générées en $z$ et en $z+L_\mathsc{coh} =z + \frac{\pi}{\Delta k}$ interfèrent destructivement, ce qui conduit à une amplitude nulle en sortie, comme illustré figure \ref{fig:agen}.
 
 \begin{figure}[htpb]
 \centering
-\begin{subfigure}{0.45\textwidth}
+\begin{subfigure}[h]{0.48\textwidth}
 	\centering
-	\includegraphics[height=5cm]{./img/QPM.png}
+	\hspace*{-0.8cm}
+	%\includegraphics[height=5cm]{./img/QPM.png}
+	\include{./img/qpm.tex}
 	\caption{}
 	\label{fig:agen}
 \end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-	\includegraphics[height=5cm]{./img/cristal.png}
+\begin{subfigure}[h]{0.48\textwidth}
+	\includegraphics[height=4cm]{./img/PP.png}
 	\caption{}
 \end{subfigure}
 \hspace*{-0.6cm}
-\caption{Amplitude de seconde harmonique et quasi-accord de phase (à modifier, /!\textbackslash déf Lcoh)} %TODO
+\caption{Amplitude de seconde harmonique et quasi-accord de phase} %TODO
 \label{fig:QPM}
 \end{figure}
 
+Avec le cristal de niobate de lithium utilisé, $L_\mathsc{coh}$ vaut à peine $\SI{3}{\micro\meter}$ alors que le cristal fait $\SI{2}{cm}$.
 Afin d'avoir une génération efficace, il faudrait donc $\Delta k = \frac{2\pi}{\lambda_2}(n_2-n_1) = 0$ (condition d'accord de phase) avec $\lambda_2=$\lmbd{532} la longueur d'onde dans le vide de la seconde harmonqiue, soit $n_2 = n_1$. Cela n'est \textit{a priori} pas possible sans dispersion anormale. Une solution consiste alors à exploiter la biréfringence du cristal, mais cette méthode est difficile à réaliser et le $\chi^{(2)}$ correspondant à la polarisation requise est souvent assez faible. 
 
-Nous avons choisi une autre solution qui consiste à fabriquer un cristal dont le $\chi^{(2)}$ varie spatialement. En effet, si $\chi^{(2)}(z) = \chi^{(2)}_0 \e{i k_\chi z}$, cela revient à remplacer $\Delta k$ par $\Delta k_\mathsc{eff} = \Delta k - k_\chi$ dans (\ref{eq:pwe}). En pratique, il est difficile de fabriquer un tel cristal, et on préfère inverser le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:QPM}). On parle alors de quasi-accord de phase et un tel cristal est dit périodiquement pôlé. Dans ce cas, la décomposition de Fourier de $\chi^{(2)}(z) = \chi^{(2)}_0 \operatorname sgn[\cos(2\pi z/ \Lambda)]$ montre que le terme de plus grande amplitude est le fondamental d'amplitude $\chi_\mathsc{eff} = \frac2\pi \chi^{(2)}_0$ et de nombre d'onde $k_\chi = \frac{2\pi}{\Lambda}$. Si $k_\chi = \Delta k$, le terme source correspondant sera accordé en phase sur toute la longueur du cristal et permettra donc de générer la seconde harmonique. Par la suite, on ne tiendra compte que de ce terme, oubliant les autres harmoniques de $\chi^{(2)}(z)$.
+Nous avons choisi une autre solution qui consiste à fabriquer un cristal dont le $\chi^{(2)}$ varie spatialement. En effet, si $\chi^{(2)}(z) = \chi^{(2)}_0 \e{i k_\chi z}$, cela revient à remplacer $\Delta k$ par $\Delta k_\mathsc{eff} = \Delta k - k_\chi$ dans (\ref{eq:pwe}). En pratique, il est difficile de fabriquer un tel cristal, et on préfère inverser le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:QPM}). On parle alors de quasi-accord de phase et un tel cristal est dit périodiquement pôlé. Dans ce cas, la décomposition de Fourier de $\chi^{(2)}(z) = \chi^{(2)}_0 \operatorname{sgn}[\cos(2\pi z/ \Lambda)]$ montre que le terme de plus grande amplitude est le fondamental d'amplitude $\chi_\mathsc{eff} = \frac2\pi \chi^{(2)}_0$ et de nombre d'onde $k_\chi = \frac{2\pi}{\Lambda}$. Si $k_\chi = \Delta k$, le terme source correspondant sera accordé en phase sur toute la longueur du cristal et permettra donc de générer la seconde harmonique. Par la suite, on ne tiendra compte que de ce terme, oubliant les autres harmoniques de $\chi^{(2)}(z)$.
 Ceci nous conduit à une amplitude 
 \begin{align}
 	&\A_2(L) = i \frac{\chi_\mathsc{eff} \omega}{2 cn_2} \A_1^2L \\	
@@ -448,7 +451,7 @@ On obtient donc
 
 \section{Réalisation de la génération de seconde harmonique}
 
-
+Le cristal doubleur choisi pour mon stage est un 
 
 \begin{figure}[h]
 	\centering

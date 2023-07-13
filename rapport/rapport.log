@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.9)  11 JUL 2023 21:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.9)  13 JUL 2023 19:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -143,6 +143,10 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2023/05/11 v3.89 The Babel package
 \babel@savecnt=\count272
@@ -282,6 +286,12 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \l__siunitx_unit_tmp_int=\count296
 \l__siunitx_unit_position_int=\count297
 \l__siunitx_unit_total_int=\count298
+
+Package siunitx Info: Option "separate-uncertainty" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "uncertainty-mode = separate" as a replacement.
+
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
@@ -828,13 +838,6 @@ File: pgfcalendar.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@cal@easter@M=\count349
 \pgf@cal@easter@julianday=\count350
 )))
-\pgf@layerbox@background=\box85
-\pgf@layerboxsaved@background=\box86
-\pgf@layerbox@foreground=\box87
-\pgf@layerboxsaved@foreground=\box88
-Package pgfplots info on input line 56: Setting layers 'background,main,foregro
-und'...
-
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.callouts.code.tex
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
@@ -989,35 +992,35 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count362
-\l__pdf_internal_box=\box89
+\l__pdf_internal_box=\box85
 )
 (./rapport.aux (./img/qpm.aux))
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count363
 \scratchdimen=\dimen317
-\scratchbox=\box90
+\scratchbox=\box86
 \nofMPsegments=\count364
 \nofMParguments=\count365
 \everyMPshowfont=\toks48
@@ -1035,8 +1038,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \degres on input line 117.
-LaTeX Info: Redefining \up on input line 117.
+LaTeX Info: Redefining \degres on input line 121.
+LaTeX Info: Redefining \up on input line 121.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-d
 ictionary-french.trsl
@@ -1044,7 +1047,7 @@ File: translations-basic-dictionary-french.trsl (french translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `french'. on input line 117.
+or `french'. on input line 121.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1052,12 +1055,12 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring ON on input line 117.
+Package hyperref Info: Link coloring ON on input line 121.
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write5
 \openout5 = `rapport.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 122.
+Package hyperref Info: Option `pageanchor' set `false' on input line 126.
 Package epstopdf Info: Source file: <logoens.eps>
 (epstopdf)                    date: 2022-07-01 07:49:00
 (epstopdf)                    size: 30680 bytes
@@ -1066,12 +1069,12 @@ Package epstopdf Info: Source file: <logoens.eps>
 (epstopdf)                    size: 4067 bytes
 (epstopdf)             Command: <repstopdf --outfile=logoens-eps-converted-to.p
 df logoens.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 131.
 Package epstopdf Info: Output file is already uptodate.
-<logoens-eps-converted-to.pdf, id=111, 263.98625pt x 97.36375pt>
+<logoens-eps-converted-to.pdf, id=119, 263.98625pt x 97.36375pt>
 File: logoens-eps-converted-to.pdf Graphic file (type pdf)
 <use logoens-eps-converted-to.pdf>
-Package pdftex.def Info: logoens-eps-converted-to.pdf  used on input line 127.
+Package pdftex.def Info: logoens-eps-converted-to.pdf  used on input line 131.
 (pdftex.def)             Requested size: 154.28833pt x 56.9055pt.
 Package epstopdf Info: Source file: <logoucbl.eps>
 (epstopdf)                    date: 2022-07-01 07:49:00
@@ -1081,12 +1084,12 @@ Package epstopdf Info: Source file: <logoucbl.eps>
 (epstopdf)                    size: 25710 bytes
 (epstopdf)             Command: <repstopdf --outfile=logoucbl-eps-converted-to.
 pdf logoucbl.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 131.
 Package epstopdf Info: Output file is already uptodate.
-<logoucbl-eps-converted-to.pdf, id=112, 185.69376pt x 134.5025pt>
+<logoucbl-eps-converted-to.pdf, id=120, 185.69376pt x 134.5025pt>
 File: logoucbl-eps-converted-to.pdf Graphic file (type pdf)
 <use logoucbl-eps-converted-to.pdf>
-Package pdftex.def Info: logoucbl-eps-converted-to.pdf  used on input line 127.
+Package pdftex.def Info: logoucbl-eps-converted-to.pdf  used on input line 131.
 
 (pdftex.def)             Requested size: 78.5632pt x 56.9055pt.
 Package epstopdf Info: Source file: <logounivlyon.eps>
@@ -1097,27 +1100,28 @@ Package epstopdf Info: Source file: <logounivlyon.eps>
 (epstopdf)                    size: 4512 bytes
 (epstopdf)             Command: <repstopdf --outfile=logounivlyon-eps-converted
 -to.pdf logounivlyon.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 131.
 Package epstopdf Info: Output file is already uptodate.
-<logounivlyon-eps-converted-to.pdf, id=113, 301.125pt x 135.50626pt>
+<logounivlyon-eps-converted-to.pdf, id=121, 301.125pt x 135.50626pt>
 File: logounivlyon-eps-converted-to.pdf Graphic file (type pdf)
 <use logounivlyon-eps-converted-to.pdf>
 Package pdftex.def Info: logounivlyon-eps-converted-to.pdf  used on input line 
-127.
+131.
 (pdftex.def)             Requested size: 126.45784pt x 56.9055pt.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd)
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-79.
+83.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-<./img/logos.png, id=116, 1012.78375pt x 633.36626pt>
+<./img/logos.png, id=124, 1012.78375pt x 633.36626pt>
 File: ./img/logos.png Graphic file (type png)
 <use ./img/logos.png>
-Package pdftex.def Info: ./img/logos.png  used on input line 183.
+Package pdftex.def Info: ./img/logos.png  used on input line 187.
 (pdftex.def)             Requested size: 227.48016pt x 142.26378pt.
  [1
 Non-PDF special ignored!
@@ -1131,172 +1135,160 @@ nverted-to.pdf> <./img/logos.png>] (./rapport.toc)
 \openout6 = `rapport.toc'.
 
  [2]
-<img/accordeon-dmd.pdf, id=173, 412.95607pt x 605.01344pt>
+<img/accordeon-dmd.pdf, id=183, 412.95607pt x 605.01344pt>
 File: img/accordeon-dmd.pdf Graphic file (type pdf)
 <use img/accordeon-dmd.pdf>
-Package pdftex.def Info: img/accordeon-dmd.pdf  used on input line 225.
+Package pdftex.def Info: img/accordeon-dmd.pdf  used on input line 230.
 (pdftex.def)             Requested size: 174.78882pt x 256.0748pt.
  (./img/transitions.tex)
-LaTeX Font Info:    Trying to load font information for U+euf on input line 250
+[1 <./img/accordeon-dmd.pdf>]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 258
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [1 <./img/accordeon-dmd.pdf>]
-<../biblio/solid core PCF - russell2006.png, id=336, 546.04pt x 547.04375pt>
+) [2]
+<../biblio/solid core PCF - russell2006.png, id=360, 546.04pt x 547.04375pt>
 File: ../biblio/solid core PCF - russell2006.png Graphic file (type png)
 <use ../biblio/solid core PCF - russell2006.png>
 Package pdftex.def Info: ../biblio/solid core PCF - russell2006.png  used on in
-put line 287.
-(pdftex.def)             Requested size: 142.00037pt x 142.26378pt.
-<./img/mode hexa.png, id=339, 78.2925pt x 76.285pt>
+put line 296.
+(pdftex.def)             Requested size: 150.5239pt x 150.79968pt.
+<./img/mode hexa.png, id=363, 78.2925pt x 76.285pt>
 File: ./img/mode hexa.png Graphic file (type png)
 <use ./img/mode hexa.png>
-Package pdftex.def Info: ./img/mode hexa.png  used on input line 294.
-(pdftex.def)             Requested size: 146.01317pt x 142.26378pt.
- [2]
-<./img/schema couplage.png, id=355, 445.9059pt x 379.1766pt>
+Package pdftex.def Info: ./img/mode hexa.png  used on input line 303.
+(pdftex.def)             Requested size: 154.7747pt x 150.79968pt.
+<./img/schema couplage.png, id=366, 445.9059pt x 379.1766pt>
 File: ./img/schema couplage.png Graphic file (type png)
 <use ./img/schema couplage.png>
-Package pdftex.def Info: ./img/schema couplage.png  used on input line 308.
+Package pdftex.def Info: ./img/schema couplage.png  used on input line 317.
 (pdftex.def)             Requested size: 338.5863pt x 287.9342pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <../biblio/solid core PCF - russell2006.png> <./img/mode hexa.png>]
-<./img/cristal clair.jpg, id=371, 2748.2675pt x 1977.3875pt>
+[3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+} <../biblio/solid core PCF - russell2006.png> <./img/mode hexa.png>] [4 <./img
+/schema couplage.png>]
+<./img/cristal clair.jpg, id=387, 2748.2675pt x 1977.3875pt>
 File: ./img/cristal clair.jpg Graphic file (type jpg)
 <use ./img/cristal clair.jpg>
-Package pdftex.def Info: ./img/cristal clair.jpg  used on input line 339.
+Package pdftex.def Info: ./img/cristal clair.jpg  used on input line 349.
 (pdftex.def)             Requested size: 217.6621pt x 156.5951pt.
-<./img/cristal.png, id=372, 286.06876pt x 191.71625pt>
+<./img/cristal.png, id=388, 286.06876pt x 191.71625pt>
 File: ./img/cristal.png Graphic file (type png)
 <use ./img/cristal.png>
-Package pdftex.def Info: ./img/cristal.png  used on input line 342.
+Package pdftex.def Info: ./img/cristal.png  used on input line 352.
 (pdftex.def)             Requested size: 241.84842pt x 162.08197pt.
+ [5 <./img/cristal clair.jpg> <./img/cristal.png>]
+\openout2 = `./img/qpm.aux'.
+
+
+(./img/QPM.tex)
+<./img/PP.png, id=408, 271.0125pt x 100.4553pt>
+File: ./img/PP.png Graphic file (type png)
+<use ./img/PP.png>
+Package pdftex.def Info: ./img/PP.png  used on input line 419.
+(pdftex.def)             Requested size: 307.04694pt x 113.81102pt.
+
+Overfull \hbox (74.87453pt too wide) in paragraph at lines 419--420
+[][] 
+ []
+
+[6] [7
+
+
+
+ <./img/PP.png>] [8] (./img/bk-factor.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1885--518
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1885--518
+
+ []
+
+(./img/bk-factor-cmap.tex)
+Overfull \hbox (44.50957pt too wide) in paragraph at lines 306--524
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--524
+
+ []
+
+[9 <./bk-factor-cmap-000.png>]
+File: ./img/cristal.png Graphic file (type png)
+<use ./img/cristal.png>
+Package pdftex.def Info: ./img/cristal.png  used on input line 549.
+(pdftex.def)             Requested size: 212.28993pt x 142.26378pt.
+<../donnees/waist faisceau incident.pdf, id=453, 240.78757pt x 183.19197pt>
+File: ../donnees/waist faisceau incident.pdf Graphic file (type pdf)
+<use ../donnees/waist faisceau incident.pdf>
+Package pdftex.def Info: ../donnees/waist faisceau incident.pdf  used on input 
+line 556.
+(pdftex.def)             Requested size: 186.9942pt x 142.26378pt.
+<./img/schema.pdf, id=456, 469.59436pt x 300.13402pt>
+File: ./img/schema.pdf Graphic file (type pdf)
+<use ./img/schema.pdf>
+Package pdftex.def Info: ./img/schema.pdf  used on input line 572.
+(pdftex.def)             Requested size: 445.18777pt x 284.52756pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./img/schema couplage.png>] [5 <./img/cristal clair.jpg> <./img/cristal.png
->]
-\openout2 = `./img/qpm.aux'.
-
- (./img/QPM.tex)
-<./img/PP.png, id=397, 271.0125pt x 100.4553pt>
-File: ./img/PP.png Graphic file (type png)
-<use ./img/PP.png>
-Package pdftex.def Info: ./img/PP.png  used on input line 407.
-(pdftex.def)             Requested size: 307.04694pt x 113.81102pt.
-
-Overfull \hbox (74.87453pt too wide) in paragraph at lines 407--408
-[][] 
- []
-
-[6
-
-
-
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} 
-<./img/PP.png>] [7] (./img/bk-factor.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1885--504
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1885--504
-
- []
-
-(./img/bk-factor-cmap.tex
-Package pgfplots info on input line 304: the combination of 'axis on top' and '
-activate layers' implies 'set layers=axis on top'. Deactivate 'axis on top' if 
-you want other layers.
-\pgf@layerbox@axis background=\box91
-\pgf@layerboxsaved@axis background=\box92
-\pgf@layerbox@pre main=\box93
-\pgf@layerboxsaved@pre main=\box94
-\pgf@layerbox@axis grid=\box95
-\pgf@layerboxsaved@axis grid=\box96
-\pgf@layerbox@axis ticks=\box97
-\pgf@layerboxsaved@axis ticks=\box98
-\pgf@layerbox@axis lines=\box99
-\pgf@layerboxsaved@axis lines=\box100
-\pgf@layerbox@axis tick labels=\box101
-\pgf@layerboxsaved@axis tick labels=\box102
-\pgf@layerbox@axis descriptions=\box103
-\pgf@layerboxsaved@axis descriptions=\box104
-\pgf@layerbox@axis foreground=\box105
-\pgf@layerboxsaved@axis foreground=\box106
-Package pgfplots info on input line 304: Setting layers 'axis background,pre ma
-in,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axis
- foreground'...
-)
-Overfull \hbox (35.97366pt too wide) in paragraph at lines 306--510
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--510
-
- []
-
-[8]
-File: ./img/cristal.png Graphic file (type png)
-<use ./img/cristal.png>
-Package pdftex.def Info: ./img/cristal.png  used on input line 535.
-(pdftex.def)             Requested size: 212.28993pt x 142.26378pt.
-<../donnees/waist faisceau incident.pdf, id=433, 240.78757pt x 183.19197pt>
-File: ../donnees/waist faisceau incident.pdf Graphic file (type pdf)
-<use ../donnees/waist faisceau incident.pdf>
-Package pdftex.def Info: ../donnees/waist faisceau incident.pdf  used on input 
-line 542.
-(pdftex.def)             Requested size: 186.9942pt x 142.26378pt.
- [9 <./bk-factor-cmap-000.png> <../donnees/waist faisceau incident.pdf>]
-<./img/schema.pdf, id=459, 469.59436pt x 300.13402pt>
-File: ./img/schema.pdf Graphic file (type pdf)
-<use ./img/schema.pdf>
-Package pdftex.def Info: ./img/schema.pdf  used on input line 558.
-(pdftex.def)             Requested size: 445.18777pt x 284.52756pt.
-
-[10 <./img/schema.pdf>]
-<../donnees/conversion basse puissance 82.5 C.pdf, id=528, 248.28758pt x 183.19
+[10 <../donnees/waist faisceau incident.pdf>]
+<../donnees/conversion basse puissance 82.5 C.pdf, id=490, 248.28758pt x 183.19
 197pt>
 File: ../donnees/conversion basse puissance 82.5 C.pdf Graphic file (type pdf)
 <use ../donnees/conversion basse puissance 82.5 C.pdf>
 Package pdftex.def Info: ../donnees/conversion basse puissance 82.5 C.pdf  used
- on input line 611.
+ on input line 621.
 (pdftex.def)             Requested size: 231.38242pt x 170.71652pt.
-<./img/alpha bp.pdf, id=529, 244.93246pt x 183.19197pt>
+<./img/alpha bp.pdf, id=491, 244.93246pt x 183.19197pt>
 File: ./img/alpha bp.pdf Graphic file (type pdf)
 <use ./img/alpha bp.pdf>
-Package pdftex.def Info: ./img/alpha bp.pdf  used on input line 617.
+Package pdftex.def Info: ./img/alpha bp.pdf  used on input line 627.
 (pdftex.def)             Requested size: 228.25574pt x 170.71652pt.
-<./img/waist faisceau vert.pdf, id=530, 240.78757pt x 183.19197pt>
+ [11 <./img/schema.pdf>]
+(./img/dt.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 267--661
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--661
+
+ []
+
+(./img/dbaffine.tex)
+<./img/waist faisceau vert.pdf, id=555, 240.78757pt x 183.19197pt>
 File: ./img/waist faisceau vert.pdf Graphic file (type pdf)
 <use ./img/waist faisceau vert.pdf>
-Package pdftex.def Info: ./img/waist faisceau vert.pdf  used on input line 630.
+Package pdftex.def Info: ./img/waist faisceau vert.pdf  used on input line 684.
 
 (pdftex.def)             Requested size: 240.78697pt x 183.1915pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <../donnees/conversion basse puissance 82.5 C.pdf> <./img/alpha bp.pdf>]
-(./rapport.bbl [12 <./img/waist faisceau vert.pdf>]) [13] (./rapport.aux
+[12 <../donnees/conversion basse puissance 82.5 C.pdf> <./img/alpha bp.pdf>]
+[13 <./img/waist faisceau vert.pdf>] (./rapport.bbl) [14] (./rapport.aux
 (./img/qpm.aux))
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 9E49CBE6F2F12EF7E6D6533264A4B5F6;4500.
+(rerunfilecheck)             Checksum: E2DE3E75C0D43F70BBEA67ACEA28AA3B;4865.
  ) 
 Here is how much of TeX's memory you used:
- 43534 strings out of 475980
- 1041662 string characters out of 5789010
- 2416947 words of memory out of 5000000
- 63273 multiletter control sequences out of 15000+600000
- 539610 words of font info for 100 fonts, out of 8000000 for 9000
+ 43631 strings out of 475980
+ 1043213 string characters out of 5789010
+ 2427505 words of memory out of 5000000
+ 63344 multiletter control sequences out of 15000+600000
+ 543188 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,89p,2048b,3033s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,21n,89p,1476b,3201s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1305,37 +1297,40 @@ fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
 b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
-023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/
-texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
-/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2
-023/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/
-texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/te
-xmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2023/texm
-f-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/2023/texmf-
-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2023/texmf-di
-st/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist
-/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/f
-onts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2023/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts
-/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/t
-ype1/public/cm-super/sfti1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
-e1/public/cm-super/sfti1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
-/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/p
-ublic/cm-super/sfxc1095.pfb>
-Output written on rapport.pdf (15 pages, 3261937 bytes).
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf
+-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023
+/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2023/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2023/texmf-dist/
+fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fo
+nts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/font
+s/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2023/texmf-dist/fonts/
+type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
+pe1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
+1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
+public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
+/cm-super/sfrm1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/c
+m-super/sfti1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-
+super/sfti1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-su
+per/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-supe
+r/sfxc1095.pfb>
+Output written on rapport.pdf (16 pages, 3315377 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 601 compressed objects within 7 object streams
- 66 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 802 PDF objects out of 1000 (max. 8388607)
+ 633 compressed objects within 7 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
 

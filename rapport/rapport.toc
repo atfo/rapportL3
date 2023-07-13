@@ -3,19 +3,21 @@
 \contentsline {subsection}{\numberline {1.1}Expériences de rubidium}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Utilisation des lasers à 532 nm}{2}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Objectif du stage}{2}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Couplage de la fibre à cristaux /al? photoniques}{2}{section.2}%
-\contentsline {section}{\numberline {3}Principe de la génération de seconde harmonique (SHG)}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Polarisation non linéaire et seconde harmonique}{4}{subsection.3.1}%
+\contentsline {section}{\numberline {2}Couplage de la fibre à cristaux photoniques}{2}{section.2}%
+\contentsline {section}{\numberline {3}Principe de la génération de seconde harmonique (SHG)}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Polarisation non linéaire et seconde harmonique}{5}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Le problème de l'accord de phase}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Cas des faisceaux gaussiens}{7}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Réalisation de la génération de seconde harmonique}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Choix du cristal doubleur}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Montage et alignement}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Montage et alignement}{10}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Étude à basse puissance}{11}{section.5}%
-\contentsline {section}{\numberline {6}Étude à haute puissance}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Caractérisation à haute puissance}{12}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Recherche d'un régime exploitable}{12}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Conclusion}{12}{section.7}%
-\contentsline {section}{\numberline {A}\'Equation d'onde non-linéaire}{12}{appendix.A}%
-\contentsline {section}{\numberline {B}Validité de l'hypothèse de non déplétion}{12}{appendix.B}%
-\contentsline {section}{\numberline {C}Efficacité de conversion dans un cristal périodiquement pôlé}{12}{appendix.C}%
+\contentsline {subsection}{\numberline {5.1}Efficactité de conversion}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Profil du faisceau généré}{12}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Étude à haute puissance}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Caractérisation à haute puissance}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Recherche d'un régime exploitable}{13}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Conclusion}{13}{section.7}%
+\contentsline {section}{\numberline {A}\'Equation d'onde non-linéaire}{13}{appendix.A}%
+\contentsline {section}{\numberline {B}Validité de l'hypothèse de non déplétion}{14}{appendix.B}%
+\contentsline {section}{\numberline {C}Efficacité de conversion dans un cristal périodiquement pôlé}{14}{appendix.C}%

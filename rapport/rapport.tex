@@ -257,14 +257,14 @@ Alors que le refroidissement des atomes se fait avec des lasers résonants, c'es
 
 C'est le cas des lasers à \lmbd{532}, qui sont désaccordés vers le bleu pour le rubidium 87 comme on peut le voir sur le diagramme des transitions figure \ref{fig:transitions}.
 
-Cette interaction donne lieu, classiquement, à une force dérivant du potentiel $U_\mathsc{dip}(\v r) = -\frac12 \langle \v d \cdot \v E \rangle$=$-\frac{1}{2\varepsilon_0 c}\mathfrak{Re}\left(\alpha(\omega)\right) I(\v r)$ ($\v d$ désigne le moment dipolaire induit, $\alpha$ la polarisabilité complexe, $\langle \cdot \rangle$ une moyenne temporelle et $I$ l'intensité du faisceau)
+Cette interaction donne lieu, classiquement, à une force dérivant du potentiel $U_\mathsc{dip}(\v r) = {-\frac12 \langle \v d \cdot \v E \rangle} = -\frac{1}{2\varepsilon_0 c}\mathfrak{Re}\left(\alpha(\omega)\right) I(\v r)$ ($\v d$ désigne le moment dipolaire induit, $\alpha$ la polarisabilité complexe, $\langle \cdot \rangle$ une moyenne temporelle et $I$ l'intensité du faisceau)
 %\footnote{Le facteur $\frac12$ est dû au fait que le dipôle est non pas permannent mais proportionnel au champ appliqué.} %En effet, pour $\v d = \alpha \v E$, $\v F = (\v d \cdot \v \nabla) \v E = \frac12 \v \nabla (\v d \cdot \v E)$}  %
 qui va servir à piéger les atomes dans un minimum de potentiel. Le rayonnement laser va également engendrer des cycles d'absorption et réémission spontanée, ayant lieu, toujours ``classiquement'', à une fréquence $\Gamma_\mathsc{diff} = \frac{P_\mathsc{abs}}{\hbar \omega} = \frac{1}{\hbar \varepsilon_0 c} \mathfrak{Im}\left(\alpha(\omega)\right) I(\v r)$ où $P_\mathsc{abs} = \langle \dot{\v d} \cdot \v E \rangle$ est la puissance absorbée par l'atome, qui vont conduire à un réchauffement des atomes. 
 Pour un atome à deux niveaux avec une transition à $\omega_0$, dans l'approximation de faible saturation (état excité faiblement peuplé) et de fort désaccord ($\Delta = \omega - \omega_0$ vérifiant $|\Delta| \ll \omega_0$), vérifiée en pratique et permettant de justifier le calcul classique (à une précision de l'ordre du pourcent), on trouve
 
 \begin{salign}
-	U_\mathsc{dip}(\v r)=\frac{3\pi c^2}{2\omega_0^3} & \frac{\Gamma}{\Delta} I(\v r) \\
-	\Gamma_\mathsc{diff}(\v r)=\frac{3\pi c^2}{2\hbar\omega_0^3} & \left(\frac{\Gamma}{\Delta}\right)^2 I(\v r) \\
+	U_\mathsc{dip}(\v r)&=\frac{3\pi c^2}{2\omega_0^3} & \frac{\Gamma}{\Delta} I(\v r) \\
+	\Gamma_\mathsc{diff}(\v r)&=\frac{3\pi c^2}{2\hbar\omega_0^3} & \left(\frac{\Gamma}{\Delta}\right)^2 I(\v r) \\
 \end{salign}
 
 avec $\Gamma = \frac{\e 2 \omega^2}{6 \pi \varepsilon_0 m_e c^3}$ la largeur naturelle de la transition, qui correspond dans une vision classique au facteur d'amortissement dû au rayonnement.
@@ -413,12 +413,13 @@ Cette équation se comprend très bien en considérant que le carré de l'onde i
 	\hspace*{-0.8cm}
 	%\includegraphics[height=5cm]{./img/QPM.png}
 	\include{./img/qpm.tex}
+	\vspace*{-1cm}
 	\caption{}
 	\label{fig:agen}
 \end{subfigure}
 \begin{subfigure}[b]{0.48\textwidth}
 	\includegraphics[height=4cm]{./img/PP.pdf}
-	\vspace*{2cm}
+	\vspace*{0.8cm}
 	\caption{}
 	\label{fig:inversion}
 \end{subfigure}
@@ -432,7 +433,7 @@ Afin d'avoir une génération efficace, il faudrait donc $\Delta k = \frac{2\pi}
 
 Nous avons choisi une autre solution qui consiste à fabriquer un cristal dont le $\chi^{(2)}$ varie spatialement. En effet, si $\chi^{(2)}(z) = \chi^{(2)}_0 \e{i k_\chi z}$, cela revient à remplacer $\Delta k$ par $\boxed{ \Delta k_\mathsc{eff} = \Delta k - k_\chi }$ dans (\ref{eq:pwe}). 
 %En pratique, il est difficile de fabriquer un tel cristal, et on préfère inverser le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:QPM}). 
-Évidemment, la susceptibilité est en réalité proche d'une valeur réelle et un tel $\chi^{(2)}$ n'est pas réalisable. À la place, on inverse le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:inversion}). \footnote{En effet, si $P_z = \chi^{(2)} E_z^2$ et on change $P_z$ et $E_z$ de signe, on voit que $\chi^{(2)}$ est changé en son opposé.} 
+Évidemment, la susceptibilité est en réalité proche d'une valeur réelle et un tel $\chi^{(2)}$ n'est pas réalisable. À la place, on inverse le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:inversion}) \footnote{En effet, si $P_z = \chi^{(2)} E_z^2$ et on change $P_z$ et $E_z$ de signe, on voit que $\chi^{(2)}$ est changé en son opposé.}.
 On parle alors de quasi-accord de phase et un tel cristal est dit périodiquement pôlé. Dans ce cas, la décomposition de Fourier de $\chi^{(2)}(z) = \chi^{(2)}_0 \operatorname{sgn}[\cos(2\pi z/ \Lambda)]$ montre que le terme de plus grande amplitude est le fondamental d'amplitude $\boxed{ \chi_\mathsc{eff} = \frac2\pi \chi^{(2)}_0 }$ et de nombre d'onde $\boxed{ k_\chi = \frac{2\pi}{\Lambda} }$. 
 Si $k_\chi = \Delta k$, $\Delta k_\mathsc{eff} = 0$ et le terme source correspondant sera accordé en phase sur toute la longueur du cristal et permettra donc de générer la seconde harmonique. Par la suite, on ne tiendra compte que de ce terme, oubliant les autres harmoniques de $\chi^{(2)}(z)$ (cela correspond à la courbe en pointillés, qui approxime bien la courbe orange).
 Ceci nous conduit à une amplitude 
@@ -526,11 +527,11 @@ Notons au passage que l'on retrouve bien le résultat pour les ondes planes dans
 	%\includegraphics[width=\textwidth]{./img/bk-factor-cmap.pdf}
 \end{subfigure}
 \hspace{0.8cm}
-\caption{Facteur de Boyd-Kleinman}
+\caption{Facteur de Boyd-Kleinman : \small dépendance en $b$ pour différentes valeurs de $a$ fixées et profil global (la couleur représente la valeur de $h$}
 \label{fig:bk-factor}
 \end{figure}
 
-Le profil de $h$ est tracé figure \ref{fig:bk-factor}. On observe que $h$ est maximal pour $a=2.886$ et $b=0.56$, et vaut alors $1.067$. On remarque également que le maximum est assez large en $a$ et plus étroit en $b$ lorsqu'on se rapproche de la valeur optimale de $a$.
+Le profil de $h$ est tracé figure \ref{fig:bk-factor}. Le facteur de Boyd-Kleinman $h$ est maximal pour $a=2.8$ et $b=0.58$, et vaut alors $1.068$. On remarque également que le maximum est assez large en $a$ et se rétrécit en $b$ lorsqu'on se rapproche de la valeur optimale de $a$.
 
 Physiquement, $a\gg1$ (\textit{i.e. $\zr \ll L$}) correspond à un faisceau fortement focalisé. L'intensité est alors importante au point focal, mais décroît rapidement dès que l'on s'en écarte. À l'inverse, $a\ll1$ (\textit{i.e. $\zr \gg L$}) correspond à un faisceau collimaté. L'intensité a alors un maximum moins intense mais est uniforme sur la longueur du cristal. Notons au passage que l'on retrouve bien dans cette limite le résultat pour les ondes planes donné par l'équation (\ref{eq:plane}), en considérant que $h(a,b) \approx a \sinc^2(ab)$ et $\P = \frac{\pi w_0^2}{2} I$.
 L'optimum de $a$ correspond à un compromis entre ces deux cas limites, avec une longueur de Rayleigh comparable à la longueur du cristal.
@@ -542,9 +543,11 @@ L'optimum de $a$ correspond à un compromis entre ces deux cas limites, avec une
 
 \section{Réalisation de la génération de seconde harmonique} 
 
+Maintenant que l'on a discuté le principe de la génération de seconde harmonique et déterminé les valeurs optimales des paramètres $a$ et $b$, nous allons présenter la mise en place expérimentale du doublage dans cette section puis étudier les résultats obtenus à la lumière des calculs théoriques dans la section suivante. Tous les règlages sont d'abord faits à basse puissance (autour de $\SI{100}{mW}$) pour des raisons de sécurité ainsi que pour éviter d'endommager le cristal.
+
 \subsection{Choix du cristal doubleur}
 
-Le cristal doubleur choisi pour mon stage est un cristal de niobate de lithium périodiquement pôlé dopé au magnésium (Mgo\hc PPLN). Il présente l'avantage d'avoir un $\chi^{(2)}$ important selon l'axe extraordinaire et donc une bonne efficacité de conversion. En revanche, il présente des effets non-linéaires parasites conduisant notamment à des inhomogénéités d'indice optique et un couplage entre les faisceaux mais présente en revanche une dégradation optique plus importante. Il est donc avantageux lorsque l'on ne cherche pas à produire plus de 2 ou 3 watts de vert, ce qui est notre cas. % En effet, %TODO
+Le cristal doubleur choisi pour mon stage est un cristal de niobate de lithium périodiquement pôlé dopé au magnésium (Mgo\hc PPLN). Il présente l'avantage d'avoir un $\chi^{(2)}$ important selon l'axe extraordinaire et donc une bonne efficacité de conversion. En revanche, il présente des effets non-linéaires parasites conduisant notamment à des inhomogénéités d'indice optique et un couplage entre les faisceaux mais présente en revanche une dégradation optique plus importante. Il est donc avantageux lorsque l'on ne cherche pas à produire plus de 2 ou 3 watts de lumière verte, ce qui est notre cas. % En effet, %TODO
 
 Le cristal commandé chez Covesion a une longueur $L=\SI{20}{mm}$ et présente 5 bandes avec des inversions de périodes différentes : $\Lambda = \qtylist[list-units = single]{6.83; 6.86 ; 6.90 ; 6.93 ; 6,96}{\micro\meter}$ (figure \ref{fig:sc}).
 
@@ -569,12 +572,34 @@ Le cristal commandé chez Covesion a une longueur $L=\SI{20}{mm}$ et présente 5
 \caption{}
 \end{figure}
 
-Tout d'abord, on place une lentille devant le cristal afin d'obtenir un faisceau incident focalisé au centre du cristal et avec le bon waist.
+Tout d'abord, on place une lentille devant le cristal afin d'obtenir un faisceau incident focalisé au centre du cristal et avec le bon souhaité (conformément à la valeur de $a$ voulue).
 
 Les premières mesures ont été réalisées avec le faisceau issu de la fibre à cristaux photoniques et une lentille de focale $\SI{5}{cm}$, sachant que le faisceau incident sur la lentille est collimaté. Le profil du faisceau obtenu a été vérifié à la caméra en mesurant le waist à différentes positions (figure \ref{fig:wincident}). Avec le waist obtenu de $\SI{62.6}{\micro\meter}$, $a=\frac{L}{2\zr}=0.4$ ($\zr = \frac{n_1 \pi w_0^2}{\lambda_1} = \SI{2.4}{cm}$), 
  ce qui est suboptimal mais corresond à un pic en $b$ plus large et donc plus facile à trouver.
 
-Il s'agit ensuite d'optimiser la température du cristal (contrôlée à l'aide d'un four Covesion) et l'alignement du faisceau incident à l'aide des deux miroirs (cf. schéma figure \ref{fig:montage}). 
+ Il s'agit ensuite d'optimiser la température du cristal (contrôlée à l'aide d'un four Covesion) et l'alignement du faisceau incident à l'aide des deux miroirs (cf. schéma figure \ref{fig:montage}). Pour estimer la température à laquelle se trouve l'optimum, on utilise une estimation des indices optiques $n_1$ et $n_2$ en fonction de la température à partir d'une équation dite de Sellmeier, pour laquelle on a pris les coefficients correspondants à un cristal de niobate de lithium congruent dopé à $\SI{5}{\percent}$ \cite{gayer,covesion}, et qui est tracée figure \ref{fig:sellmeier}. La température optimale calculée de la sorte est donnée figure \ref{fig:lp}.
+
+\begin{figure}[htpb]
+\centering
+\hspace*{-0.8cm}
+\begin{subfigure}[h]{0.48\textwidth}
+	\centering
+	\include{./img/sellmeier.tex}
+	\caption{Différence d'indices optiques calculée par l'équation de Sellmeier}
+	\label{fig:sellmeier}
+\end{subfigure}
+\centering
+\hspace*{0.8cm}
+\begin{subfigure}[h]{0.48\textwidth}
+	\include{./img/topt.tex}
+	\caption{Température optimale calculée, en fonction de la période d'inversion $\Lambda$}
+    \label{fig:lp}
+\end{subfigure}
+\caption{}
+\end{figure}
+
+
+%On peut estimer la valeur de la température à laquelle il faut se placer à partir d'une équation dite de Sellmeier donnant la dépendance en température et en longueur d'onde des indices optiques, pour laquelle on a pris les coefficients correspondants à un cristal de niobate de lithium congruent dopé à $\SI{5}{\percent}$ \cite{gayer,covesion}. La relation entre période d'inversion $\Lambda$ et température optimale calculée est donnée figure \ref{fig:lp}.
 
 \begin{figure}[h]
 	\centering
@@ -586,14 +611,14 @@ Il s'agit ensuite d'optimiser la température du cristal (contrôlée à l'aide 
 
 De façon plus détaillée, l'ajustement se fait ensuite selon le protocole suivant :
 \begin{enumerate}
-	\item À l'aide des quatre vis des deux miroirs, on cherche à obtenir un faisceau le plus droit possible à la hauteur du cristal, d'abord sans puis avec lentille. La procédure est analogue à celle pour coupler la fibre.
-	\item On place ensuite le cristal au point focal de la lentille et on le translate transversalement (à l'aide d'une platine de translation) jusqu'à faire passer le faisceau par la bande avec la bonne période d'inversion.
-	\item On tourne la lame demi-onde devant le cristal afin d'aligner la direction de polarisation avec l'axe extraordinaire du cristal (alignement signé par un maximum de puissance).
+	\item À l'aide des quatre vis des deux miroirs, on cherche à obtenir un faisceau le plus horizontal possible à la hauteur du cristal, d'abord sans puis avec lentille. La procédure est analogue à celle pour coupler la fibre.
+	\item On place ensuite le cristal au point focal de la lentille et on le translate transversalement (à l'aide d'une platine de translation) jusqu'à faire passer le faisceau par la bande avec la période d'inversion choisie.
+	\item On tourne la lame demi-onde devant le cristal afin d'aligner la direction de polarisation (linéaire) avec l'axe extraordinaire du cristal.
 	\item On se place à une température élevée que l'on laisse décroître et on attend de voir apparaître le pic principal.
 	\item Lorsque l'alignement n'est pas bon, le pic principal et les pics secondaires sont d'amplitudes comparables et il est difficile de trouver la température optimale. Il s'agit donc d'alterner optimisation de l'alignement et de la température.
 	\item Une fois dépassé quelques dizaines de $\unit{\micro\watt}$ de vert, on peut passer d'une estimation de la puissance à l'\oe il à une mesure au puissance-mètre.
 	\item On fait une dernière recherche fine d'optimum de température (en variant par pas de $\SI{0.2}{\celsius}$ sur une plage de $\SI{1}{\celsius}$).
-	\item On optimise finement l'alignement. On note que changer un seul angle influence très fortement la puissance de vert produite, mais que la variation de l'angle correspondant sur le deuxième miroir permet de retrouver une puissance optimale semblable. Il faut donc `beam-walker' considérablement afin de trouver le véritable optimum. De plus, il y a une certaine compensation entre alignement (et donc $\Lambda$ effective pour l'angle du faisceau) et température (et donc $\Delta k$, mais aussi $\Lambda$ à travers la dilatation thermique).
+	\item On optimise finement l'alignement. %On note que changer un seul angle influence très fortement la puissance de vert produite, mais que la variation de l'angle correspondant sur le deuxième miroir permet de retrouver une puissance optimale semblable. Il faut donc `beam-walker' considérablement afin de trouver le véritable optimum. De plus, il y a une certaine compensation entre alignement (et donc $\Lambda$ effective pour l'angle du faisceau) et température (et donc $\Delta k$, mais aussi $\Lambda$ à travers la dilatation thermique).
 \end{enumerate}
 
 
@@ -620,18 +645,19 @@ L'étude du doublage est d'abord faite à basse puissance afin d'éviter les eff
 
 \subsection{Efficactité de conversion}
 
-On vérifie tout d'abord que la puissance générée est bien quadratique en la puissance incidente, comme en témoignent les données présentées figure \ref{fig:quadra}. On fait ensuite varier la température autour de l'optimum, en gardant les autres paramètres fixés. On obtient alors les mesures figure \ref{fig:alphabp}. On observe un pic principal et un très petit maximum secondaire, plutôt en accord avec l'allure prédite par la théorie de Boyd et Kleinman. 
+On vérifie tout d'abord que la puissance générée est bien quadratique en la puissance incidente, comme en témoignent les données présentées figure \ref{fig:quadra}. On fait ensuite varier la température autour de l'optimum, en gardant les autres paramètres fixés. On obtient alors les mesures figure \ref{fig:alphabp}, qui montrent un optimum à $\SI{83.3}{\celsius}$. L'allure de la courbe est plutôt en accord avec celle prédite par la théorie de Boyd et Kleinman. 
 
 \begin{figure}[htpb]
 \centering
 \hspace*{-0.4cm}
-\begin{subfigure}{0.48\textwidth}
+\begin{subfigure}[b]{0.45\textwidth}
     \centering
     \includegraphics[height=6cm]{../donnees/conversion basse puissance 82.5 C.pdf}
-    \caption{Vérification de la dépendance quadratique (à \SI{82.5}{\celsius})}
+    \caption{Vérification de la relation quadratique entre puissance incidente et doublée {(à~\SI{82.5}{\celsius})}}
     \label{fig:quadra}
 \end{subfigure}
-\begin{subfigure}{0.48\textwidth}
+\hspace*{0.4cm}
+\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 	\includegraphics[height=6cm]{./img/alpha bp.pdf}
 	\caption{Dépendance en température de l'efficacité de conversion}
@@ -700,6 +726,13 @@ Discussion de l'hypothèse d'égalité des longueurs de Rayleigh
 \subsection{Recherche d'un régime exploitable}
 \section{Conclusion}
 
+
+\setcitestyle{numbers}
+\bibliography{rapport.bib}
+\bibliographystyle{unsrtnat}
+
+\newpage
+
 \appendix
 \section{\'Equation d'onde non-linéaire} 
 \label{NL}
@@ -741,10 +774,6 @@ On peut alors écrire $\v {\boldsymbol{\mathcal D}}^\mathsc{(1)}_q = \tens \vare
 %Dvpt en série de Fourier de d(z)
 \label{BK}
 
-
-\setcitestyle{numbers}
-\bibliography{rapport.bib}
-\bibliographystyle{unsrtnat}
 
 \end{document}
 

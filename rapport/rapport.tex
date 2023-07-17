@@ -343,7 +343,7 @@ TODO: injection en pola
 
 Nous revenons maintenant à l'objectif principal du stage, l'obtention d'un laser à \lmbd{532} par génération de seconde harmonique, dont nous expliquons d'abord le principe.
 
-\subsection{Polarisation non linéaire et seconde harmon ique}
+\subsection{Polarisation non linéaire et seconde harmonique}
 
 \begin{figure}[h]
 \centering
@@ -408,7 +408,7 @@ Cette équation se comprend très bien en considérant que le carré de l'onde i
 
 \begin{figure}[htpb] 
 \centering
-\begin{subfigure}[h]{0.48\textwidth}
+\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 	\hspace*{-0.8cm}
 	%\includegraphics[height=5cm]{./img/QPM.png}
@@ -416,9 +416,11 @@ Cette équation se comprend très bien en considérant que le carré de l'onde i
 	\caption{}
 	\label{fig:agen}
 \end{subfigure}
-\begin{subfigure}[h]{0.48\textwidth}
-	\includegraphics[height=4cm]{./img/PP.png}
+\begin{subfigure}[b]{0.48\textwidth}
+	\includegraphics[height=4cm]{./img/PP.pdf}
+	\vspace*{2cm}
 	\caption{}
+	\label{fig:inversion}
 \end{subfigure}
 \hspace*{-0.6cm}
 \caption{Amplitude de seconde harmonique et quasi-accord de phase : \small  (TODO légende+alignement)} %TODO
@@ -430,7 +432,7 @@ Afin d'avoir une génération efficace, il faudrait donc $\Delta k = \frac{2\pi}
 
 Nous avons choisi une autre solution qui consiste à fabriquer un cristal dont le $\chi^{(2)}$ varie spatialement. En effet, si $\chi^{(2)}(z) = \chi^{(2)}_0 \e{i k_\chi z}$, cela revient à remplacer $\Delta k$ par $\boxed{ \Delta k_\mathsc{eff} = \Delta k - k_\chi }$ dans (\ref{eq:pwe}). 
 %En pratique, il est difficile de fabriquer un tel cristal, et on préfère inverser le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:QPM}). 
-Évidemment, la susceptibilité est en réalité proche d'une valeur réelle et un tel $\chi^{(2)}$ n'est pas réalisable. À la place, on inverse le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:QPM}). \footnote{En effet, si $P_z = \chi^{(2)} E_z^2$ et on change $P_z$ et $E_z$ de signe, on voit que $\chi^{(2)}$ est changé en son opposé.} 
+Évidemment, la susceptibilité est en réalité proche d'une valeur réelle et un tel $\chi^{(2)}$ n'est pas réalisable. À la place, on inverse le signe de $\chi^{(2)}$ en inversant l'axe extraordinaire d'un matériau ferroélectrique avec une période $\Lambda$ (cf figure \ref{fig:inversion}). \footnote{En effet, si $P_z = \chi^{(2)} E_z^2$ et on change $P_z$ et $E_z$ de signe, on voit que $\chi^{(2)}$ est changé en son opposé.} 
 On parle alors de quasi-accord de phase et un tel cristal est dit périodiquement pôlé. Dans ce cas, la décomposition de Fourier de $\chi^{(2)}(z) = \chi^{(2)}_0 \operatorname{sgn}[\cos(2\pi z/ \Lambda)]$ montre que le terme de plus grande amplitude est le fondamental d'amplitude $\boxed{ \chi_\mathsc{eff} = \frac2\pi \chi^{(2)}_0 }$ et de nombre d'onde $\boxed{ k_\chi = \frac{2\pi}{\Lambda} }$. 
 Si $k_\chi = \Delta k$, $\Delta k_\mathsc{eff} = 0$ et le terme source correspondant sera accordé en phase sur toute la longueur du cristal et permettra donc de générer la seconde harmonique. Par la suite, on ne tiendra compte que de ce terme, oubliant les autres harmoniques de $\chi^{(2)}(z)$ (cela correspond à la courbe en pointillés, qui approxime bien la courbe orange).
 Ceci nous conduit à une amplitude 

@@ -96,16 +96,18 @@
 \newcommand{\dke}{\Delta k_\mathsc{eff}}
 \newcommand{\alphae}[1]{\SI{#1}{\percent W^{-1}}}
 
+
+\DeclareMathOperator{\sinc}{sinc}
 \DeclareMathOperator{\divg}{div}
 \DeclareMathOperator{\rot}{\mathbf{rot}}
 \DeclareMathOperator{\grad}{\mathbf{grad}}
 \renewcommand{\P}{\mathscr{P}}
-\newcommand{\E}{\mathcal E}
-\newcommand{\A}{\mathcal A}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\A}{\mathcal{A}}
 \newcommand{\e}[1]{\text{e}^{#1}}
 \newcommand{\mathsc}[1]{\mathrm{\scriptscriptstyle {#1}}}
-\renewcommand{\v}[1]{\mathbf{#1}}
-\newcommand{\tens}[1]{\underline{#1}}
+\renewcommand{\v}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\tens}[1]{\boldsymbol{\underline{#1}}}
 
 \newenvironment{salign}{
 \centering
@@ -336,12 +338,12 @@ J'ai ainsi pu obtenir un couplage d'environ $\SI{75}{\percent}$, ce qui est tout
 TODO: injection en pola
 
 
-\section{Principe de la génération de seconde harmonique (SHG)} %\'Etude th\'eoriqaue de la génération de seconde harmonique (SHG)}
+\section{Principe de la génération de seconde harmoni que (SHG)} %\'Etude th\'eoriqaue de la génération de seconde harmonique (SHG)}
 \label{SHG}
 
 Nous revenons maintenant à l'objectif principal du stage, l'obtention d'un laser à \lmbd{532} par génération de seconde harmonique, dont nous expliquons d'abord le principe.
 
-\subsection{Polarisation non linéaire et seconde harmonique}
+\subsection{Polarisation non linéaire et seconde harmon ique}
 
 \begin{figure}[h]
 \centering
@@ -349,21 +351,20 @@ Nous revenons maintenant à l'objectif principal du stage, l'obtention d'un lase
 	\includegraphics[width=\textwidth]{./img/cristal clair.jpg}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
-	\includegraphics[width=\textwidth]{./img/cristal.png}
+	\includegraphics[width=\textwidth]{./img/cristal.pdf}
 \end{subfigure}
 \caption{Génération d'un laser vert dans un cristal doubleur de fréquence}
 \label{fig:cristal}
 \end{figure}
 
 La génération de la seconde harmonique a lieu dans un cristal doubleur de fréquence avec des propriétés non-linéaires favorables (figure \ref{fig:cristal}).
-La propagation d'ondes électromagnétiques dans un milieu non linéaire donne lieu à une équation d'onde avec un terme source, qui s'écrit (cf annexe \ref{NL}) \ncite{boyd,joffre}
-\[ \nabla^2 \v E_q(\v r) + \frac{\omega_q^2}{c^2}\tens\epsilon^{(1)}(\omega_q)\cdot \v E_q(\v r) = - \frac{\omega_q^2}{\epsilon_0 c^2} \v P^\mathsc{NL}_q(\v r) \]
-dans le domaine de Fourier en temps avec la convention $\v E(\v r, t) = \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal E}}_q (\v r) \e{-i \omega_q t} \right\}$ et $\v P^\mathsc{NL}_q (\v r, t) = \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal P}}^{NL}_q (\v r) \e{-i \omega_q t} \right\}
+La propagation d'ondes électromagnétiques dans un milieu non linéaire non magnétique donne lieu à une équation d'onde avec un terme source, qui s'écrit \[ \boldsymbol{\nabla}^2 \boldsymbol{\E}_q + \frac{\omega_q^2}{c^2}\tens\epsilon^{(1)}(\omega_q)\cdot \v \E_q(\v r) = - \frac{\omega_q^2}{\epsilon_0 c^2} \boldsymbol{\mathcal{P}}^\mathsc{NL}_q(\v r) \]
+dans le domaine de Fourier en temps avec la convention $\v E(\v r, t) = \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal E}}_q (\v r) \e{-i \omega_q t} \right\}$ et $\v P^\mathsc{NL} (\v r, t) = \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal P}}^\mathsc{NL}_q (\v r) \e{-i \omega_q t} \right\}
 $,
 %, avec n un indice désignant la composante spectrale (il s'agira dans notre cas de l'ordre de l'harmonique), 
-avec $\tens \epsilon^{(1)}$ le tenseur de permittivité diélectrique relative associé à la partie linéaire de la polarisation et $\v P^\mathsc{NL}_q$ la partie non-linéaire de la polarisation.
+avec $\tens \epsilon^{(1)}$ le tenseur de permittivité diélectrique relative associé à la partie linéaire de la polarisation et $\v P^\mathsc{NL}_q$ la partie non-linéaire de la polarisation (cf annexe \ref{NL}) \ncite{boyd,joffre}.
 
-On fait l'hypothèse simplificatrice d'une \textbf{polarisation linéaire} selon un des axes principaux et on travaillera par la suite avec des $\mathcal E_q$ scalaires. En particulier, la permittivité tensorielle $\tens \varepsilon^{(1)}$ est remplacée par sa valeur propre correspondante et donne lieu à un indice optique $\boxed{ n_q^2 = 1 + \varepsilon^{(1)}(\omega_q)/\varepsilon_0}$. En écrivant les différentes harmoniques sous la forme d'une ``onde monochromatique d'amplitude variable'' $\mathcal E_q = \A_q(x,y,z) \e{ik_qz}$ avec $\boxed{k_q =\frac{n_q \omega_q}{c}}$ et en se plaçant dans l'approximation paraxiale, i.e. de lente variation de $\A$ avec $z$ $\left(\frac{\partial^2 \A_q}{\partial z^2} \ll k_q \frac{\partial \A_q}{\partial z}\right)$, on arrive aux équations \ncite{joffre}
+On fait l'hypothèse simplificatrice d'une \textbf{polarisation linéaire} selon un des axes principaux et on travaillera par la suite avec des $\mathcal E_q$ scalaires. En particulier, la permittivité tensorielle $\tens \varepsilon^{(1)}$ est remplacée par sa valeur propre correspondante et donne lieu à un indice optique $\boxed{ n_q^2 = \varepsilon^{(1)}(\omega_q)/\varepsilon_0}$. En écrivant les différentes harmoniques sous la forme d'une ``onde monochromatique d'amplitude variable'' $\mathcal E_q = \A_q(x,y,z) \e{ik_qz}$ avec $\boxed{k_q =\frac{n_q \omega_q}{c}}$ et en se plaçant dans l'approximation paraxiale, i.e. de lente variation de $\A$ avec $z$ $\left(\frac{\partial^2 \A_q}{\partial z^2} \ll k_q \frac{\partial \A_q}{\partial z}\right)$, on arrive aux équations \ncite{joffre}
 \begin{align}  
 	\left\{\v\nabla_\bot + 2 i k_q \frac{\partial}{\partial z} \right\} \A_q = - \frac{\omega_q^2}{\varepsilon_0 c^2} \v P^\mathsc{NL}_q (\v r) \e{-ik_qz}
 	\label{eq:parax}
@@ -375,8 +376,8 @@ En particulier, pour un champ électrique avec une composante à $\omega$ et une
 	P^{(2)} &= \varepsilon_0 \chi^{(2)} \v E^2  \text{ avec $\chi^{(2)}$ la susceptibilité d'odre 2}\\
 	&= \frac{\varepsilon_0 \chi^{(2)}}{4} \left\{\mathcal E_1 e^{-i\omega t} + \mathcal E_1^* e^{i\omega t} + \mathcal E_2 e^{-2i\omega t} + \mathcal E_2^* e^{2i\omega t} \vphantom{\frac12}\right\}^2 \\
 	&= \frac{\varepsilon_0 \chi^{(2)}}{4} \left\{\mathcal E_1^2 \e{-2i\omega t} + \E_1^{*2} \e{2i\omega t} + 2|\mathcal E_1|^2 + 2 \E_1\E_2^* \e{i\omega t} + 2 \E_1^*\E_2 \e{-i\omega t} \vphantom{\frac12}\right. \\
-	&\qquad\qquad\qquad \left. + 2 \E_1\E_2 \e{-3 i\omega t}  + 2 \E_1^*\E_2^* \e{3 i\omega t} + \mathcal O(\E_2^2) \vphantom{\frac12}\right\} \\
-	%&= \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal P}}^{(2)}_q \e{-i \omega_q t} \right\}
+	&\qquad\qquad\qquad \left. + 2 \E_1\E_2 \e{-3 i\omega t}  + 2 \E_1^*\E_2^* \e{3 i\omega t} + \mathcal O(\E_2^2) \vphantom{\frac12}\right\} \\ 
+%	&= \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal P}}^{(2)}_q \e{-i \omega_q t} \right\}
 \end{align*}
 où l'on a considéré que $\chi^{(2)}$ est approximativement le même pour toutes les harmoniques. 
 % où l'on a considéré que $\chi^{(2)}$ est le même pour toutes les harmoniqes pour un milieu supposé sans pertes \ncite{boyd}.
@@ -504,7 +505,7 @@ Ceci conduit à une efficacité de conversion
 %	\alpha = \frac{\omega^3 \chie^2 L}{ {\color{red} 2} \varepsilon_0 c^4 \pi n_1 n_2} h(a,b)
 %\end{align}
 
-Notons au passage que l'on retrouve bien le résultat pour les ondes planes dans la limite $a\ll1$, l'équation \ref{eq:plane} donnant $\alpha = \frac{\chie^2 \omega^2 L^2}{2 \varepsilon_0 c^3 \pi w_0^2 n_1^2 n_2}$ en passant des intensités aux puissances ($\P = \frac{\pi w_0^2}{2} I$). 
+Notons au passage que l'on retrouve bien le résultat pour les ondes planes dans la limite $a\ll1$, l'équation (\ref{eq:plane}) donnant $\alpha = \frac{\chie^2 \omega^2 L^2}{2 \varepsilon_0 c^3 \pi w_0^2 n_1^2 n_2}$ en passant des intensités aux puissances ($\P = \frac{\pi w_0^2}{2} I$). 
 
 
 \begin{figure}[htpb] 
@@ -527,7 +528,13 @@ Notons au passage que l'on retrouve bien le résultat pour les ondes planes dans
 \label{fig:bk-factor}
 \end{figure}
 
-Le profil de $h$ est tracé figure \ref{fig:bk-factor} et sera discuté plus bas en relation avec la réalisation expérimentale du doublage.
+Le profil de $h$ est tracé figure \ref{fig:bk-factor}. On observe que $h$ est maximal pour $a=2.886$ et $b=0.56$, et vaut alors $1.067$. On remarque également que le maximum est assez large en $a$ et plus étroit en $b$ lorsqu'on se rapproche de la valeur optimale de $a$.
+
+Physiquement, $a\gg1$ (\textit{i.e. $\zr \ll L$}) correspond à un faisceau fortement focalisé. L'intensité est alors importante au point focal, mais décroît rapidement dès que l'on s'en écarte. À l'inverse, $a\ll1$ (\textit{i.e. $\zr \gg L$}) correspond à un faisceau collimaté. L'intensité a alors un maximum moins intense mais est uniforme sur la longueur du cristal. Notons au passage que l'on retrouve bien dans cette limite le résultat pour les ondes planes donné par l'équation (\ref{eq:plane}), en considérant que $h(a,b) \approx a \sinc^2(ab)$ et $\P = \frac{\pi w_0^2}{2} I$.
+L'optimum de $a$ correspond à un compromis entre ces deux cas limites, avec une longueur de Rayleigh comparable à la longueur du cristal.
+% donnant $\alpha = \frac{\chie^2 \omega^2 L^2}{2 \varepsilon_0 c^3 \pi w_0^2 n_1^2 n_2}$ en passant des intensités aux puissances ($\P = \frac{\pi w_0^2}{2} I$). 
+
+%et sera discuté plus bas en relation avec la réalisation expérimentale du doublage.
 
 %On constate que l'optimum en $a$ est relativement souple, l'optimum $a=2.886$ et $a=3$ donnant essentiellement les mêmes courbes. 
 
@@ -546,7 +553,7 @@ Le cristal commandé chez Covesion a une longueur $L=\SI{20}{mm}$ et présente 5
 \hspace*{-0.4cm}
 \begin{subfigure}[h]{0.48\textwidth}
 	\centering
-	\includegraphics[height=5cm]{./img/cristal.png}
+	\includegraphics[height=5cm]{./img/cristal.pdf}
 	\caption{Schéma du cristal}
 	\label{fig:sc}
 \end{subfigure}
@@ -569,7 +576,7 @@ Il s'agit ensuite d'optimiser la température du cristal (contrôlée à l'aide 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=10cm]{./img/schema.pdf}
+	\includegraphics[height=8cm]{./img/schema.pdf}
 	%\include{./img/schema.tex}
 	\caption{Schéma du montage}
 	\label{fig:montage}
@@ -705,9 +712,24 @@ En prenant le rotationnel de l'équation de Maxwell-Faraday et en injectant l'é
 	\rot (\rot \v E) = \grad (\divg \v E) - \v \nabla^2 \v E = - \frac{1}{c^2} \frac{\partial^2 \v E}{\partial t^2} - \mu_0 \frac{\partial^2 \v P}{\partial t^2} \\
 \end{align*}
 
-Le terme $\grad (\divg \v E)$ est nul dans un milieu isotrope (et sans charges libres) puisque $\div \v D=0$ implique alors $\div \v E = 0$ ou encore pour une onde plane transverse. En règle générale, 
+Le terme $\grad (\divg \v E)$ est nul dans un milieu linéaire isotrope (et sans charges libres) puisque $\divg \v D=0$ implique alors $\divg \v E = 0$, ou encore pour une onde plane transverse. En règle générale, ce terme est non nul à cause de l'anisotropie ou de la non-linéarité du matériau, mais il reste négligeable, en particulier dans l'approximation paraxiale \ncite{boyd}.
 
-terme négligé (angle de double réfraction \cite{joffre}) \cite{boyd}
+
+%terme négligé (angle de double réfraction \cite{joffre}) \cite{boyd}
+
+On décompose ensuite la polarisation en un terme linéaire $\v P^\mathsc{(1)}$ et un terme non linéaire $\v P^\mathsc{NL}$, et de même pour l'induction électrique $\v D = \v D^\mathsc{(1)} + \v D^\mathsc{NL} = \v D^\mathsc{(1)} + \v P^\mathsc{NL}$. 
+
+Comme la réponse du milieu dépend de la fréquence de l'excitation, on décompose les champs en composantes à différentes pulsations $\omega_q$ :
+\begin{align*}
+	\v E(\v r, t) &= \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal E}}_q (\v r) \e{-i \omega_q t} \right\} \\
+	\v D(\v r, t) &= \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal D}}_q (\v r) \e{-i \omega_q t} \right\} \\
+	\v P^\mathsc{NL}(\v r, t) &= \mathfrak{Re} \left\{ \sum_{q \in \mathbb N} \v {\boldsymbol{\mathcal P}}^\mathsc{NL}_q (\v r) \e{-i \omega_q t} \right\}
+\end{align*}
+
+On peut alors écrire $\v {\boldsymbol{\mathcal D}}^\mathsc{(1)}_q = \tens \varepsilon^{\mathsc(1)}(\omega_q) \v {\boldsymbol{\mathcal E}}_q$ avec $\tens \epsilon^{(1)}(\omega_q)$ le tenseur de permittivité diélectrique relative (linéaire) à $\omega_q$, ce qui conduit à l'équation de Helmholtz  \citep{boyd}
+\begin{align*}
+	\boldsymbol{\nabla}^2 \boldsymbol{\E}_q + \frac{\omega_q^2}{c^2}\tens\epsilon^{(1)}(\omega_q)\cdot \v \E_q(\v r) = - \frac{\omega_q^2}{\epsilon_0 c^2} \boldsymbol{\mathcal{P}}^\mathsc{NL}_q(\v r)
+\end{align*}
 
 \section{Validité de l'hypothèse de non déplétion}
 \label{ndepl}

@@ -30,3 +30,17 @@ comp : Tex_RunLaTeX: errlist = [
 14 error:  ==> Fatal error occurred, no output PDF file produced!]
 comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
 comp : Tex_SetupErrorWindow: mfnlog = dbaffine.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [waist faisceau incident.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! waist faisceau incident.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 error: I can't find file `waist'. waist  faisceau incident.tex
+ 2 error: Emergency stop. waist  faisceau incident.tex
+ 3 error:  ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = waist faisceau incident.log
+comp : not finding error pattern anywhere in quickfix window :

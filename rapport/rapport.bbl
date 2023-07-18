@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,17 @@ Brice Bakkali-Hassani.
   preparation and characterization of solitary waves}}.
 \newblock Theses, {Sorbonne Universit{\'e}}, December 2021.
 \newblock URL \url{https://theses.hal.science/tel-03591031}.
+
+\bibitem[Ville et~al.(2017)Ville, Bienaim\'e, Saint-Jalm, Corman, Aidelsburger,
+  Chomaz, Kleinlein, Perconte, Nascimb\`ene, Dalibard, and Beugnon]{ville}
+J.~L. Ville, T.~Bienaim\'e, R.~Saint-Jalm, L.~Corman, M.~Aidelsburger,
+  L.~Chomaz, K.~Kleinlein, D.~Perconte, S.~Nascimb\`ene, J.~Dalibard, and
+  J.~Beugnon.
+\newblock Loading and compression of a single two-dimensional bose gas in an
+  optical accordion.
+\newblock \emph{Phys. Rev. A}, 95:\penalty0 013632, Jan 2017.
+\newblock \doi{10.1103/PhysRevA.95.013632}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.95.013632}.
 
 \bibitem[Grimm et~al.(2000)Grimm, Weidemüller, and Ovchinnikov]{grimm}
 Rudolf Grimm, Matthias Weidemüller, and Yurii~B. Ovchinnikov.
@@ -35,16 +46,32 @@ Philip Russell.
 \newblock \doi{10.1364/OPN.18.7.000026}.
 \newblock URL \url{https://www.optica-opn.org/abstract.cfm?URI=opn-18-7-26}.
 
+\bibitem[Boyd(2008)]{boyd}
+Robert~W. Boyd.
+\newblock \emph{Nonlinear Optics, Third Edition}.
+\newblock Academic Press, Inc., USA, 3rd edition, 2008.
+\newblock ISBN 0123694701.
+
 \bibitem[Joffre(2010)]{joffre}
 Manuel Joffre.
 \newblock {Optique non-lin{\'e}aire en r{\'e}gimes continu et femtoseconde}.
 \newblock Lecture, 2010.
 \newblock URL \url{https://cel.hal.science/cel-00092964}.
 
-\bibitem[Boyd(2008)]{boyd}
-Robert~W. Boyd.
-\newblock \emph{Nonlinear Optics, Third Edition}.
-\newblock Academic Press, Inc., USA, 3rd edition, 2008.
-\newblock ISBN 0123694701.
+\bibitem[Gayer et~al.(2008)Gayer, Sacks, Galun, and Arie]{gayer}
+O.~Gayer, Z.~Sacks, E.~Galun, and A.~Arie.
+\newblock Temperature and wavelength dependent refractive index equations for
+  {MgO}-doped congruent and stoichiometric {LiNbO}3.
+\newblock \emph{Applied Physics B}, 91\penalty0 (2):\penalty0 343--348, April
+  2008.
+\newblock \doi{10.1007/s00340-008-2998-2}.
+\newblock URL \url{https://doi.org/10.1007/s00340-008-2998-2}.
+
+\bibitem[Covesion()]{covesion}
+Covesion.
+\newblock {M}aterial {P}roperties of {L}ithium {N}iobate.
+\newblock
+  \url{https://covesion.com/en/resource/material-properties-of-lithium-niobate/}.
+\newblock [Accessed 18-Jul-2023].
 
 \end{thebibliography}

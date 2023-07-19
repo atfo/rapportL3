@@ -34,8 +34,8 @@
 \RequirePackage[T1]{fontenc} %Quelques lettres qui sont pas inclus dans UTF-8
 \RequirePackage{mathtools} %Paquet pour des équations et symboles mathématiques
 \RequirePackage[separate-uncertainty = true]{siunitx}
-\RequirePackage{caption} %[justification=centering]{caption} %Pour les légendes centralisées
-\RequirePackage{subcaption}
+\RequirePackage[margin=1cm]{caption} %[justification=centering]{caption} %Pour les légendes centralisées
+\RequirePackage[margin={1cm,0cm}]{subcaption}
 %\usepackage{sectsty}
 %\allsectionsfont{\sffamily}
 
@@ -346,12 +346,12 @@ J'ai ainsi pu obtenir un couplage d'environ $\SI{75}{\percent}$, ce qui est tout
 TODO: injection en pola
 
 
-\section{Principe de la génération de seconde harmonique (SHG)} %\'Etude th\'eoriqaue de la génération de seconde harmonique (SHG)}
+\section{Principe de la génération de seconde harmonique ( SHG)} %\'Etude th\'eoriqaue de la génération de seconde harmonique (SHG)}
 \label{SHG}
 
 Nous revenons maintenant à l'objectif principal du stage, l'obtention d'un laser à \lmbd{532} par génération de seconde harmonique, dont nous expliquons d'abord le principe.
 
-\subsection{Polarisation non linéaire et seconde harmonique}
+\subsection{Polarisation non linéaire et seconde harmonique} 
 
 \begin{figure}[h]
 \centering
@@ -584,7 +584,7 @@ Le cristal commandé chez Covesion a une longueur $L=\SI{20}{mm}$ et présente 5
 \centering
 \hspace*{0.4cm}
 \begin{subfigure}[b]{0.48\textwidth}
-    \include{./img/waist faisceau incident.tex}
+    \include{./img/waist_faisceau_incident.tex}
 	\vspace{-0.5cm}
     \caption{Profil du faisceau incident sur le cristal}
     \label{fig:wincident}
@@ -597,12 +597,12 @@ Tout d'abord, on place une lentille devant le cristal afin d'obtenir un faisceau
 Les premières mesures ont été réalisées avec le faisceau issu de la fibre à cristaux photoniques et une lentille de focale $\SI{5}{cm}$, sachant que le faisceau incident sur la lentille est collimaté. Le profil du faisceau obtenu a été vérifié à la caméra en mesurant le waist à différentes positions (figure \ref{fig:wincident}). Avec le waist obtenu de $\SI{62.6}{\micro\meter}$, $a=\frac{L}{2\zr}=0.4$ ($\zr = \frac{n_1 \pi w_0^2}{\lambda_1} = \SI{2.4}{cm}$), 
  ce qui est suboptimal mais corresond à un pic en $b$ plus large et donc plus facile à trouver.
 
- Il s'agit ensuite d'optimiser la température du cristal (contrôlée à l'aide d'un four Covesion) et l'alignement du faisceau incident à l'aide des deux miroirs (cf. schéma figure \ref{fig:montage}). Pour estimer la température à laquelle se trouve l'optimum, on utilise une estimation des indices optiques $n_1$ et $n_2$ en fonction de la température à partir d'une équation dite de Sellmeier, pour laquelle on a pris les coefficients correspondants à un cristal de niobate de lithium congruent dopé à $\SI{5}{\percent}$ \cite{gayer,covesion}, et qui est tracée figure \ref{fig:sellmeier}. La température optimale calculée de la sorte est donnée figure \ref{fig:lp}.
+ Il s'agit ensuite d'optimiser la température du cristal (contrôlée à l'aide d'un four Covesion) et l'alignement du faisceau incident à l'aide des deux miroirs (cf. schéma figure \ref{fig:montage}). Pour estimer la température à laquelle se trouve l'optimum, on utilise une estimation des indices optiques $n_1$ et $n_2$ en fonction de la température à partir d'une équation dite de Sellmeier, pour laquelle on a pris les coefficients correspondants à un cristal de niobate de lithium congruent dopé à $\SI{5}{\percent}$ \ncite{gayer,covesion}, et qui est tracée figure \ref{fig:sellmeier}. La température optimale calculée de la sorte est donnée figure \ref{fig:lp}. Pour $\Lambda = \SI{6.9}{\micro\meter}$, on s'attend à $\SI{66}{\celsius}$.
 
 \begin{figure}[htpb] 
 \centering
 \hspace*{-0.8cm}
-\begin{subfigure}[h]{0.48\textwidth}
+\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 	\include{./img/sellmeier.tex}
 	\caption{Différence d'indices optiques calculée par l'équation de Sellmeier}
@@ -610,7 +610,7 @@ Les premières mesures ont été réalisées avec le faisceau issu de la fibre �
 \end{subfigure}
 \centering
 \hspace*{0.8cm}
-\begin{subfigure}[h]{0.48\textwidth}
+\begin{subfigure}[b]{0.48\textwidth}
 	\include{./img/topt.tex}
 	\caption{Température optimale calculée, en fonction de la période d'inversion $\Lambda$}
     \label{fig:lp}
@@ -619,7 +619,7 @@ Les premières mesures ont été réalisées avec le faisceau issu de la fibre �
 \end{figure}
 
 
-%On peut estimer la valeur de la température à laquelle il faut se placer à partir d'une équation dite de Sellmeier donnant la dépendance en température et en longueur d'onde des indices optiques, pour laquelle on a pris les coefficients correspondants à un cristal de niobate de lithium congruent dopé à $\SI{5}{\percent}$ \cite{gayer,covesion}. La relation entre période d'inversion $\Lambda$ et température optimale calculée est donnée figure \ref{fig:lp}.
+%On peut estimer la valeur de la température à laquelle il faut se placer à partir d'une équation dite de Sellmeier donnant la dépendance en température et en longueur d'onde des indices optiques, pour laquelle on a pris les coefficients correspondants à un cristal de niobate de lithium congruent dopé à $\SI{5}{\percent}$ \ncite{gayer,covesion}. La relation entre période d'inversion $\Lambda$ et température optimale calculée est donnée figure \ref{fig:lp}.
 
 \begin{figure}[h]
 	\centering
@@ -661,7 +661,7 @@ Le régime de doublage trouvé initialement a été pour la bande avec $\Lambda 
 
 \section{Étude à basse puissance}
 
-L'étude du doublage est d'abord faite à basse puissance afin d'éviter les effets thermiques qui, comme nous le verrons, compliquent considérablement le comportement à haute puissance.
+L'étude du doublage est d'abord faite à basse puissance afin d'éviter les effets thermiques qui, comme nous le verrons, compliquent considérablement le comportement à haute puissance. À haute puissance comme à basse puissance, l'accord avec la théorie laisse à désirer et, au vu du temps limité à disposition pour étudier la question, on doit se contenter des hypothèses pour expliquer le comportement observé.
 
 \subsection{Efficactité de conversion}
 
@@ -696,19 +696,19 @@ Les graphes de $\alpha(T)$ et de $h(a,b)$ à $a$ fixé (figure \ref{fig:bk-facto
 L'accord quantitatif pose plus de difficultés. En effet, on ne peut se fier avec certitude ni à la valeur de température indiquée par le module de contrôle du four (dont la sonde est au niveau de la monture en cuivre et non à l'intérieur du cristal chauffé par le laser), qui indiquait d'ailleurs $\SI{30}{\celsius}$ laser et asservissement éteints dans une salle à $\SI{25}{\celsius}$, ni à la valeur exacte de la période d'inversion $\Lambda$ (qui varie d'ailleurs aussi avec la dilatation thermique). Il est donc difficile de se placer sur la courbe figure \ref{fig:lp}, or il est nécessaire de connaître la température du cristal au niveau du faisceau pour avoir une valeur exacte des indices optiques et de $\Lambda$ et ainsi pouvoir calculer $\dke$.
 La valeur de $\chie$ varie d'un cristal à un autre et est également source d'incertitude. Covesion annonce d'ailleurs $\chie = \SI{28}{pm/V}$ alors que la valeur théorique correspondant à $\chi^{(2)}=\SI{50}{pm/V}$ est $\chie = \SI{32}{pm/V}$, ce qui fait passer le facteur devant $h$ de $\SI{5.5}{\percent\per\watt}$ à $\SI{4.2}{\percent\per\watt}$.
 
-Encore une autre source d'incertitude est la détermination du waist du faisceau incident dont $\zr$ dépend quadratiquement. D'ailleurs, avec le waist déterminé à $\SI{62.6}{\micro\meter}$, $a=0.41$ ce qui correspond à un maximum de $h = 0.39$ et donc un maximum de seulement $\alphae{2.1}$ même pour $\chie = \SI{32}{pm/V}$. Il apparaît donc que $a$ a été sous-estimé et donc que le waist a été surestimé. Il faudrait plutôt $a=0.7$, ce qui correspond à un waist $\sqrt2$ fois plus petit, ce qui est difficiement reconciliable avec les mesures effectuées. % puisque un des waists $w(z)$ mesurés vaut $\SI{68\pm10}{\micro m}$, ce qui impose une borne supérieure sur la valeur de $w_0$. 
-Il est également difficile d'imaginer un $\chie=\SI{40}{pm/V}$ qui permettrait d'augmenter suffisamment le préfacteur de $h$. Cette efficacité plus grande que prévu est d'autant plus étonnante que les mesures faites plus tard avec des longueurs de Rayleigh plus proches de l'optimum donnent toutes des efficacités plus faibles, et qui sont d'ailleurs en-dessous des valeurs théoriques (comme on pourrait s'y attendre au vu des imperfections inhérentes à la mise en pratique). Ces mesures sont récapitulées dans le tableau \ref{table:bp}. La seule différence au niveau de la mise en place est que la mesure dont il s'agit jusqu'à présent a été faite avec un faisceau sortant de la fibre à cristaux photoniques, alors que les mesures suivantes ont été faites avec un faisceau contournant la fibre (ce qui était nécessaire pour les tests à haute puissance).
+Encore une autre source d'incertitude est la détermination du waist du faisceau incident dont $\zr$ dépend quadratiquement. D'ailleurs, avec le waist déterminé à $\SI{62.6}{\micro\meter}$, $a=0.41$ ce qui correspond à un maximum de $h = 0.39$ et donc un maximum de seulement $\alphae{2.1}$ même pour $\chie = \SI{32}{pm/V}$. Il faudrait plutôt $a=0.7$, ce qui correspond à un waist $\sqrt2$ fois plus petit, ce qui est difficiement reconciliable avec les mesures effectuées. % puisque un des waists $w(z)$ mesurés vaut $\SI{68\pm10}{\micro m}$, ce qui impose une borne supérieure sur la valeur de $w_0$. 
+Il est également difficile d'imaginer un $\chie=\SI{40}{pm/V}$ qui permettrait d'augmenter suffisamment le préfacteur de $h$. Cette efficacité plus grande que prévu est d'autant plus étonnante que les mesures faites plus tard avec des longueurs de Rayleigh plus proches de l'optimum donnent toutes des efficacités plus faibles, et qui sont d'ailleurs en-dessous des valeurs théoriques (comme on pourrait s'y attendre au vu des imperfections inhérentes à la mise en pratique). Ces mesures sont récapitulées dans le tableau \ref{table:bp}. La seule différence au niveau de la mise en place est que la mesure dont il s'agit jusqu'à présent a été faite avec un faisceau sortant de la fibre à cristaux photoniques, alors que les mesures suivantes ont été faites avec un faisceau contournant la fibre (ce qui était nécessaire pour les tests à haute puissance). Il semblerait aussi que la première mesure ait été fait avec un faisceau à proximité du bord supérieur du cristal, même s'il est difficile d'en juger précisément car le cristal ne tient en place qu'avec le four fermé, et que la carte infrarouge ne permet pas de localiser précisément le faisceau. On peut alors imaginer que le cristal ait des propriétés pas parfaitement uniformes ce qui pourrait expliquer au moins en partie la différence entre les deux séries de mesures.
 
 \begin{table*}[h]\centering
 \ra{1.3}
 \begin{tabular}{@{}cccccc@{}}\toprule
-	fibre & $w_0$ $(\unit{\micro\meter})$ & $zr$ $(\unit{cm})$ & $a$ & $\alpha$ théorique $(\unit{\percent\per\watt})$ & $\alpha$ mesuré $(\unit{\percent\per\watt})$ \\ \midrule
+	fibre & $w_0$ $(\unit{\micro\meter})$ & $\zr$ $(\unit{cm})$ & $a=\frac L {2\zr}$ & $\alpha$ théorique $(\unit{\percent\per\watt})$ & $\alpha$ mesuré $(\unit{\percent\per\watt})$ \\ \midrule
 	oui & 63     & 2.5 & 0.4 & 1.6 & 3.5 \\ \midrule  
-	non  & 30    & 0.6 & 1.7 & 4.15               & 2.8             \\
+	non & 30    & 0.6 & 1.7 & 4.2                & 2.8             \\
 	non & 38    & 0.9 & 1.1 & 3.4                & 3.1             \\
 	non & 64    & 2.6 & 0.4 & 1.6                & 1.2             \\ \bottomrule
 \end{tabular}
-\caption{}
+\caption{Efficacités théoriques et mesurées pour différentes longueurs de Rayleigh. \small La première mesure correspond à celle discutée jusqu'à présent, avec le faisceau incident issu de la fibre à cristaux photoniques. Les mesures suivantes ont été réalisées plus tard et sans la fibre.}
 \label{table:bp}
 \end{table*}
 
@@ -726,10 +726,11 @@ D'après la courbe figure \ref{fig:fwhm}, on s'attend donc à une largeur $\delt
 
 \begin{figure}[htpb] 
 \centering
-\hspace*{-0.8cm}
+%\hspace*{-0.8cm}
 \begin{subfigure}[b]{0.48\textwidth}
 	\small
 	\input{./img/dt.tex}
+	\vspace{-0.42cm}
 	\caption{$\delta T$ FWHM calculé}
 	\label{fig:fwhm}
 \end{subfigure}
@@ -745,33 +746,75 @@ D'après la courbe figure \ref{fig:fwhm}, on s'attend donc à une largeur $\delt
 \end{figure}
 
 
-\subsection{Profil du faisceau généré}
+\subsection{Profil du faisceau généré (TODO, ou pas)} 
 
-On peut également s'intéresser au profil du faisceau vert généré.
+On peut également s'intéresser au profil du faisceau vert généré. En particulier, pour résoudre l'équation (\ref{eq:SHG}), nous avons postulé que le faisceau généré avait la même longueur de Rayleigh et un waist $\sqrt 2$ fois plus petit, et était focalisé au même point que le faisceau incident. 
 
 Discussion de l'hypothèse d'égalité des longueurs de Rayleigh
 
-\begin{figure}[h]
+\begin{figure}[h]  
 	\centering
-	\includegraphics{./img/waist faisceau vert.pdf}
-	\caption{Profil du faisceau vert généré}
+	\include{./img/comparaison-profils.tex}
+	\caption{Comparaison des profils : \small Le faisceau généré a un profil proche de celui du fondamental au lieu d'être $\sqrt2$ fois plus petit comme prédit par la théorie de Boyd-Kleinman} %TODO
 	\label{fig:vert}
 \end{figure}
 
 \section{Étude à haute puissance}
+L'étude à basse puissance a permis de réaliser un alignement convenable et de déterminer la température adaptée à la conversion. L'objectif du stage étant l'obtention d'environ $\SI{2}{\watt}$ de lumière verte, on cherche maintenant à maximiser le doublage pour une puissance du fondamental maximal. Le laser à notre disposition a une puissance maximale nominale de $\SI{10}{\watt}$, mais en génère plutôt $9$. Avec les pertes dans les séparateurs et dans la fibre à cristaux photoniques, il reste moins de $\SI{6}{\watt}$ incidents sur le cristal. On a donc choisi de modifier la trajectoire du faisceau pour contourner la fibre, ce qui a également permis de réduire le nombre de séparateurs sur son trajet. On arrive ainsi à environ $\SI{8.3}{\watt}$ incidents sur le cristal. 
+
 \subsection{Caractérisation à haute puissance}
-\subsection{Recherche d'un régime exploitable}
+Pour chaque configuration, on commence par refaire une optimisation à basse puissance afin de minimiser les déplacements du faisceau faits à haute puissance.
+Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, la puissance doublée augmente en conséquence (avec $\alpha$ approximativement constant), mais retombe sur l'échelle de quelques secondes jusqu'à la dizaine de milliwatts au lieu de quelques watts. On constate alors que la température optimale (commandée au four) en régime établi est inférieure de plusieurs degrés à l'optimum à basse puissance, ce qui se comprend en considérant qu'une partie de la puissance du laser est absorbée par le cristal, ce qui conduit à un gradient de température dans le cristal. La température au niveau du laser est donc plus élevée que la température commandée au four. Les mesures effectuées à haute et basse puissance pour différentes configurations sont récapitulées dans le tableau \ref{table:mes}. 
+
+\begin{table}[h]\centering
+\ra{1.3}
+\begin{tabular}{@{}cccccccc@{}} \toprule
+ &  & \multicolumn{2}{c}{théorique} & \multicolumn{2}{c}{basse puissance} & \multicolumn{2}{c}{haute puissance} \\ 
+ \cmidrule(r){3-4} \cmidrule(lr){5-6} \cmidrule(l){7-8} 
+ $\Lambda$ $(\unit{\micro\meter})$ & $\zr$ $(\unit{cm})$ & $T$ $(\unit{\celsius})$ & $\alpha$ $(\unit{\percent\per\watt})$& $T$ $(\unit{\celsius})$ & $\alpha$ $(\unit{\percent\per\watt})$ & $T$ $(\unit{\celsius})$ & $\alpha$ $(\unit{\percent\per\watt})$   \\ \midrule
+ 6.9       & 0.6  & 66.0  & 4.2      & 84.0 & 2.8      & 77.0 & 2.3      \\
+ 6.9       & 0.9  & 66.0  & 3.4      & 84.2 & 3.1      & 75.0 & 2.2      \\
+ 6.9       & 2.6  & 66.2  & 1.6      & 84.0 & 1.2      & 75.0   & 2.9      \\ \bottomrule 
+\end{tabular}
+\caption{}
+\label{table:mes}
+\end{table}
+
+\subsection{Stabilité de la génération à haute puissance}
+
+
+\begin{figure}[htpb]  
+\centering
+%\hspace*{0.4cm}
+\begin{subfigure}[b]{\textwidth}
+	\centering
+	\include{./img/mesc1.tex}
+	\caption{Mesures pour $\Lambda=\SI{6.9}{\micro\meter}$ et $\zr = \SI{0.6}{cm}$ à $\SI{77.5}{\celsius}$ : \small L'alignement a été repris d'une optimisation préalable et on voit une montée en puissance sur les deux premières heures, qui corresondent au chauffage du cristal jusqu'à atteinte d'un régime permanent.}
+	\label{fig:mesc1}
+\end{subfigure}
+%\hspace*{0.4cm}
+\begin{subfigure}[b]{\textwidth}
+	\centering
+	\include{./img/mesc2.tex}
+	\caption{Mesures pour $\Lambda=\SI{6.96}{\micro\meter}$ et $\zr = \SI{0.6}{cm}$ à $\SI{77.5}{\celsius}$ : \small}
+	\label{fig:mesc2}
+\end{subfigure}
+%\hspace*{-0.8cm}
+\caption{Étude de la stabilité de la puissance doublée}
+\end{figure}
+
+
 \section{Conclusion}
 
 
 \setcitestyle{numbers}
+\bibliographystyle{abbrvnatnourl} %unsrtnat}
 \bibliography{rapport.bib}
-\bibliographystyle{unsrtnat}
 
 \newpage
 
 \appendix
-\section{\'Equation d'onde non-linéaire} 
+\section{\'Equation d'onde non-linéaire}  
 \label{NL}
 Considérons un milieu matériel non magnétique, dans lequel
 \begin{align*}
@@ -787,7 +830,7 @@ En prenant le rotationnel de l'équation de Maxwell-Faraday et en injectant l'é
 Le terme $\grad (\divg \v E)$ est nul dans un milieu linéaire isotrope (et sans charges libres) puisque $\divg \v D=0$ implique alors $\divg \v E = 0$, ou encore pour une onde plane transverse. En règle générale, ce terme est non nul à cause de l'anisotropie ou de la non-linéarité du matériau, mais il reste négligeable, en particulier dans l'approximation paraxiale \ncite{boyd}, et sera négligé par la suite.
 
 
-%terme négligé (angle de double réfraction \cite{joffre}) \cite{boyd}
+%terme négligé (angle de double réfraction \ncite{joffre}) \ncite{boyd}
 
 On décompose ensuite la polarisation en un terme linéaire $\v P^\mathsc{(1)}$ et un terme non linéaire $\v P^\mathsc{NL}$, et de même pour l'induction électrique $\v D = \v D^\mathsc{(1)} + \v D^\mathsc{NL} = \v D^\mathsc{(1)} + \v P^\mathsc{NL}$. 
 

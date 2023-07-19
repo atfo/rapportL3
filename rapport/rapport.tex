@@ -750,8 +750,6 @@ D'après la courbe figure \ref{fig:fwhm}, on s'attend donc à une largeur $\delt
 
 On peut également s'intéresser au profil du faisceau vert généré. En particulier, pour résoudre l'équation (\ref{eq:SHG}), nous avons postulé que le faisceau généré avait la même longueur de Rayleigh et un waist $\sqrt 2$ fois plus petit, et était focalisé au même point que le faisceau incident. 
 
-Discussion de l'hypothèse d'égalité des longueurs de Rayleigh
-
 \begin{figure}[h]  
 	\centering
 	\include{./img/comparaison-profils.tex}
@@ -759,14 +757,17 @@ Discussion de l'hypothèse d'égalité des longueurs de Rayleigh
 	\label{fig:vert}
 \end{figure}
 
+
 \section{Étude à haute puissance}
+
 L'étude à basse puissance a permis de réaliser un alignement convenable et de déterminer la température adaptée à la conversion. L'objectif du stage étant l'obtention d'environ $\SI{2}{\watt}$ de lumière verte, on cherche maintenant à maximiser le doublage pour une puissance du fondamental maximal. Le laser à notre disposition a une puissance maximale nominale de $\SI{10}{\watt}$, mais en génère plutôt $9$. Avec les pertes dans les séparateurs et dans la fibre à cristaux photoniques, il reste moins de $\SI{6}{\watt}$ incidents sur le cristal. On a donc choisi de modifier la trajectoire du faisceau pour contourner la fibre, ce qui a également permis de réduire le nombre de séparateurs sur son trajet. On arrive ainsi à environ $\SI{8.3}{\watt}$ incidents sur le cristal. 
 
 \subsection{Caractérisation à haute puissance}
 Pour chaque configuration, on commence par refaire une optimisation à basse puissance afin de minimiser les déplacements du faisceau faits à haute puissance.
-Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, la puissance doublée augmente en conséquence (avec $\alpha$ approximativement constant), mais retombe sur l'échelle de quelques secondes jusqu'à la dizaine de milliwatts au lieu de quelques watts. On constate alors que la température optimale (commandée au four) en régime établi est inférieure de plusieurs degrés à l'optimum à basse puissance, ce qui se comprend en considérant qu'une partie de la puissance du laser est absorbée par le cristal, ce qui conduit à un gradient de température dans le cristal. La température au niveau du laser est donc plus élevée que la température commandée au four. Les mesures effectuées à haute et basse puissance pour différentes configurations sont récapitulées dans le tableau \ref{table:mes}. 
+Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, la puissance doublée augmente en conséquence (avec $\alpha$ approximativement constant), mais retombe sur l'échelle de quelques secondes jusqu'à la dizaine de milliwatts au lieu de quelques watts. On constate alors que la température optimale (commandée au four) en régime établi est inférieure de plusieurs degrés à l'optimum à basse puissance, ce qui se comprend en considérant qu'une partie de la puissance du laser est absorbée par le cristal, ce qui conduit à un gradient de température dans le cristal. La température au niveau du laser est donc plus élevée que la température commandée au four. Les mesures effectuées à haute et basse puissance pour différentes configurations sont récapitulées dans le tableau \ref{table:mes}. On voit que les effets non-linéaires apparaissant aux hautes itensités, notamment des effets thermiques, limitent l'efficacité de conversion, de sorte que le choix d'un waist plus large que l'optimum théorique permet d'augmenter l'efficacité car l'intensité lumineuse est alors plus faible ce qui diminue les effets parasites.
 
-\begin{table}[h]\centering
+\begin{table}[htpb]
+\centering
 \ra{1.3}
 \begin{tabular}{@{}cccccccc@{}} \toprule
  &  & \multicolumn{2}{c}{théorique} & \multicolumn{2}{c}{basse puissance} & \multicolumn{2}{c}{haute puissance} \\ 
@@ -774,7 +775,7 @@ Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, l
  $\Lambda$ $(\unit{\micro\meter})$ & $\zr$ $(\unit{cm})$ & $T$ $(\unit{\celsius})$ & $\alpha$ $(\unit{\percent\per\watt})$& $T$ $(\unit{\celsius})$ & $\alpha$ $(\unit{\percent\per\watt})$ & $T$ $(\unit{\celsius})$ & $\alpha$ $(\unit{\percent\per\watt})$   \\ \midrule
  6.9       & 0.6  & 66.0  & 4.2      & 84.0 & 2.8      & 77.0 & 2.3      \\
  6.9       & 0.9  & 66.0  & 3.4      & 84.2 & 3.1      & 75.0 & 2.2      \\
- 6.9       & 2.6  & 66.2  & 1.6      & 84.0 & 1.2      & 75.0   & 2.9      \\ \bottomrule 
+ 6.9       & 2.6  & 66.2  & 1.6      & 84.0 & 1.2      & 75.0   & 2.7      \\ \bottomrule 
 \end{tabular}
 \caption{}
 \label{table:mes}

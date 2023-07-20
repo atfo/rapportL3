@@ -559,7 +559,7 @@ L'optimum de $a$ correspond à un compromis entre ces deux cas limites, avec une
 
 %On constate que l'optimum en $a$ est relativement souple, l'optimum $a=2.886$ et $a=3$ donnant essentiellement les mêmes courbes. 
 
-\section{Réalisation de la génération  de seconde harmonique} 
+\section{Réalisation de la génération  de seconde harmonique}  
 
 Maintenant que l'on a discuté le principe de la génération de seconde harmonique et déterminé les valeurs optimales des paramètres $a$ et $b$, nous allons présenter la mise en place expérimentale du doublage dans cette section puis étudier les résultats obtenus à la lumière des calculs théoriques dans la section suivante. Tous les règlages sont d'abord faits à basse puissance (autour de $\SI{100}{mW}$) pour des raisons de sécurité ainsi que pour éviter d'endommager le cristal.
 
@@ -569,7 +569,7 @@ Le cristal doubleur choisi pour mon stage est un cristal de niobate de lithium p
 
 Le cristal commandé chez Covesion a une longueur $L=\SI{20}{mm}$ et présente 5 bandes avec des inversions de périodes différentes : $\Lambda = \qtylist[list-units = single]{6.83; 6.86 ; 6.90 ; 6.93 ; 6,96}{\micro\meter}$ (figure \ref{fig:sc}).
 
-\subsection{Montage et alignement} 
+\subsection{Montage et alignement}  
 
 \begin{figure}[htpb]
 \centering
@@ -657,13 +657,13 @@ De façon plus détaillée, l'ajustement se fait ensuite selon le protocole suiv
 
 
 
-Le régime de doublage trouvé initialement a été pour la bande avec $\Lambda = \SI{6.9}{\micro\meter}$ et une température optimale autour de $\SI{83}{\celsius}$.
+Le régime de doublage trouvé initialement a été pour la bande avec $\Lambda = \SI{6.9}{\micro\meter}$ et une température optimale autour de $\SI{83}{\celsius}$. Cette température correspondrait à $\Lambda=\SI{6.87}{\micro\meter}$, ce qui reste supérieur à la valeur annoncée pour la bande voisine. Comme discuté en détail plus bas, il est difficile de connaître la vraie valeur de $\Lambda$ et de la température.
 
 \section{Étude à basse puissance}
 
 L'étude du doublage est d'abord faite à basse puissance afin d'éviter les effets thermiques qui, comme nous le verrons, compliquent considérablement le comportement à haute puissance. À haute puissance comme à basse puissance, l'accord avec la théorie laisse à désirer et, au vu du temps limité à disposition pour étudier la question, on doit se contenter des hypothèses pour expliquer le comportement observé.
 
-\subsection{Efficactité de conversion}
+\subsection{Efficactité de conversion} 
 
 On vérifie tout d'abord que la puissance générée est bien quadratique en la puissance incidente, comme en témoignent les données présentées figure \ref{fig:quadra}. On fait ensuite varier la température autour de l'optimum, en gardant les autres paramètres fixés. On obtient alors les mesures figure \ref{fig:alphabp}, qui montrent un optimum à $\SI{83.3}{\celsius}$ (on rappelle que l'on travaille avec la bande $\Lambda = \SI{6.9}{\micro\meter}$). L'allure de la courbe est plutôt en accord avec celle prédite par la théorie de Boyd et Kleinman. 
 
@@ -693,7 +693,7 @@ En effet, le tracé de $\alpha$ en fonction de la température correspond, modul
 avec $\beta = \num{1.5e-5}$ le coefficient de dilatation thermique du cristal.
 Les graphes de $\alpha(T)$ et de $h(a,b)$ à $a$ fixé (figure \ref{fig:bk-factor}) sont alors reliés par dilatation des deux axes.
 
-L'accord quantitatif pose plus de difficultés. En effet, on ne peut se fier avec certitude ni à la valeur de température indiquée par le module de contrôle du four (dont la sonde est au niveau de la monture en cuivre et non à l'intérieur du cristal chauffé par le laser), qui indiquait d'ailleurs $\SI{30}{\celsius}$ laser et asservissement éteints dans une salle à $\SI{25}{\celsius}$, ni à la valeur exacte de la période d'inversion $\Lambda$ (qui varie d'ailleurs aussi avec la dilatation thermique). Il est donc difficile de se placer sur la courbe figure \ref{fig:lp}, or il est nécessaire de connaître la température du cristal au niveau du faisceau pour avoir une valeur exacte des indices optiques et de $\Lambda$ et ainsi pouvoir calculer $\dke$.
+L'accord quantitatif pose plus de difficultés. En effet, on ne peut se fier avec certitude ni à la valeur de température indiquée par le module de contrôle du four (dont la sonde est au niveau de la monture en cuivre et non à l'intérieur du cristal chauffé par le laser), qui indiquait d'ailleurs $\SI{30}{\celsius}$ laser et asservissement éteints dans une salle à $\SI{25}{\celsius}$, ni à la valeur exacte de la période d'inversion $\Lambda$ (qui varie d'ailleurs aussi avec la dilatation thermique). Il est donc difficile de se placer sur la courbe figure \ref{fig:lp}, or il est nécessaire de connaître la température du cristal au niveau du faisceau pour avoir une valeur exacte des indices optiques et ainsi pouvoir calculer $\dke$.
 La valeur de $\chie$ varie d'un cristal à un autre et est également source d'incertitude. Covesion annonce d'ailleurs $\chie = \SI{28}{pm/V}$ alors que la valeur théorique correspondant à $\chi^{(2)}=\SI{50}{pm/V}$ est $\chie = \SI{32}{pm/V}$, ce qui fait passer le facteur devant $h$ de $\SI{5.5}{\percent\per\watt}$ à $\SI{4.2}{\percent\per\watt}$.
 
 Encore une autre source d'incertitude est la détermination du waist du faisceau incident dont $\zr$ dépend quadratiquement. D'ailleurs, avec le waist déterminé à $\SI{62.6}{\micro\meter}$, $a=0.41$ ce qui correspond à un maximum de $h = 0.39$ et donc un maximum de seulement $\alphae{2.1}$ même pour $\chie = \SI{32}{pm/V}$. Il faudrait plutôt $a=0.7$, ce qui correspond à un waist $\sqrt2$ fois plus petit, ce qui est difficiement reconciliable avec les mesures effectuées. % puisque un des waists $w(z)$ mesurés vaut $\SI{68\pm10}{\micro m}$, ce qui impose une borne supérieure sur la valeur de $w_0$. 
@@ -753,18 +753,18 @@ On peut également s'intéresser au profil du faisceau vert généré. En partic
 \begin{figure}[h]  
 	\centering
 	\include{./img/comparaison-profils.tex}
-	\caption{Comparaison des profils : \small Le faisceau généré a un profil proche de celui du fondamental au lieu d'être $\sqrt2$ fois plus petit comme prédit par la théorie de Boyd-Kleinman} %TODO
+	\caption{Comparaison des profils : \small Le faisceau généré a un profil proche de celui du fondamental au lieu d'être $\sqrt2$ fois plus petit comme prédit par la théorie de Boyd-Kleinman.} %TODO
 	\label{fig:vert}
 \end{figure}
 
 
 \section{Étude à haute puissance}
 
-L'étude à basse puissance a permis de réaliser un alignement convenable et de déterminer la température adaptée à la conversion. L'objectif du stage étant l'obtention d'environ $\SI{2}{\watt}$ de lumière verte, on cherche maintenant à maximiser le doublage pour une puissance du fondamental maximal. Le laser à notre disposition a une puissance maximale nominale de $\SI{10}{\watt}$, mais en génère plutôt $9$. Avec les pertes dans les séparateurs et dans la fibre à cristaux photoniques, il reste moins de $\SI{6}{\watt}$ incidents sur le cristal. On a donc choisi de modifier la trajectoire du faisceau pour contourner la fibre, ce qui a également permis de réduire le nombre de séparateurs sur son trajet. On arrive ainsi à environ $\SI{8.3}{\watt}$ incidents sur le cristal. 
+L'étude à basse puissance a permis de réaliser un alignement convenable et de déterminer la température adaptée à la conversion. L'objectif du stage étant l'obtention d'environ $\SI{2}{\watt}$ de lumière verte, on cherche maintenant à maximiser le doublage pour une puissance du fondamental maximal. Le laser à notre disposition a une puissance maximale nominale de $\SI{10}{\watt}$, mais en génère plutôt $9$. Avec les pertes dans les séparateurs et dans la fibre à cristaux photoniques, il reste moins de $\SI{6}{\watt}$ incidents sur le cristal. On a donc choisi de modifier la trajectoire du faisceau pour contourner la fibre, ce qui a également permis de réduire le nombre de séparateurs sur son trajet. On arrive ainsi à environ $\SI{8.5}{\watt}$ incidents sur le cristal. 
 
 \subsection{Caractérisation à haute puissance}
 Pour chaque configuration, on commence par refaire une optimisation à basse puissance afin de minimiser les déplacements du faisceau faits à haute puissance.
-Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, la puissance doublée augmente en conséquence (avec $\alpha$ approximativement constant), mais retombe sur l'échelle de quelques secondes jusqu'à la dizaine de milliwatts au lieu de quelques watts. On constate alors que la température optimale (commandée au four) en régime établi est inférieure de plusieurs degrés à l'optimum à basse puissance, ce qui se comprend en considérant qu'une partie de la puissance du laser est absorbée par le cristal, ce qui conduit à un gradient de température dans le cristal. La température au niveau du laser est donc plus élevée que la température commandée au four. Les mesures effectuées à haute et basse puissance pour différentes configurations sont récapitulées dans le tableau \ref{table:mes}. On voit que les effets non-linéaires apparaissant aux hautes itensités, notamment des effets thermiques, limitent l'efficacité de conversion, de sorte que le choix d'un waist plus large que l'optimum théorique permet d'augmenter l'efficacité car l'intensité lumineuse est alors plus faible ce qui diminue les effets parasites.
+Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, la puissance doublée augmente en conséquence (avec $\alpha$ approximativement constant), mais retombe sur l'échelle de quelques secondes jusqu'à la dizaine de milliwatts au lieu de quelques watts. On constate alors que la température optimale (commandée au four) en régime établi est inférieure de plusieurs degrés à l'optimum à basse puissance, ce qui se comprend en considérant qu'une partie de la puissance du laser est absorbée par le cristal, ce qui conduit à un gradient de température dans le cristal. La température au niveau du laser est donc plus élevée que la température commandée au four. Les mesures effectuées à haute et basse puissance pour différentes configurations sont récapitulées dans le tableau \ref{table:mes}. On voit que les effets non-linéaires apparaissant aux hautes itensités, notamment les effets thermiques, limitent l'efficacité de conversion, de sorte que le choix d'un waist plus large que l'optimum théorique permet d'augmenter l'efficacité en réduisant l'intensité lumineuse et donc les effets parasites. Bien que ces efficacités soient plutôt encourageantes (elles correspondent à presque $\SI{2}{\watt}$ de lumière verte), le doublage est en fait extrêment instable, avec une puissance qui peut retomber à quelques dizaines de milliwatts en une minute. On peut retrouver un bon doublage en modifiant légèrement l'alignement, mais ce n'est évidemment pas viable.
 
 \begin{table}[htpb]
 \centering
@@ -783,6 +783,13 @@ Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, l
 
 \subsection{Stabilité de la génération à haute puissance}
 
+J'avais constaté que la première configuration (avec $\zr=\SI{0.6}{cm}$) était tout de même plus stable que les suivantes (et ce malgré la plus grande intensité vu que le waist est plus petit). Après différents essais, je suis arrivé à l'hypothèse que cette configuration était plus stable car je m'étais placé à une température plus élevée. En effet, quitte à adapter l'alignement, il est possible pour ces trois valeurs de $\zr$ d'avoir une efficacité semblable à $\SI{75}{\celsius}$ et à $\SI{77}{\celsius}$. On comprend que, en variant l'inclinaison du faisceau, on varie la période effective d'inversion $\Lambda$, et que l'on peut de la sorte compenser la variation de $\Delta k$ avec la température. En revanche, il est difficile de juger laquelle des configurations (à $75$ ou à $\SI{77}{\celsius}$) correspond à faisceau horizontal car, avec la précision avec laquelle on peut déterminer la position du faisceau infrarouge, le faisceau semble horizontal dans les deux cas. 
+
+J'ai donc essayé de chercher des règlages à une température plus élevée, quitte à avoir une moins bonne efficacité de conversion. Après différents essais, la meilleure stabilité a été obtenue pour $\zr=\SI{0.6}{cm}$ à $\SI{77.5}{\celsius}$ : $\SI{1.2}{\watt}$ \footnote{Je parle désormais en puissance générée et non en efficacité de conversion, car l'objectif final est de maximiser la puissance.} de lumière verte sur 2h30, avec des fluctuations de quelques pourcents. C'est acceptable en termes d'amplitude des fluctuations, mais cela reste trop court. 
+
+Enfin, puisqu'une température plus élevée semble améliorer la stabilité, j'ai essayé la bande $\Lambda=\SI{6.83}{\micro\meter}$ (cf. la dernière du tableau \ref{table:mes}). Étonnemment, j'ai retrouvé le même phénomène d'un premier régime instable à $\SI{127}{\celsius}$ avant de trouver un régime plus stable à $\SI{129}{\celsius}$. Après quelques essais d'alignement différents qui donnaient un doublage sur l'échelle de la demi-heure puis de l'heure, j'ai trouvé un règlage qui semblait stable. Se mettre à une température élevée semble finalement avoir aidé, puisque j'ai trouvé un régime plus stable et avec plus de puissance (autour de $\SI{1.5}{\watt}$). Comme des alignements très proches donnent des stabilités très différentes, il est cependant difficile de conclure avec certitude.
+
+L'évolution de la puissance produite en fonction du temps est tracée figure \ref{fig:mesc1}. On voit en particulier un régime stable la nuit qui s'interrompt vers 7h du matin. Cela laisse penser que la cause de la déstabilisation au bout de plusiers heures (probablement d'origine différente de la déstabilisation en quelques minutes) est liée à des perturbations extérieures plutôt qu'au comportement du cristal, par exemple un mouvement ou une dilatation thermique des optiques. Il convient de souligner que l'expérience est montée dans une salle ``annexe'' qui ne dispose pas d'un contrôle fin en température mais seulement d'un système de climatisation standard (sans asservissement en température). La température est maintenue autour de $\SI{25.5+-0.2}{\celsius}$, mais la soufflerie en elle-même pourrait perturber l'expérience. À titre de comparaison, j'ai également étudié la stabilité avec la climatisation éteinte, avec le même alignement et la même température du four. La température de la salle était alors de $\SI{27.5+-0.3}{\celsius}$ la journée. La température variait plus qu'avec la climatisation, mais plus lentement. L'évolution de la puissance au cours du temps est donnée figure \ref{fig:mesc2}. Les fluctuations semblent moins importantes, mais sans répéter l'expérience il est difficile de conclure de manière définitive car les sources de perturbation peuvent être multiples. Idéalement, il faudrait remonter l'expérience dans une salle contrôlée en température afin de s'affranchir dans une large mesure des fluctuations thermiques pour pouvoir identifier quelles sources de perturbation sont les plus néfastes. On peut remarquer que, bien que la température de la salle ait changé de $\SI{2}{\celsius}$, je n'ai pas eu besoin de toucher à l'alignement, ce qui semble indiquer que le désalignement du fait de la dilatation thermique des optiques n'est pas la cause des variations de puissance observées.
 
 \begin{figure}[htpb]  
 \centering
@@ -797,11 +804,11 @@ Lorsque l'on augement la puissance à partir d'un règlage à basse puissance, l
 \begin{subfigure}[b]{\textwidth}
 	\centering
 	\include{./img/mesc2.tex}
-	\caption{Seconde session, sans ventilation : \small}
+	\caption{Seconde session, sans ventilation : \small Il manque les premières 10 minutes après le démarrage avec une puissance plutôt constante à $\SI{1.74+-0.01}{\watt}$. On voit que la puissance semble plus stable sans la ventilation.}
 	\label{fig:mesc2}
 \end{subfigure}
 %\hspace*{-0.8cm}
-\caption{Étude de la stabilité de la puissance doublée pour $\Lambda=\SI{6.83}{\micro\meter}$ et $\zr = \SI{0.6}{cm}$ à $\SI{129}{\celsius}$}
+\caption{Étude de la stabilité de la puissance doublée pour $\Lambda=\SI{6.83}{\micro\meter}$ et $\zr = \SI{0.6}{cm}$ à $\SI{129}{\celsius}$ (puissance incidente : $\SI{8.0}{\watt}$)}
 \end{figure}
 
 

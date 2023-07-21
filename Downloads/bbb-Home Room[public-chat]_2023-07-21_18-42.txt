@@ -1,0 +1,12 @@
+[14:29] Alexandre Fouquet: 27.0°C
+[15:20] Lab: 27.1°C
+[15:40] Lab: 27.0
+[10:40] Lab: 27.7°C
+[18:46] Lab: 27.2
+[18:50] Welcome to Home Room!For help on using BigBlueButton see these (short) tutorial videos.To join the audio bridge click the speaker button.  Use a headset to avoid causing background noise for others.This server is running BigBlueButton.
+[18:50] To invite someone to the meeting, send them this link: https://bigbluebutton2.ens-lyon.fr/b/ale-dsw-4wf-omh
+[10:30] Lab: 27.5
+[13:12] Lab: 7.9W
+[13:12] Lab: 3.33 V
+[13:12] Lab: 129°C
+[13:47] Lab: 75mm

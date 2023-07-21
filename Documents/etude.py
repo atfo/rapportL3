@@ -119,6 +119,7 @@ def caract(zr,lp):
     dkeff_opt = - bo/zr # cm-1
     Topt = Tdeb(bo,lp,zr)
     dT = Tdeb(bp,lp,zr)-Tdeb(bm,lp,zr)
+    lp_opt = 2*np.pi / (2*np.pi*(n2(Topt)-n1(Topt))/lmbd2 - dkeff_opt) / (1+cexp*(Topt-T0)) # à T0
     c= {
         'a' : a,
         'bo' : bo,
@@ -127,7 +128,8 @@ def caract(zr,lp):
         'db' : bp-bm,
         'dkeff_opt' : - bo/zr, # cm-1
         'Topt' : Topt,
-        'dT' : dT
+        'dT' : dT,
+        'lp' : lp_opt
         #dT2 = - 2*np.pi * zr /lmbd2 * 1e4 * (n2(100)-n1(100)-n2(80)+n1(80))/20
     }
     return c
@@ -180,7 +182,7 @@ if __name__ == "__main__":
         plt.legend()
         savefig("dbaffine")
     plt.figure()
-    if True:    
+    if False:    
         zr_arr = np.linspace(0.1,3,40)
         #with plt.style.context(['science']):#, 'scatter']):
         for lp in [6.85,6.86,6.87,6.88,6.9]:
@@ -189,7 +191,25 @@ if __name__ == "__main__":
             plt.legend()
             plt.xlabel("$z_R$ (cm)")
             plt.ylabel("$\delta T$ FWHM (°C)")
-            savefig("dt")
+            #savefig("dt")
+    if True:
+        plt.plot(TT, [(n2(T)-n1(T))*1e2 for T in TT], label='équation de Sellmeier')
+        plt.ylabel(r'$n_2-n_1$ $\left(\times 10^{-2}\right)$')
+        plt.xlabel(r'T (°C)')
+        #plt.legend()
+        #savefig("sellmeier")
+        plt.figure()
+        zr = 2.4
+        bo = bopt(1/zr)
+        print(bo)
+        plt.plot([2*np.pi / (2*np.pi*(n2(T)-n1(T))/lmbd2 + bo/zr*1e-4) / (1+cexp*(T-T0)) for T in TT], TT)
+        #plt.plot([2*np.pi / (2*np.pi*(n2(T)-n1(T))/lmbd2) / (1+cexp*(T-T0)) for T in TT], TT)
+        #plt.plot([2*np.pi / (2*np.pi*(n2(T)-n1(T))/lmbd2 + 1.6*1e-4) / (1+cexp*(T-T0)) for T in TT], TT)
+        lp_arr = np.linspace(6.75,6.93,100)
+        # plt.plot(lp_arr, [caract(zr,lp)['Topt'] for lp in lp_arr]) # pour vérifier validité calculs (not. Tdeb)
+        plt.xlabel("$\Lambda$ à 20°C ($\mu$m)")
+        plt.ylabel("température optimale (°C)")
+        #savefig("topt")
     plt.show()
     
     

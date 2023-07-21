@@ -7,6 +7,9 @@
    id="svg31912"
    sodipodi:docname="cristal.svg"
    inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   inkscape:export-filename="rapport/img/cristal.pdf"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +29,7 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="2.0486111"
-     inkscape:cx="264.32543"
+     inkscape:cx="304.59661"
      inkscape:cy="298.25085"
      inkscape:window-width="1280"
      inkscape:window-height="956"
@@ -69,46 +72,6 @@
          style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
          d="M 3,-3 0,0 3,3"
          id="path32633"
-         transform="rotate(180,0.125,0)"
-         sodipodi:nodetypes="ccc" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="marker32607"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Arrow1"
-       markerWidth="3.85353268"
-       markerHeight="6.70710678"
-       viewBox="0 0 3.85353268 6.70710678"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
-         d="M 3,-3 0,0 3,3"
-         id="path32605"
-         transform="rotate(180,0.125,0)"
-         sodipodi:nodetypes="ccc" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Arrow1"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Arrow1"
-       markerWidth="3.85353268"
-       markerHeight="6.70710678"
-       viewBox="0 0 3.85353268 6.70710678"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
-         d="M 3,-3 0,0 3,3"
-         id="path5057"
          transform="rotate(180,0.125,0)"
          sodipodi:nodetypes="ccc" />
     </marker>
@@ -31311,17 +31274,17 @@
        y="186.96036">L = 20 mm</tspan></text>
   <path
      style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.751177;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-start:url(#marker32635);marker-end:url(#marker32635);stop-color:#000000;stop-opacity:1"
-     d="m 272.24441,265.85792 c 0,14.70234 0,14.70234 0,14.70234"
+     d="m 273.74441,265.85792 c 0,14.70234 0,14.70234 0,14.70234"
      id="path35848" />
   <text
      xml:space="preserve"
      style="font-size:7.54px;font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.751177;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-start:url(#marker32635);marker-end:url(#marker32635);stop-color:#000000;stop-opacity:1"
-     x="274.284"
+     x="277.284"
      y="275.67645"
      id="text35934"><tspan
        sodipodi:role="line"
        id="tspan35932"
        style="font-size:7.54px;fill:#000000;fill-opacity:1;stroke-width:0.751177"
-       x="274.284"
+       x="277.284"
        y="275.67645">1 mm</tspan></text>
 </svg>

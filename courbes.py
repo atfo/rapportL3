@@ -9,8 +9,26 @@ import sys, argparse
 
 import boyd
 
-plt.style.use('science')
+from boydf import alpha_np as balpha
 
+import tikzplotlib
+import matplotlib as mpl
+
+plt.style.use('science')
+mpl.rcParams['lines.linewidth'] = 3
+
+def tpl_fix(obj):
+    """
+    workaround for matplotlib 3.6 renamed legend's _ncol to _ncols, which breaks tikzplotlib
+    """
+    if hasattr(obj, "_ncols"):
+        obj._ncol = obj._ncols
+    for child in obj.get_children():
+        tpl_fix(child)
+
+def savefig(name):
+    tpl_fix(plt.gcf())
+    tikzplotlib.save(name+".tex")
 
 def idata(fname):
     return np.genfromtxt('./donnees/'+fname, delimiter=',', skip_header=1, usemask=True)
@@ -74,8 +92,8 @@ depp = {
         'fitlbl': "$\\alpha = \\frac{{P_2}}{{P_1^2}} = {:.3} \mathrm{{W/W^2}}$"
 }
 
-def gprofile(z,w0,z0):
-    lmbd = 1.064 # um
+def gprofile(z,w0,z0, lmbd=1.064):
+    #lmbd = 1.064 # um
     zr=np.pi*w0**2/lmbd * 1e-4 # cm
     print('w0='+str(w0)+'zr='+str(zr))
     return w0*np.sqrt(1+(z-z0)**2 / zr**2)
@@ -85,13 +103,13 @@ waist = {
         'name': 'waist faisceau incident',
         'xlabel': r"distance z à la lentille ($\mathrm{cm}$)",
         'xdata': 1.2+np.array([41, 26.5, 5, 3.5, 9.2, 3, 14, 27, 20]), # distance au bord de la lentille (cm), +1.2cm à cause de la profondeur caméra
-        'xerr': 0.1,
+        'xerr': 0.3,
         'xlims': (0,45),
         'ylabel': r"waist ($\mathrm{\mu m}$)",
         'ydata': np.array([3990, 2486, 200, 136, 602, 174, 1070, 2580, 1820])/2,  # waist horizontal (um)
-        'yerr': np.array([200]+[20]*8)/2,
+        'yerr': np.array([200]+[80]*8)/2,
         'y2data': np.array([4100, 2740, 206, 133, 622, 184, 1230, 2780, 2040])/2,
-        'ylims': (0,4000),
+        'ylims': (0,2000),
         'func': gprofile,
         'fitlbl': "$w_0=$ {:.1f} $\\mathrm{{\\mu m}}$, $z_0=$ {:.1f} $\\mathrm{{cm}}$",
         'datalbl': "waist mesuré",
@@ -108,8 +126,8 @@ profil_vert = {
         'ydata': np.array([3543, 3505, 3000, 3638, 3262, 3211, 3300])/2,  # waist horizontal (um)
         'yerr': 50,
         'y2data': np.array([4100, 2740, 206, 133, 622, 184, 1230, 2780, 2040])/2,
-        'ylims': (0,4000),
-        'func': gprofile,
+        'ylims': (0,2000),
+        'func': lambda z,w0,z0: gprofile(z,w0,z0,0.532),
         'fitlbl': "$w_0=$ {:.1f} $\\mathrm{{\\mu m}}$, $z_0=$ {:.1f} $\\mathrm{{cm}}$",
         'datalbl': "waist mesuré",
         'nomask': True
@@ -132,21 +150,7 @@ def boyd_fit(T,zr,lp,c):
         res.append(c*boyd.alpha(zr,T))
     return res
 
-depTbP = {
-    'name': 'Efficacité de conversion à basse puissance en fonction de la température',
-    'xlabel': "Température (°C)",
-    'xdata': ddepTbP[:,2],
-    'xlims': (77.8,90.2),
-    'ylabel': r'$\alpha$ $(W/W^2)$',
-    'ydata': alpha,
-    'ylims': (-0.001,0.04),
-    'xerr': 0.001,
-    'yerr': 0.0001,
-    'func': lambda T,zr,lp,c: c*boyd.alpha(zr,T,lp),
-    'p0': [1.2,6.8741,0.143],
-    'bounds': ([0.5,]),
-    'fitlbl': 'Ajustement'#' à la théorie de Boyd-Kleinman (zr = {}, lp = {}, c = {})'
-}
+
 
 waist_shunte = {
         'name': 'waist faisceau laser',
@@ -219,7 +223,7 @@ def plot_data(data, p=None):
     #ax = plt.axes((0.1,0.1,0.5,0.8))
     x = data['xdata']
     y = data['ydata']
-    ax.errorbar(data['xdata'], data['ydata'], xerr=data['xerr'], yerr=data['yerr'], fmt='.', markersize=0.2)
+    ax.errorbar(data['xdata'], data['ydata'], xerr=data['xerr'], yerr=data['yerr'], fmt='.', markersize=0.2, label=data['datalbl'])
     if 'func' in data and p==None:    
         xx = np.linspace(data['xlims'][0], data['xlims'][1])
         if not ('nomask' in data):
@@ -231,7 +235,7 @@ def plot_data(data, p=None):
         ax.plot(xx, data['func'](xx, *a), label=data['fitlbl'].format(*a))
         print(*a)
     if p:
-        xx = np.linspace(data['xlims'][0], data['xlims'][1], 100)
+        xx = np.linspace(data['xlims'][0], data['xlims'][1], 1000)
         ax.plot(xx, data['func'](xx, *p), label=data['fitlbl'].format(*p))
         #axs[0].plot(xx, data['func'](xx,*p))
     #ax.margins(0.3)
@@ -244,19 +248,20 @@ def plot_data(data, p=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', action='store_true')    
     if parser.parse_args().s:    
-        plt.savefig(data['name']+".pdf", dpi=300)
+        #plt.savefig(data['name']+".pdf", dpi=300)
+        savefig(data['name'])
 
 if False:
     plt.plot(uu, a*uu, label="{:3.0f} mV/mw".format(a), linestyle="--")
     plt.xlabel("Tension (mV)")
     plt.ylabel("Puissance avant lentille (mW)")
 
-plot_data(calib)
+#plot_data(calib)
 #plot_data(depp)
 #plot_data(waist)
 #plot_data(depTbP)
 #plot_data(depTbP, p=[1.2,6.8741,0.143])
-plot_data(waist_100)
+#plot_data(waist_100)
 
 
 waist_test = {
@@ -275,9 +280,60 @@ waist_test = {
         'nomask': True
 }
 
-plot_data(waist_150)
+#plot_data(waist_150)
 
 #plot_data(profil_vert)
+
+
+depTbP = {
+    'name': 'Efficacité de conversion à basse puissance en fonction de la température',
+    'xlabel': "Température (°C)",
+    'xdata': ddepTbP[:,2],
+    'xlims': (77.8,90.2),
+    'ylabel': r'$\alpha$ $(W/W^2)$',
+    'ydata': alpha,
+    'ylims': (-0.001,0.04),
+    'xerr': 0.001,
+    'yerr': 0.0001,
+    'func': lambda T,zr,lp,c: balpha(zr,T,lp,c),
+    'p0': [1.2,6.8741,0.143],
+    'bounds': ([0.5,]),
+    'fitlbl': 'Ajustement'#' à la théorie de Boyd-Kleinman (zr = {}, lp = {}, c = {})'
+}
+
+d75mf = idata('f75malfoc.csv')
+
+print(d75mf[:,0]+8)
+
+depT75mf = {
+    'name': 'Efficacité de conversion à basse puissance en fonction de la température (f = 75 mm)',
+    'xlabel': "Température (°C)",
+    'xdata': d75mf[:,0]+8,
+    'xlims': (77.8,90.2),
+    'ylabel': r'$\alpha$ $(W/W^2)$',
+    'ydata': d75mf[:,1]*1e-2,
+    'ylims': (-0.001,0.04),
+    'xerr': 0.001,
+    'yerr': 0.0001,
+    'func': lambda T,zr,lp,c: balpha(zr,T,lp,c),
+    'p0': [1.2,6.8741,0.143],
+    'bounds': ([0.5,]),
+    'fitlbl': 'Ajustement'#' à la théorie de Boyd-Kleinman (zr = {}, lp = {}, c = {})'
+}
+
+plot_data(waist)
+plot_data(profil_vert)
+plt.figure()
+plt.scatter(waist['xdata'],waist['ydata'], label='fondamental')
+plt.scatter(profil_vert['xdata'],profil_vert['ydata'], label='seconde harmonique')
+plt.legend()
+plt.xlabel(waist['xlabel'])
+plt.ylabel(waist['ylabel'])
+
+#plot_data(depTbP)
+#plot_data(depTbP, p=[2.48,6.862,0.097*(17/14)**2])
+#plot_data(depT75mf, p=[1.7,6.862,0.097*(17/14)**2])
+savefig("comparaison-profils")
 plt.show()
 
 

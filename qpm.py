@@ -6,9 +6,11 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 import scienceplots
 plt.style.use('science')
 import tikzplotlib
+mpl.rcParams['lines.linewidth'] = 3
 
 
 def tpl_fix(obj):
@@ -38,13 +40,14 @@ def fun2(z):
     return 1j*np.exp(-1j*np.pi*z)*np.sign(np.cos(np.pi*z))
 def fun3(z):
     return 1j*np.exp(-1j*np.pi*z)*2/np.pi*np.exp(1j*np.pi*z)
-plt.plot(xx,xx)
-plt.plot(xx,np.abs(integr(xx,fun)))
-plt.plot(xx,np.abs(integr(xx,fun2)))
-plt.plot(xx,np.abs(integr(xx,fun3)), linestyle="--")
-plt.xlabel(r"$z/L_\text{sc}$")
-plt.ylabel(r"Amplitude $\mathcal A_2$")
-#savefig("QPM")
+plt.plot(xx,xx, label='accord parfait ($\Delta k = 0$)')
+plt.plot(xx,np.abs(integr(xx,fun)), label='sans accord de phase')
+plt.plot(xx,np.abs(integr(xx,fun2)), label='quasi-accord de phase')
+plt.plot(xx,np.abs(integr(xx,fun3)), label='avec que le fondamental de $\chi^{(2)}$')#, linestyle="--")
+plt.xlabel(r"$z/L_\text{coh}$")
+plt.ylabel(r"Amplitude $\left|\mathcal A_2\right|$")
+plt.legend()
+savefig("QPM")
 plt.savefig("QPM.pdf")
 plt.show()
 

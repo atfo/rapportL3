@@ -10,20 +10,8 @@ from matplotlib.colors import LogNorm
 from tqdm import tqdm
 import sys, argparse
 import scienceplots
-import tikzplotlib
-import matplotlib as mpl
 
 plt.style.use('science')
-mpl.rcParams['lines.linewidth'] = 3
-
-def tpl_fix(obj):
-    """
-    workaround for matplotlib 3.6 renamed legend's _ncol to _ncols, which breaks tikzplotlib
-    """
-    if hasattr(obj, "_ncols"):
-        obj._ncol = obj._ncols
-    for child in obj.get_children():
-        tpl_fix(child)
 
 L=2 #cm
 lp = 6.874 #um
@@ -44,15 +32,6 @@ def n1(T):
 
 def n2(T):
     return n(T,lmbd2)
-
-def complex_quad(func, a, b, **kwargs):
-    def real_func(x):
-        return np.real(func(x))
-    def imag_func(x):
-        return np.imag(func(x))
-    real_integral = integr.quad(real_func, a, b, **kwargs)
-    imag_integral = integr.quad(imag_func, a, b, **kwargs)
-    return real_integral[0] + 1j*imag_integral[0]
 
 def h(a,b):
     def f(t):
@@ -75,7 +54,7 @@ def alpha(zr,T,lp):
     b = dk*zr
     #print(dk)
     #print('b: {}'.format(b))
-    return L*h(a,b)/n1/n2
+    return 0.143*L*h(a,b)/n1/n2
 
 #print(h(1,2))
 #print(alpha(10,100))
@@ -83,21 +62,76 @@ def alpha(zr,T,lp):
 def deltak(T):
     n1=n(T,lmbd1)
     n2=n(T,lmbd2)
-    return 2*np.pi*(2*n1/lmbd1-n2/lmbd2)*1e4 #de um-1 a cm-1
+    return 2*np.pi*(2*n1/lmbd1-n2/lmbd2) #de um-1 a cm-1
 
 def grad(f,x):
     return (np.roll(f,1)-f)/(np.roll(x,1) - x)
 
-def savefig(name):
-    tpl_fix(plt.gcf())
-    tikzplotlib.save(name+".tex")
+Lc = np.array([6.83,6.86,6.9,6.93,6.96])
+Tc = np.array([103,88,67,50,33])
+
+def edind(Lc):
+    return 0.532*(1/Lc)# - 1.6e-4/(2*np.pi))
+
+def dn(T):
+    coeffs = np.polyfit(Tc-80, edind(Lc), deg=2)
+    return np.polyval(coeffs, T-80)
+
+def lpopt(T):
+    return 2*np.pi / (1.6e-4 + 2*np.pi*dn(T)/lmbd2)
+
+def alphaC(zr,T,lp):
+    a = L/(2*zr)
+    b = zr * 2*np.pi* (1/lp - dn(T)/lmbd2 ) * 1e4
+#    print('a={}, b={}'.format(a,b))
+    return 0.143*L/n1(T)/n2(T) * h(a,b)
+
+cexp = 1.5e-5
+
+def alpha_corr(zr,T,lp,c):  
+    LT = L*(1+cexp*(T-20))
+    lpT = lp*(1+cexp*(T-20))
+    a = LT/(2*zr)
+    b = zr * 2*np.pi* (1/lpT - dn(T)/lmbd2 ) * 1e4
+    return c*LT/n1(T)/n2(T) * h(a,b)
+
+def alpha_np(zr,T,lp,c):
+    return [alpha_corr(zr,T,lp,c) for T in T]
 
 if __name__ == "__main__":
-    TT = np.linspace(40,110,500)
+    print("n1={} et n2={} à 100°C".format(n1(10), n2(100)))
+    TT = np.linspace(30,150,500)
     plt.plot(TT, deltak(TT))
-    plt.ylabel(r'$\Delta k$ ($cm^{-1}$)')
+    plt.ylabel(r'$\Delta k$ ($\mu m^{-1}$)')
     plt.xlabel(r'T (°C)')
     plt.figure()
+    # n2-n1 from Covesion data  
+    plt.plot(Tc, edind(Lc), '+', label='données Covesion')
+    plt.plot(TT, n2(TT)-n1(TT), '--', label='équation de Sellmeier')
+    coeffs = np.polyfit(Tc-80, edind(Lc), deg=2)
+    print(coeffs)
+    plt.plot(TT, np.polyval(coeffs,TT-80), '--', label='ajustement quadratique')
+    plt.xlabel(r'T (°C)')
+    plt.ylabel(r'$n_2-n_1$')
+    plt.xlabel(r'T (°C)')
+    plt.legend()
+    plt.figure()
+    plt.plot(TT, lpopt(TT), label='sans dilatation thermique')
+    plt.plot(TT, lpopt(TT)*(1-cexp*(TT-20)), label='avec dilatation thermique')
+    plt.ylabel(r"période d'inversion $\Lambda$ optimale ($\mu$m)")
+    plt.xlabel(r'T (°C)')
+    plt.legend()
+    plt.figure()
+    # h(T) from C data
+    plt.plot(TT, alphaC(0.35,TT,6.9), label='sans dilatation thermique')
+    plt.plot(TT, [alpha_corr(0.35,T,6.9) for T in TT], label='avec dilatation thermique')
+    plt.ylabel(r'$\alpha$(T) (W/W$^2$)')
+    plt.xlabel(r'T (°C)')
+    plt.legend()
+    plt.figure()
+
+    # temperature bandwidth
+
     def dT(TT):
         beta = 15e-6
         n2a = n2(TT)
@@ -105,37 +139,27 @@ if __name__ == "__main__":
         #grads = np.gradient(n2,TT)-np.gradient(n1,TT)
         grads = grad(n2a,TT) - grad(n1a,TT) 
         return 0.4429*lmbd1/L*1e-4 / (grads - beta*(n2a-n1a))
-    plt.plot(TT, dT(TT), '.')
-    plt.ylabel(r'$\delta T$ (°C)')
-    plt.xlabel(r'T (°C)')
-    plt.figure()
+#    plt.plot(TT, dT(TT), '.')
+#    plt.ylabel(r'$\delta T$ (°C)')
+#    plt.xlabel(r'T (°C)')
+#    plt.figure()
+
+
     parser = argparse.ArgumentParser()
     parser.add_argument('-u', action='store_true')    
-    s1 = 251
-    s2 = 201
+    s1 = 201
+    s2 = 101
     a_arr = np.linspace(0.01, 8, s1)
     b_arr = np.linspace(-4, 4, s2)
-    
-    bb = np.linspace(-4, 4, 301)
-    for a in [0.5,1,2,2.8,3,10,100]:
-        plt.plot(bb, h(a, bb), label='a={}'.format(a))
-        #plt.plot(bb, a*(np.sinc(a*bb/np.pi))**2, label='approx onde plane')
-    plt.xlabel(r'$b$')
-    plt.ylabel(r'$h(a,b)$')
-    plt.legend()
-    #plt.savefig("bk-factor.pdf", dpi=300)
-    tpl_fix(plt.gcf())
-    tikzplotlib.save("bk-factor.tex")
-    plt.figure()
 
     if parser.parse_args().u:
         im = np.empty((s2, s1))
         for i in tqdm(range(s2)):
             for j in range(s1):
                 im[i,j] = h(a_arr[j], b_arr[i])
-        np.savez("h_cmap"+str(lp), im=im)
+        np.savez("scratch_cmap"+str(lp), im=im)
     else:
-        im = np.load("h_cmap"+str(lp)+".npz")['im']
+        im = np.load("scratch_cmap"+str(lp)+".npz")['im']
     
 
     ind = (np.unravel_index(im.argmax(), im.shape))
@@ -144,7 +168,5 @@ if __name__ == "__main__":
     plt.xlabel(r'$a$')
     plt.ylabel(r'$b$')
     plt.colorbar()
-    #plt.savefig("bk-factor-cmap.pdf", dpi=300)    
-    savefig("bk-factor-cmap")    
     plt.show()
 

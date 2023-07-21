@@ -71,7 +71,7 @@ def alpha(zr,T,lp):
 def deltak(T):
     n1=n(T,lmbd1)
     n2=n(T,lmbd2)
-    return 2*np.pi*(2*n1/lmbd1-n2/lmbd2)*1e4 #de um-1 a cm-1
+    return 2*np.pi*(2*n1/lmbd1-n2/lmbd2) #de um-1 a cm-1
 
 def grad(f,x):
     return (np.roll(f,1)-f)/(np.roll(x,1) - x)
@@ -105,9 +105,10 @@ def alpha_corr(zr,T,lp):
     return 0.143*LT/n1(T)/n2(T) * h(a,b)
 
 if __name__ == "__main__":
+    print("n1={} et n2={} à 80°C".format(n1(80), n2(80)))
     TT = np.linspace(30,150,500)
     plt.plot(TT, deltak(TT))
-    plt.ylabel(r'$\Delta k$ ($cm^{-1}$)')
+    plt.ylabel(r'$\Delta k$ ($\mu m^{-1}$)')
     plt.xlabel(r'T (°C)')
     plt.figure()
     # n2-n1 from Covesion data  
@@ -116,6 +117,7 @@ if __name__ == "__main__":
     coeffs = np.polyfit(Tc-80, edind(Lc), deg=2)
     print(coeffs)
     plt.plot(TT, np.polyval(coeffs,TT-80), '--', label='ajustement quadratique')
+    print('d(delta keff)',-2*np.pi/lmbd2*(np.polyval(coeffs,83.9-80)-np.polyval(coeffs,82.4-80)))
     plt.xlabel(r'T (°C)')
     plt.ylabel(r'$n_2-n_1$')
     plt.xlabel(r'T (°C)')
@@ -128,6 +130,7 @@ if __name__ == "__main__":
     plt.legend()
     plt.figure()
     # h(T) from C data
+    TT = np.linspace(55,80,500)
     plt.plot(TT, alphaC(0.35,TT,6.9), label='sans dilatation thermique')
     plt.plot(TT, [alpha_corr(0.35,T,6.9) for T in TT], label='avec dilatation thermique')
     plt.ylabel(r'$\alpha$(T) (W/W$^2$)')
@@ -168,7 +171,7 @@ if __name__ == "__main__":
     
 
     ind = (np.unravel_index(im.argmax(), im.shape))
-    print(b_arr[ind[0]],a_arr[ind[1]])
+    print('b=',b_arr[ind[0]],'a=',a_arr[ind[1]],'h=',np.max(im))
     plt.imshow(im, extent=(np.amin(a_arr), np.amax(a_arr), np.amin(b_arr), np.amax(b_arr)), origin='lower', aspect="auto", cmap=cm.inferno) #, norm=LogNorm())
     plt.xlabel(r'$a$')
     plt.ylabel(r'$b$')

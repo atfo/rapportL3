@@ -2,28 +2,25 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: rapport.aux
 A level-1 auxiliary file: ./img/qpm.aux
-White space in argument---line 73 of file rapport.aux
- : \@input{./img/waist
- :                     faisceau incident.aux}
-I'm skipping whatever remains of this command
+A level-1 auxiliary file: ./img/waist_faisceau_incident.aux
 A level-1 auxiliary file: ./img/sellmeier.aux
 A level-1 auxiliary file: ./img/topt.aux
-The style file: unsrtnat.bst
+The style file: abbrvnatnourl.bst
 Database file #1: rapport.bib
 Warning--empty booktitle in grimm
 Warning--empty year in covesion
 You've used 9 entries,
-            2481 wiz_defined-function locations,
-            637 strings with 6622 characters,
-and the built_in function-call counts, 3430 in all, are:
-= -- 304
+            2746 wiz_defined-function locations,
+            681 strings with 6784 characters,
+and the built_in function-call counts, 3346 in all, are:
+= -- 286
 > -- 159
 < -- 8
 + -- 66
 - -- 48
-* -- 271
-:= -- 575
-add.period$ -- 41
+* -- 259
+:= -- 557
+add.period$ -- 35
 call.type$ -- 9
 change.case$ -- 18
 chr.to.int$ -- 9
@@ -31,13 +28,13 @@ cite$ -- 11
 duplicate$ -- 166
 empty$ -- 296
 format.name$ -- 57
-if$ -- 716
+if$ -- 698
 int.to.chr$ -- 1
 int.to.str$ -- 10
 missing$ -- 7
-newline$ -- 66
+newline$ -- 60
 num.names$ -- 27
-pop$ -- 64
+pop$ -- 70
 preamble$ -- 1
 purify$ -- 9
 quote$ -- 0
@@ -52,5 +49,5 @@ type$ -- 60
 warning$ -- 2
 while$ -- 26
 width$ -- 0
-write$ -- 149
-(There was 1 error message)
+write$ -- 137
+(There were 2 warnings)

@@ -19020,3 +19020,1046 @@ comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileN
 comp : Tex_CompileLatex: execing [make! rapport.tex]
 comp : Tex_RunLaTeX: errlist = []
 comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+SyntaxFolds : Finished folding in   0.165170 seconds.
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+main : SetTeXOptions: sourcing maps
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Viewr
+comp : compiler/tex.vim: sourcing this file
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 rapport.tex:773 error: Undefined control sequence. \cmdirule  \cmidrule{3-4} \cmidrule{5-6} \cmdirule {7-8} [16] [17] (./rapport.aux (./img/sellmeier.aux) ) </usr/local/texlive/2023/te]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 rapport.tex:773 error: Undefined control sequence. \cmdirule  ...rule(r){3-4} \cmidrule(lr){5-6} \cmdirule (l){7-8} [16] [17] (./rapport.aux (./img/sellmeier.aux) ) </usr/local/texlive/2023/te]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:791 warning: LaTeX Warning: File `.img/mesc1.tex' not found on input line 791.
+ 2 rapport.tex:791 error: LaTeX Error: Unknown graphics extension: .tex.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: Emergency stop. rapport.tex 
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:791 warning: LaTeX Warning: File `.img/mesc1.tex' not found on input line 791.
+ 6 rapport.tex:791 error: LaTeX Error: Unknown graphics extension: .tex.
+ 7 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 8 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: Emergency stop. rapport.tex 
+ 9 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:791 warning: LaTeX Warning: File `.img/mesc1.tex' not found on input line 791.
+ 6 rapport.tex:791 error: LaTeX Error: Unknown graphics extension: .tex.
+ 7 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 8 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: Emergency stop. rapport.tex 
+ 9 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 6 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: Emergency stop. rapport.tex 
+ 7 /usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:767 warning: LaTeX Warning: Reference `table:mes' on page 15 undefined on input line 767.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: Package natbib Warning: There were undefined citations.
+ 6 rapport.aux warning: Package natbib Warning: Citation(s) may have changed. Rerun to get citations correct.
+ 7 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+ 8 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: Package rerunfilecheck Warning: File `rapport.out' has changed. Rerun to get outlines right or use package `bookmark'.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+SyntaxFolds : Finished folding in   0.151839 seconds.
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+main : SetTeXOptions: sourcing maps
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Viewr
+comp : compiler/tex.vim: sourcing this file
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 rapport.tex:660 error: Undefined control sequence. \mircro  \meter  ...rait à $\Lambda=\SI{6.87}{\mircro\meter} $, ce qui reste supérieur...
+ 2 rapport.tex:660 error: Undefined control sequence. \mircro  \meter  ...rait à $\Lambda=\SI{6.87}{\mircro\meter} $, ce qui reste supérieur...
+ 3 rapport.tex:790 error: Undefined control sequence. \mirco  \meter  ... essayé $\Lambda=\SI{6.83}{\mirco\meter} $
+ 4 rapport.tex:790 error: Undefined control sequence. \mirco  \meter  ... essayé $\Lambda=\SI{6.83}{\mirco\meter} $
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `' on page 16 undefined on input line 792.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: Emergency stop. rapport.tex 
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `fig:mesc1' on page 16 undefined on input line 792.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `fig:mesc2' on page 16 undefined on input line 792.
+ 6 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 7 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: Emergency stop. rapport.tex 
+ 8 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `fig:mesc1' on page 16 undefined on input line 792.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `fig:mesc2' on page 16 undefined on input line 792.
+ 6 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: File ended while scanning use of \caption@xdblarg. \par  rapport.tex 
+ 7 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: Emergency stop. rapport.tex 
+ 8 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex error: ==> Fatal error occurred, no output PDF file produced!]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:376 warning: LaTeX Warning: Reference `NL' on page 5 undefined on input line 376.
+ 2 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:399 warning: LaTeX Warning: Reference `ndepl' on page 6 undefined on input line 399.
+ 3 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:494 warning: LaTeX Warning: Reference `BK' on page 8 undefined on input line 494.
+ 4 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `fig:mesc1' on page 16 undefined on input line 792.
+ 5 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex:792 warning: LaTeX Warning: Reference `fig:mesc2' on page 16 undefined on input line 792.
+ 6 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: Package natbib Warning: There were undefined citations.
+ 7 rapport.aux warning: Package natbib Warning: Citation(s) may have changed. Rerun to get citations correct.
+ 8 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+ 9 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: Package rerunfilecheck Warning: File `rapport.out' has changed. Rerun to get outlines right or use package `bookmark'.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = [
+ 1 /usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex warning: LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.]
+comp : Tex_RunLaTeX: There were errors in compiling, breaking chain...
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : not finding error pattern anywhere in quickfix window :
+proj : texproject.vim: catching LatexSuiteFileType event
+env : envmacros.vim: Catching LatexSuiteFileType event
+comp : compiler.vim: Catching LatexSuiteFileType event
+fold : folding.vim: catching LatexSuiteFileType
+brak : brackets.vim: Catching LatexSuiteFileType event
+view : texviewer.vim: Catching LatexSuiteFileType event
+main : main.vim: Catching LatexSuiteFileType event
+pack : packages.vim: Catching LatexSuiteFileType event
+pack : +Tex_pack_updateall
+pack : :Tex_pack_updateall: split
+pack : +Tex_ScanForPackages
+pack : :Tex_ScanForPackages: Begining scans in [/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex], beginline = 0
+pack : :Tex_ScanForPackages: beginning scan for \usepackage lines
+pack : :Tex_ScanForPackages: End scan \usepackage, detected packages = 
+pack : :Tex_ScanForPackages: Beginning scan for \newcommand's
+pack : :Tex_ScanForPackages: Beginning scan for \newenvironment's
+pack : -Tex_ScanForPackages
+pack : :Tex_pack_updateall: detected [] in first run
+pack : :Tex_pack_updateall: throwing LatexSuiteScannedPackages event
+ : babel: catching LatexSuiteScannedPackages event
+pack : -Tex_pack_updateall
+comp : not finding error pattern anywhere in quickfix window :
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log
+comp : Tex_RunLaTeX: compiling to target [pdf]
+comp : Tex_RunLaTeX: getting dependency chain = [pdf]
+comp : +Tex_SetTeXCompilerTarget: setting target to [pdf] for Compiler
+comp : Tex_RunLaTeX: setting target to pdf
+comp : Tex_RunLaTeX: compiling file once via Tex_CompileLatex
+comp : Tex_CompileLatex: getting mainfname = [rapport.tex] from Tex_GetMainFileName
+comp : Tex_CompileLatex: execing [make! rapport.tex]
+comp : Tex_RunLaTeX: errlist = []
+comp : Tex_SetupErrorWindow: mfnlog = rapport.log

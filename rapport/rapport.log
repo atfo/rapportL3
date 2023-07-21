@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.9)  18 JUL 2023 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.9)  20 JUL 2023 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1017,8 +1017,9 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count366
 \l__pdf_internal_box=\box85
 )
-(./rapport.aux (./img/qpm.aux) (./img/waist faisceau incident.aux)
-(./img/sellmeier.aux) (./img/topt.aux))
+(./rapport.aux (./img/qpm.aux) (./img/waist_faisceau_incident.aux)
+(./img/sellmeier.aux) (./img/topt.aux) (./img/comparaison-profils.aux)
+(./img/mesc1.aux) (./img/mesc2.aux))
 \openout1 = `rapport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
@@ -1257,16 +1258,21 @@ File: ./img/cristal.pdf Graphic file (type pdf)
 <use ./img/cristal.pdf>
 Package pdftex.def Info: ./img/cristal.pdf  used on input line 579.
 (pdftex.def)             Requested size: 231.19977pt x 142.26378pt.
-\openout2 = `"./img/waist faisceau incident.aux"'.
+\openout2 = `./img/waist_faisceau_incident.aux'.
 
- (./img/waist faisceau incident.tex)
+ (./img/waist_faisceau_incident.tex)
 Overfull \hbox (10.78424pt too wide) in paragraph at lines 180--587
 [][] 
  []
 
+[10
+
+
+
+]
 \openout2 = `./img/sellmeier.aux'.
 
-(./img/sellmeier.tex)
+ (./img/sellmeier.tex)
 Overfull \hbox (10.91837pt too wide) in paragraph at lines 542--607
  [][] 
  []
@@ -1278,17 +1284,12 @@ Overfull \hbox (5.31686pt too wide) in paragraph at lines 542--614
 [][] 
  []
 
-[10
-
-
-
-]
-<./img/schema.pdf, id=22610, 495.18423pt x 302.11684pt>
+<./img/schema.pdf, id=22611, 495.18423pt x 302.11684pt>
 File: ./img/schema.pdf Graphic file (type pdf)
 <use ./img/schema.pdf>
 Package pdftex.def Info: ./img/schema.pdf  used on input line 626.
 (pdftex.def)             Requested size: 373.08733pt x 227.62204pt.
- [11
+[11
 
 
 
@@ -1296,7 +1297,7 @@ Package pdftex.def Info: ./img/schema.pdf  used on input line 626.
 
 
  <./img/schema.pdf>]
-<../donnees/conversion basse puissance 82.5 C.pdf, id=22682, 248.28758pt x 183.
+<../donnees/conversion basse puissance 82.5 C.pdf, id=22681, 248.28758pt x 183.
 19197pt>
 File: ../donnees/conversion basse puissance 82.5 C.pdf Graphic file (type pdf)
 <use ../donnees/conversion basse puissance 82.5 C.pdf>
@@ -1308,43 +1309,69 @@ Overfull \hbox (13.72032pt too wide) in paragraph at lines 675--676
  [][] 
  []
 
-<./img/alpha bp.pdf, id=22683, 244.93246pt x 183.19197pt>
+
+Underfull \hbox (badness 2435) in paragraph at lines 676--676
+[]\T1/cmr/m/n/10 (a) |Vé-ri-fi-ca-tion de la re-la-tion qua-dra-
+ []
+
+<./img/alpha bp.pdf, id=22682, 244.93246pt x 183.19197pt>
 File: ./img/alpha bp.pdf Graphic file (type pdf)
 <use ./img/alpha bp.pdf>
 Package pdftex.def Info: ./img/alpha bp.pdf  used on input line 682.
 (pdftex.def)             Requested size: 228.25574pt x 170.71652pt.
 [12 <../donnees/conversion basse puissance 82.5 C.pdf> <./img/alpha bp.pdf>]
 [13] (./img/dt.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 267--733
+Underfull \hbox (badness 10000) in paragraph at lines 267--734
 [][]
  []
 
+(./img/dbaffine.tex)
+\openout2 = `./img/comparaison-profils.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--733
+ (./img/comparaison-profils.tex)
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14] [15
+
+
+
+] [16]
+\openout2 = `./img/mesc1.aux'.
+
+ (./img/mesc1.tex)
+Overfull \hbox (5.1121pt too wide) in paragraph at lines 2970--799
+ [][] 
  []
 
-(./img/dbaffine.tex)
-<./img/waist faisceau vert.pdf, id=22752, 240.78757pt x 183.19197pt>
-File: ./img/waist faisceau vert.pdf Graphic file (type pdf)
-<use ./img/waist faisceau vert.pdf>
-Package pdftex.def Info: ./img/waist faisceau vert.pdf  used on input line 756.
+\openout2 = `./img/mesc2.aux'.
 
-(pdftex.def)             Requested size: 240.78697pt x 183.1915pt.
- (./rapport.bbl [14 <./img/waist faisceau vert.pdf>])
-[15] [16] (./rapport.aux (./img/qpm.aux) (./img/waist faisceau incident.aux)
-(./img/sellmeier.aux) (./img/topt.aux))
+(./img/mesc2.tex)
+Overfull \hbox (5.09752pt too wide) in paragraph at lines 4329--806
+ [][] 
+ []
+
+(./rapport.bbl [17
+
+
+
+
+
+
+]) [18] [19] (./rapport.aux (./img/qpm.aux)
+(./img/waist_faisceau_incident.aux) (./img/sellmeier.aux) (./img/topt.aux)
+(./img/comparaison-profils.aux) (./img/mesc1.aux) (./img/mesc2.aux))
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: E2DE3E75C0D43F70BBEA67ACEA28AA3B;4865.
+(rerunfilecheck)             Checksum: E8DEBC20149E7F8C4A8B22AC895CA851;5036.
  ) 
 Here is how much of TeX's memory you used:
- 43850 strings out of 475980
- 1048700 string characters out of 5789010
- 2437324 words of memory out of 5000000
- 63524 multiletter control sequences out of 15000+600000
+ 43976 strings out of 475980
+ 1052272 string characters out of 5789010
+ 3072173 words of memory out of 5000000
+ 63627 multiletter control sequences out of 15000+600000
  541185 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,22n,89p,1476b,3178s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,22n,89p,2035b,3182s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1383,10 +1410,10 @@ ic/cm-super/sfrm1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
 m-super/sfti1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-
 super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-su
 per/sfxc1095.pfb>
-Output written on rapport.pdf (18 pages, 5319063 bytes).
+Output written on rapport.pdf (21 pages, 5378436 bytes).
 PDF statistics:
- 22968 PDF objects out of 26593 (max. 8388607)
- 15350 compressed objects within 154 object streams
- 87 named destinations out of 1000 (max. 500000)
- 371 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 22964 PDF objects out of 26593 (max. 8388607)
+ 15345 compressed objects within 154 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

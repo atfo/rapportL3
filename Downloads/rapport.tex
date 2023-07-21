@@ -1,0 +1,1572 @@
+\documentclass[11pt]{article}
+
+% ------- Packages pour écrire -------
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[nottoc]{tocbibind} %numbib en plus si on veut numéroter la section
+\usepackage{lmodern}
+\usepackage{dirtytalk}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage[english]{babel}
+\usepackage{amsmath, bm}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{envmath}
+\usepackage{cancel}
+\usepackage{physics}
+\usepackage{siunitx}
+\DeclareSIUnit\gauss{G}
+
+% ------- Packages pour la mise en forme -------
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,250mm},
+	left=20mm,
+	top=25mm,
+}
+
+\usepackage{caption}
+%\usepackage[labelfont=sc]{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{color}
+\usepackage{transparent}
+\usepackage{import}
+\usepackage{epstopdf} % Permet la conversion des .eps en .pdf pour les inclure
+
+\usepackage{tabularx} % gestion avancée des tableaux
+\usepackage{booktabs}
+
+\usepackage{psfrag} % remplacement du texte d'une figure ps par du texte latex
+\usepackage{eurosym} % symbole
+
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usetikzlibrary{shapes.arrows, fadings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{dateplot}
+
+\pgfplotsset{layers/my layer set/.define layer set={background, main, foreground}{},  set layers=my layer set,}
+
+\usepackage{xcolor} % gestion de différentes couleurs
+
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newcommand*{\colorboxed}{}
+\def\colorboxed#1#{%
+  \colorboxedAux{#1}%
+}
+\newcommand*{\colorboxedAux}[3]{%
+  % #1: optional argument for color model
+  % #2: color specification
+  % #3: formula
+  \begingroup
+    \colorlet{cb@saved}{.}%
+    \color#1{#2}%
+    \boxed{%
+      \color{cb@saved}%
+      #3%
+    }%
+  \endgroup
+}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\e}[1]{\text{e}^{#1}}
+\newcommand{\mathsc}[1]{\mathrm{\scriptscriptstyle {#1}}}
+
+\MakeOuterQuote{"}
+
+\definecolor{color1}{rgb}{0.8,0.8,0.8}
+
+\newenvironment{myblock}[1]{%
+    \tcolorbox[%
+    colback=color1,colframe=color1,%
+    title=#1]}%
+    {\endtcolorbox}
+    
+\definecolor{linkcolor}{rgb}{0.7,0,0.1} % définition de la couleur des liens pdf
+
+\usepackage{url}
+\usepackage[colorlinks=true,
+pdfstartview=FitV,
+linkcolor= linkcolor,
+citecolor= linkcolor,
+urlcolor= linkcolor,
+hyperindex=true,
+hyperfigures=false]
+{hyperref} % fichiers pdf 'intelligents', avec des liens entre les références, etc.
+
+\usepackage{fancyhdr} % entêtes et pieds de pages personnalisés
+
+\pagestyle{fancy}
+\fancyhead[L]{\scriptsize \textsc{Magic \& tune-out  wavelengths of cold Yb atoms}} 
+\fancyhead[R]{\scriptsize \textsc{Guillaume Brochier}} 
+\fancyfoot[C]{ \thepage}
+
+   
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+
+\begin{document}
+	
+\thispagestyle{empty}
+\includegraphics[height=2cm]{logoens.eps} \hfill 
+%\includegraphics[height=1.8cm]{logoucbl.eps} \hfill 
+\includegraphics[height=2cm]{logounivlyon.png} \hfill \includegraphics[height=2cm]{LMU.png}
+
+\vspace{1.5cm}
+
+\begin{tabularx}{0.95\textwidth}{@{} l X l @{} }
+{\sc Master Science et innovation} & & September 2021 -- March 2022 \\
+{\it École Normale Supérieure de Lyon} & & Guillaume Brochier\\
+{\it Université Claude Bernard Lyon I} & & Projet Long de Recherche
+\end{tabularx}
+
+\begin{center}
+	
+	\vspace{1cm}
+	
+	\rule[11pt]{5cm}{0.5pt}
+	
+	\textbf{\LARGE Measurements of the magic \& tune-out wavelengths \\ 
+	\vspace{0.5cm}  
+	of cold Ytterbium atoms}
+	\vspace{0.3cm}
+	
+	\rule{5cm}{0.5pt}
+	
+	\vspace{1.5cm}
+
+\end{center}
+
+\parbox{15cm}{\small \textbf{Abstract}: Ultracold quantum gases have proven in the past decades to be a remarkable platform to study many-body physics, and in particular to simulate condensed matter models. More recently, a special attention has been drawn to Alkaline Earth Like atoms such as Ytterbium. Indeed, their rich electronic structure opens new possibilities, which can be combined with novel platforms taking advantage of optical lattices and tweezers to realize quantum simulations. Besides, the control upon the atoms can be enhanced by using the so-called \emph{magic} and \emph{tune-out} wavelengths, to manipulate independently two different electronic states. In this report, I will detail both the experimental apparatus we realized and the measurements that have been performed in order to quantitatively evaluate the magic and tune-out wavelengths of Ytterbium atoms. %These wavelengths will then be incorporated to the new cold atom experiment from Prof. Aidelsburger, and enable for instance lattice gauge simulations, or quantum simulations, thanks to its high versatility.
+} %fin de la commande \parbox du résumé
+
+
+\vspace{0.5cm}
+
+\parbox{15cm}{
+	\textbf{Key words}: \it cold atoms, optical lattices, clock spectroscopy, magic \& tune-out wavelengths
+} %fin de la commande \parbox des mots clefs
+
+\vspace{1.5cm}
+
+\parbox{15cm}{
+	Internship supervised by:
+	
+	{\bf Prof. Monika Aidelsburger}
+	
+	\href{mailto:monika.aidelsburger@physik.uni-muenchen.de}{\tt monika.aidelsburger@physik.uni-muenchen.de} / tel.(+49) 89 2180 6143 \newline
+	
+	Ludwig Maximilians Universität
+	
+	{\it 4 Schellingstra\ss e, 80799 München}
+	
+	\url{https://www.quantum-munich.de/}} %fin de la commande \parbox encadrant / laboratoire d'accueil
+
+\newpage
+
+\thispagestyle{empty}
+
+\null
+\vfill
+
+\section*{Acknowledgments}
+
+This internship in Munich was a truly remarkable experience, on many different levels. On a scientific level, I discovered the world of cold atoms experiments, with all the team work involved. I had the chance to arrive in the new experiment of Prof.$~$Aidelsburger at a great time, and for instance participate in the creation of the first MOT. It was a very interesting time, and working with Nelson, Tim and \'Etienne on a daily basis was a guarantee to learn something new every day. I hope you enjoyed working with me as much as I did working with you!
+
+I would like to thank the whole team of the \say{SQM lab}, as well as all the other laboratories in the LMU building (the Caesium lab, Fermi 2 lab, and Ytterbium lab) for the friendly and cheerful atmosphere which they created. In particular, Christoph for organizing the weekly running sessions in the Englischer Garten (and Till, Simon, Nelson, Tim, Dalila, Julian, Clara for joining in a more or less regular basis); Sophie for joining me in our trip to Innsbruck; Nelson for our scientific bets, leading to a certain number of free lunches. I don't forget all the others, Raphaël, Alex, Caesar, Scott, David, Barath, with whom it was always a pleasure to drink a bier after work, or organize a day of hiking.
+
+Last but not least, I want to give a huge thanks to Monika Aidelsburger, first for accepting me in your group, but also for your friendly management of the lab which always allowed us for a continuous progress; and more generally your permanent enthusiasm. I hope that our paths cross again someday!  
+
+\vfill
+
+\newpage
+
+\thispagestyle{empty}
+
+\tableofcontents
+
+\vfill
+
+\newpage
+
+\setcounter{page}{1}
+
+%-------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:introduction}
+%-------------------------------------------------------------------------
+
+Since the realization of the first Bose Einstein Condensates \citep{1995_anderson, 1995_davis}, ultracold atoms have became a platform of choice to study quantum mechanics, and in particular many-body effects \citep{2008_bloch, 2012_bloch}. Furthermore, the development of optical lattices \citep[see e.g.][for a review]{2001_grynberg}, which allow for the engineering of different potential landscapes for atoms, opened the way towards the simulation of condensed matter models. We can for instance mention the first observation of the Mott insulator to superfluid transition by \cite{2002_greiner}, or the band mapping (that is the direct observation of Brillouin zones) realized by \cite{2001_greiner}. The use of optical lattices can vary widely, from optical clocks \citep{2005_takamoto}, to simulation of artificial gauge theory \citep{2010_gerbier}.
+
+Recently, the manipulation of optical tweezers \citep{2016_barredo, 2016_endres} brought new perspectives to the creation many-body ensembles, in particular allowing a bottom up approach for the manipulation of cold atoms. Prof. Aidelsburger's new experiment will combine these two ingredients to create a new platform, whose possibilities will be detailed in section \ref{sec:versatile_platform}, after giving a few elements about the Ytterbium atoms. We will then explain the intermediate goal which was fulfilled during this internship in section \ref{sec:internship_project}. 
+
+\subsection{Ytterbium atoms}
+\label{sec:Yb}
+
+Ytterbium (Yb) is an \emph{Alkaline-Earth-Like} (AEL) atom, with an atomic number $Z=70$. It exists naturally in different isotopes, either fermionic ($^{171}$Yb, $^{173}$Yb) or bosonic ($^{168}$Yb, $^{170}$Yb, $^{172}$Yb, $^{174}$Yb, $^{176}$Yb). While the bosonic isotopes all lack a nuclear spin ($I=0$), the fermionic ones possess $I=1/2$ and $I=5/2$ for $^{171}$Yb and $^{173}$Yb respectively. This diversity makes it a suitable element for many different applications. In this experiment, we worked with $^{174}$Yb, the most abundant isotope. 
+The electronic structure of Yb is [Xe] 4f$^{14}$ 6s$^2$, hence its properties are mostly determined by the two valence electrons. The levels are well-described by the so-called $L-S$ coupling model, with eigenstates given in the form of spectroscopic terms $^{2S+1}L_J$, where $\mathbf{L}$ corresponds to the orbital angular momentum, $\mathbf{S}$ to the spin angular momentum and $\mathbf{J} = \mathbf{L} + \mathbf{S}$ is the total angular momentum. Given the two valence electrons, the lower levels are split between a singlet state $S=0$ and a triplet state $S=1$. The levels and transitions addressed during this project are depicted in figure \ref{fig:Yb}, the $^1$S$_0$ state corresponds to the ground state.
+
+%
+\begin{figure}[htbp]
+	\centering
+	\def\svgwidth{0.65\linewidth}
+    \input{images/Yb.pdf_tex}
+	\caption{\small Illustration of the relevant transition levels of Yb. The broad dipole-allowed blue transition is used for both the Zeeman slower and absorption imaging, and the green transition for the Magneto-Optical Trap.  The yellow transition is ultranarrow, notably used in atomic clock experiments \citep{2008_poli}. The infrared transition allows the repumping of atoms from the $^3$P$_0$ state to the ground state, after an intermediate decay to the $^3$P$_1$ state. All values are taken from \cite{2015_scazza}.}
+    \label{fig:Yb}
+\end{figure}
+%
+
+In the dipole approximation, transitions with $\Delta S \ne 0$ are forbidden. The so-called \emph{clock-transition} $^1$S$_0 \, \rightarrow \, ^3$P$_0$ presents in addition $\Delta J = 0$ and is doubly forbidden. Due to some finite spin-orbit coupling and other coupling mechanisms, the green transition $^1$S$_0 \, \rightarrow \, ^3$P$_1$ is weakly allowed \citep{1962_lurio}. Hence, the linewidth is narrower than electric-dipole allowed transitions ($\Gamma / (2\pi) = \SI{182}{\kilo\hertz}$), thereby making it suitable for achieving a low Doppler temperature (see appendix \ref{sec:MOT_theory}). 
+
+Since the clock transition is only allowed when taking into account hyperfine couplings with $I \ne 0$, it is effectively forbidden for bosonic isotopes. Thus, in order to probe this transition, it is necessary to introduce another perturbation to allow the mixing of the $^3$P$_1$ and $^3$P$_0$ states. To realize such a perturbation, we apply a constant magnetic field at the position of the atoms when addressing the clock transition \citep{2006_taichenachev}.
+
+In summary, the two valence electrons of Yb allow for a more complex electronic structure than alkali atoms and particularly allow for the existence of a clock transition. This ultranarrow transition is not only suitable for clock experiments \citep{2015_ludlow} or magnetic field simulations \citep{2010_gerbier}, but it is also a promising choice for the creation and manipulation of \emph{qubits}, owing to its long-lived excited state \citep{2021_jenkins}.
+
+\subsection{A versatile platform}
+\label{sec:versatile_platform}
+
+The realization of quantum simulations has progressed at a high pace during the last decade. \cite{2009_bakr} first bridged the gap between macro and microscopic atomic samples by building a \emph{quantum gas microscope}: it becomes possible to visualize individual atoms, generally in a 2D optical lattice, thanks to a microscope objective with a high Numerical Aperture. Then, \cite{2016_endres} and \cite{2016_barredo} showed the new possibilities brought by \emph{programmable tweezer arrays}. This approach completely changes the paradigm for the manipulation of atoms: from a top-down approach, with a cloud of atoms loaded in a lattice and \say{cookie-cutting} to the desired atomic distribution, it shifts to a bottom-up approach, where atoms are manipulated individually in order to achieve the right configuration for further simulations. This new strategy is nicely illustrated by \cite{2022_young}, who engineered a three-dimensional optical lattice combined with optical tweezers to observe \emph{quantum walks}. The latter results from the interference of an atom's wave function with itself, when tunneling in a shallow lattice, and could for instance lead to the implementation of quantum algorithms for oracular problems.
+
+The new experimental platform developed by Prof.$\,$Aidelsburger will similarly explore a combination between quantum gas microscopes and programmable tweezers. In addition to all the benefits already mentioned, we will make use of tune-out wavelengths for the optical tweezers that allow separate manipulation of the two clock states of Yb. These tools enable the simulation of  lattice gauge theories \citep{2013_wiese}, or other currently inaccessible quantum many-body models. A simple, yet remarkable, usage of the tweezers at the tune-out wavelength could be to spatially separate the ground and excited states parts of the wave functions of atoms brought into a coherent superposition of $^1$S$_0$ and $^3$P$_0$ via a $\pi/2$-pulse of the clock laser. The possibilities brought by this experiment can be thus extremely broad. 
+
+We can detail one possible application, which concerns the simulation of Lattice Gauge Theories (LGTs). This formulation of Gauge theories can be restricted to the Quantum Link Models (QLMs) which relies on discrete space-time. It is thus well suited for a simulation by ultracold atoms: the lattice sites can be interpreted as \say{matter sites} or \say{link sites} depending on whether they can be occupied by one or two of the clock states of Yb \citep[see][]{2013_Banerjee, 2018_aidelsburger}. An example of implementation is shown in figure \ref{fig:LGT}. 
+
+%
+\begin{figure}[htb]
+	\centering
+	%
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width = 0.8\textwidth]{LGT.pdf}
+		\vspace{0.4cm}
+		\caption{\small Scheme of the potential in one dimension}
+		\label{fig:LGT_1}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.49\textwidth}
+    	\centering
+    	\small
+		\def\svgwidth{0.8\linewidth}
+	    \input{images/LGT_2.pdf_tex}
+		\caption{\small Tunneling and interaction terms of the clock states}
+		\label{fig:LGT_2}
+	\end{subfigure}	
+	%
+	\caption{\small A scheme of a staggered superlattice is given in (a). This lattice is completed by tweezers addressing the tune-out wavelengths (see section \ref{sec:internship_project} for a definition). It creates a triple-well configuration for each of the two clock states, with tunneling between these three sites given by $t$ (b). The tunneling to other sites is suppressed by the superlattice. The large on-site interaction $U_{eg}$ allows for a control of the hopping processes. Fine control of the energies $t$, $U_{eg}$ can suppress first-order tunneling for the benefit of correlated tunneling, and thus simulate \emph{dynamical gauge fields}. Figure inspired from \cite{2018_aidelsburger}.}
+    \label{fig:LGT}
+\end{figure}
+%
+
+However, building such a platform raises several challenges, in addition to the complexity of a \say{usual} cold atom experiment. A great pointing and relative phase stability of the different beams must be achieved in order to maintain the desired potential landscape. Besides, a good knowledge of the polarizabilities of the clock states is crucial to create the potential shown in \ref{fig:LGT_1}. Acquiring this knowledge was the goal of the project we conducted during my internship. 
+
+\subsection{Intermediate project}
+\label{sec:internship_project}
+
+The polarizability of a given electronic level determines the forces that a light beam will exert on an atom. In particular, when the laser is far detuned from any resonance, the atom is subject to a conservative dipolar force proportional to the polarizability (see appendix \ref{sec:lattice_theory}). To efficiently manipulate the  $^1$S$_0$ and $^3$P$_0$ states of the clock transition, it is crucial to acquire sufficient knowledge about the polarizabilities of these two states. We are especially interested in the following two cases:
+%
+\begin{itemize}
+	\item \emph{magic wavelengths}, corresponding to equal polarizabilities of the two states. A lattice at this wavelength can trap, for instance, both states at an equal potential depth.
+	\item \emph{tune-out wavelengths}, corresponding to a vanishing polarizability in one of the two states. Here, a lattice (or tweezer) at this wavelength creates a force for only one state thereby allowing for separate state manipulation.
+\end{itemize}
+%
+
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/polarizability_theory.tex}
+	\caption{\small Light shifts of the levels $^1$S$_0$ and $^3$P$_0$ of Yb, the two levels involved in the clock transition, normalized by the intensity. The light shift is proportional to the polarizability (as can be seen in equation \eqref{eq:dipole_pot}). The three circles on the graph mark the position of the magic wavelengths, when the two light shifts are equal. The dashed line indicates the crossing of the tune-out wavelengths, when one of the two light shifts cancels. The polarizabilities are taken from \cite{2010_dzuba}, and are calculated from an \emph{ab initio} model.}
+    \label{fig:polarizability}
+\end{figure}
+%
+Nevertheless, predicting the position of such unique wavelengths is a challenging task. State-of-the-art calculations performed by \cite{2010_dzuba}, plotted in figure \ref{fig:polarizability}, predict three magic wavelengths at $\SI{465.5}{\nano\metre}$, $\SI{551.9}{\nano\metre}$ and $\SI{761.1}{\nano\metre}$. Yet, experimental data from \cite{2008_barber} found the third magic wavelength at $\SI{759.35}{\nano\metre}$, demonstrating that uncertainties of the calculations are of several nanometers. An experimental characterization is thus essential to complete the theoretical understanding.
+
+Our goal was therefore to precisely measure the position of the magic and tune-out wavelengths of Yb.  We mainly followed the methods which have been successfully implemented by \cite{2008_barber} and \cite{2020_heinz}, who measured a magic wavelength in Ytterbium and a tune-out wavelength in Strontium respectively.
+
+\vspace{0.5cm}
+
+\begin{myblock}{}
+During this internship, my participation in realizing a cold atom experiment ranged from the first cooling and trapping stages to the measurements of the magic \& tune-out wavelengths. The process can be summarized as follows:
+%
+\begin{itemize}
+	\item The first step was to assemble the experimental apparatus. The vacuum and coil systems were assembled prior to my arrival. My tasks involved aligning several laser optical systems for the main experimental table, and building a frequency locking scheme for the lasers addressing the blue, green and yellow transitions. This is described in section \ref{sec:experiment}.
+	\item The next step was to cool and subsequently load the Yb atoms into a one-dimensional optical lattice. My role was to assemble the optics around the vacuum glass cell, where the main experiment is performed. This allowed us to manipulate the atoms and eventually realize clock spectroscopy measurements. Details for this  part can be found in section \ref{sec:clock_spectroscopy}.
+	\item Finally, we use different methods to accurately measure the magic wavelengths and the tune-out wavelengths of the clock states of Yb. The first involved looking at the differential stark shift, and the latter involved making use of parametric heating.These methods and results are presented in section \ref{sec:measurements}.
+\end{itemize}
+%
+%I realized / participated in all the results presented in this report, unless explicitely mentioned otherwise.
+
+These measurements pave the way towards the construction of a highly controllable platform, combining optical lattices and tweezers at different wavelengths to offer individual manipulation of atoms and electronic states. 
+
+\end{myblock}
+
+%\newpage
+
+%-------------------------------------------------------------------------
+\section{Experimental apparatus}
+\label{sec:experiment}
+%-------------------------------------------------------------------------
+
+In order to successfully cool down atoms and explore their properties, a complex experimental apparatus is necessary. First, an ultra-high vacuum chamber, connected to an atom source, is required to avoid collisions between the Yb atoms and the background gas. The kinetic energy of any gas molecule is orders of magnitude higher than that of an atom cooled below a mK, as such, an elastic collision would instantly heat the atom. This step was finalized in June 2021, before I joined the experiment.
+Then, the main ingredient to slow the atoms is Doppler cooling, for which it is necessary to address the atomic transitions with laser light. Additional lasers can be used to better manipulate the atoms' external and internal degrees of freedom. Both cases require laser systems with tunable frequencies that interact with the atoms at given times. A description  of realizing  such setups is detailed in the upcoming sections \ref{sec:laser} and \ref{sec:cavity}.
+
+\subsection{Laser systems}
+\label{sec:laser}
+
+Let us first give a brief overview of the different lasers necessary to build this experiment (some additional information is detailed in appendix \ref{sec:laser_appendix}):
+\begin{itemize}
+	\item The blue, green, and yellow lasers (see figure  \ref{fig:Yb}) used to drive the transitions from the $^1$S$_0$ state are \href{https://www.toptica.com/products/tunable-diode-lasers/frequency-converted-lasers/ta-shg-pro}{Toptica} diode lasers. The emitted light is coupled to a tapered amplifier, whose output is in turn frequency doubled via Second Harmonic Generation (SHG) with a crystal in a cavity.
+	\item The $\SI{759}{\nano\metre}$ magic wavelength, required to trap the atoms with the same trap depth for both the $^1$S$_0$ and $^3$P$_0$ states, is generated with a \href{https://www.spectra-physics.com/f/matisse-2-tunable-ring-laser}{Matisse titanium-sapphire} (Ti:Sapph) laser. We use this to create a one-dimensional optical lattice. This laser system consists of a ring cavity and a  crystal which is pumped by an external $\SI{25}{W}$ laser at $\SI{532}{\nano\metre}$. The Ti:Sapph is widely tunable, and we use it at $\SI{759}{\nano\metre}$. Its frequency is locked to an external cavity, provided with the laser system.	
+	\item A laser at $\SI{1389}{\nano\metre}$ is necessary to optically pump the atoms from the  $^3$P$_0$ state back to the ground state. This repumper laser will allow us to detect the atoms present in the  $^3$P$_0$ state. It is a Distributed Feedback Laser, whose wavelength is finely tuned by adjusting the temperature of the diode. This temperature is controlled thanks to a thermoelectric coupler. 
+	\item Due to the large, several nanometer uncertainties in each of the tune-out and magic wavelengths of Yb, we required a widely tunable laser. The \href{https://hubner-photonics.com/products/lasers/tunable-lasers/c-wave/}{C-wave laser} laser, by Hubner photonics, is composed of an Optical Parametric Oscillator (OPO) and a SHG doubling cavity to allow this wide tuning range, across almost the whole visible spectrum.
+	\item A VALO (Second Harmonic Generation, Single Frequency) developed by \href{https://vexlum.com/products/}{Vexlum} is also used for the measurements of the magic and tune-out wavelengths near $\SI{552}{\nano\metre}$. Indeed, the power available with this laser is approximately 10 times greater than that of the C-wave. Its tunability ($\pm \SI{3}{\nano\metre}$) is sufficient for our purposes.
+\end{itemize}
+%
+
+During my internship, I built the optical setups for the Ti:Sapph, repumper and C-wave lasers. These setups are designed to control the light input of the optical fiber that is connected towards the main experiment. A sketch of such setups is given in figure \ref{fig:laser_setup}. The Acousto-Optic Modulator (AOM) has a rise time below $\SI{1}{\micro\second}$, which makes it a useful tool to shine light on the atoms during precise time intervals. We also take advantage of the varying diffraction efficiency of the AOM as a function of the input Radio Frequency (RF) power to control and vary the intensity of the light on the experimental table. This is realized with a photodetector on the experimental table, which measures the laser power thanks to a pick-off plate. This value is fed back to a servo amplifier connected to the AOM driver. The desired power can then be set from a computer through an analog channel output.
+
+However, due to the intrinsic leakage of light from the AOM, it is necessary to complete it with a mechanical shutter, which acts in $\SI{10}{\milli\second}$ approximately.
+
+%
+\begin{figure}[htbp]
+	\centering
+	\def\svgwidth{0.65\linewidth}
+    \input{images/laser_setup.pdf_tex}
+	\caption{\small We place a Faraday isolator at the output of the laser to prevent reflections of light that could damage the laser. The light is then sent through an Acousto-Optic Modulator (AOM), where either the $+1$ or $-1$ order is coupled into the fiber going to the experimental table. All the fibers we use are polarization-maintaining fibers. Therefore it is necessary to couple light with the right linear polarization: we align a waveplate in front of the fiber to account for this adjustment. A mechanical shutter is also added to prevent further leakage of light. A half-wave plate ($\lambda/2$) and a Polarizing Beam Splitter (PBS) allow for the manual diminution of the laser power when necessary.}
+    \label{fig:laser_setup}
+\end{figure}
+%
+
+
+\subsection{Frequency locking to a cavity}
+\label{sec:cavity}
+
+Probing the transitions of the Ytterbium atoms requires the use of resonant light. In other words, the photons with which we address  the atoms must be at a frequency that matches the  energy of either of the transitions highlighted in figure \ref{fig:Yb}, being probed. The linewidth of a given transition then defines to which precision these two energies need to match. As a result, driving the green or the yellow transition requires controlling the laser frequencies at the kHz or even the Hz level; a precision well beyond the stability of diode lasers.
+
+To overcome this limitation, we decided to use a Fabry-Pérot cavity, made of Ultra Low Expansion (ULE) glass. It is placed under vacuum and stabilized in temperature to minimize respectively the fluctuations of the optical index inside the cavity and its length. This cavity thus brings a frequency reference (the absolute frequencies being of course measured with the atoms) thanks to the well-defined modes of the cavity (more details about the cavity are given in appendix \ref{sec:cavity_appendix}). The main question then becomes: how to transfer this frequency stability from the cavity to the laser? The answer lies in the Pound Drever Hall (PDH) technique \citep[see for instance][]{2001_black}, which is illustrated in figure \ref{fig:cavity_lock}.  
+
+This method does not rely on the transmitted intensity, for which frequency and intensity fluctuations are hard to distinguish. Instead, it focuses on the phase of the reflected light, which is anti-symmetric around the cavity resonance. This phase also provides an almost instantaneous response to any frequency change, contrary to the transmitted light whose response is limited in bandwidth (due to the light building up in the cavity). An EOM is used to create sidebands to the carrier, which are reflected on the cavity. Their interferences with the carrier encodes the phase information of the carrier. By then mixing this signal down to a continuous voltage, it becomes an error signal which can be used in a feedback loop, as shown in figure \ref{fig:cavity_lock}.
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.54\textwidth}
+		\centering
+		\def\svgwidth{0.99\linewidth}
+		\hspace{-0.5cm}
+		\small
+   		\input{images/cavity_lock_2.pdf_tex}
+   		\vspace{0.7cm}
+		\caption{\small }
+		\label{fig:cavity_lock}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.45\textwidth}
+    	\centering
+    	\def\svgwidth{0.99\linewidth}
+    	\small
+    	\input{images/offset_lock.pdf_tex}		
+		\caption{\small }
+		\label{fig:offset_lock}
+	\end{subfigure}	
+	%
+	\caption{\small (a) sketch of the experimental setup used to lock the lasers to the cavity. An Electro-Optical Modulator (EOM) introduces the frequencies $\Omega_1$ and $\Omega_2$ (created by Signal Generators, SG, combined with RF power splitters) in the laser light. It leads to the creation of sidebands of the carrier frequency, as illustrated in (b).  The light is then sent to the cavity, and the reflected part is collected on a photodetector (PD), thanks to a quarter-wave plate and a Polarizing Beam Splitter (PBS). The mixer demodulates the signal at the frequency $\Omega_1$ of the PDH sidebands, and creates an error signal. It can be used to feedback the laser, after going through a Proportional-Integral-Derivative (PID) servo amplifier. We use the current of the laser fdiode in order to have a fast response.}
+    \label{fig:lock}
+\end{figure}
+%
+Besides, we need to lock lasers at given frequencies, which might differ from the cavity resonances. Hence, we introduce a second modulation frequency $\Omega_2$, in addition to the PDH frequency, creating sidebands at this frequency as well (see figure \ref{fig:offset_lock}). One of these so-called offset sidebands is then locked at the cavity resonance. By controlling $\Omega_2$, we can place the carrier light at an arbitrary position in frequency space, as shown in figure \ref{fig:offset_lock} and described in \cite{2008_thorpe}.
+Eventually, several parameters need to be experimentally tuned:
+\begin{itemize}
+	\item The respective intensities of the PDH sidebands and the offset sidebands are adjusted to maximize the error signal, which is proportional to $\abs{J_0(\Delta \phi) J_1(\Delta \phi)}$ \citep{2013_martin}, with $\Delta \phi$ the phase modulation depth, $J_{0,1}$ the 0$^\text{th}$, 1$^\text{st}$ Bessel functions of the first kind . The ideal intensity ratio between PDH sidebands and offset sidebands is then $J_1(\Delta \phi = 1.08) / J_0(\Delta \phi = 1.08) \sim 64$\%.
+ 	\item The frequency $\Omega_1$ is carefully chosen, by taking into account many parameters. The lock of the SHG cavity of the Toptica lasers is operated at $\SI{25}{\mega\hertz}$ so we should avoid this frequency. The bandwidth ($\SI{-3}{\dB}$ point) of the photodetectors which capture the beating with the PDH sideband is  $\SI{60}{\mega\hertz}$. We should also keep $\Omega_2 \gg \Omega_1$. Besides, three lasers are locked to the same cavity and need to have different PDH frequencies so that any spurious signal is discarded during the demodulation. We decided to use $\Omega_1 = \SI{14}{\mega\hertz},  \SI{33}{\mega\hertz}, \SI{37}{\mega\hertz}$.
+ 	\item The delay line is meant to adjust the phase of the local oscillator, so that the photodetector signal is mixed into a DC voltage which cancels on the cavity resonance, that is an error signal. Its length needs to be carefully designed to maximize the error signal.
+ 	\item The error signal we obtain is proportional to the power sent in the cavity. However, using too much power can lead to heating of the mirrors and shifts in frequency. We thus need to minimize the power, while keeping the lock stable. The ingoing power is controlled and stabilized thanks to an AOM and a photodetector, in the same way as described in \ref{sec:laser}, before the light is sent in the EOM.
+ 	\item The PID parameters of the servo amplifier (the \href{https://www.toptica.com/products/laser-rack-systems/laser-locking-electronics/falc-110-mfalc-110-fast-pid}{Falc 110} in our case) are chosen to optimize the so-called servo-bumps. An example of such an optimization is shown in figure \ref{fig:servo}.
+\end{itemize}
+
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/servo.tex}
+	\caption{\small Measured power spectrum after the servo amplifier when the lock is active, with a spectrum analyzer (\href{https://scdn.rohde-schwarz.com/ur/pws/dl_downloads/dl_common_library/dl_brochures_and_datasheets/pdf_1/FPC_dat-sw_en_5214-7112-22_v0600.pdf}{R\&S FPC1000}, resolution bandwidth = $\SI{3}{\kilo\hertz}$). We show here two examples of \emph{servo bumps}, in the cases of a loose and optimized servoing. The frequency of the bump indicates the bandwidth of the lock, that is the frequency up to which noise is suppressed.}
+    \label{fig:servo}
+\end{figure}
+%
+
+In practice, our cavity is used to lock the blue, green and yellow lasers, before frequency doubling, that is light at $\SI{798}{\nano\metre}$, $\SI{1112}{\nano\metre}$ and $\SI{1156}{\nano\metre}$ respectively. The finesse of the cavity is different for these three wavelengths; calculations and measurements are detailed in appendix \ref{sec:cavity_appendix}. The performance of the lock is particularly crucial for the yellow laser. Indeed, it is the only one of the three lasers for which the transition linewidth is smaller than the cavity linewidth.
+
+\subsection{Atom source and Zeeman slower}
+\label{sec:oven}
+
+The first ingredient for any cold atoms experiment is an atom source, which generally consists of an oven producing a collimated stream of atoms. In our case, the atom source was purchased from \href{https://aosense.com/product/cold-atomic-beam-system/}{AOSense}, and is coupled to a Zeeman slower.
+This system is presented in figure \ref{fig:ZS}. The transition that we cycle is the blue transition, at $\lambda = \SI{398.9}{\nano\metre}$ (see figure \ref{fig:Yb}). It is dipole-allowed, so it is very broad, leading to a fast decay of the excited state, with $\Gamma / (2 \pi)= \SI{29.1}{\mega\hertz}$. This allows for a fast deceleration of the atoms, which absorb photons at a maximum rate of $\Gamma/2$ (detailed working principles of the Zeeman slower are given in appendix \ref{sec:zeeman_theory}). Permanent magnets are used along the beam in order to keep the atomic transition at the light frequency, which is red detuned by $\simeq \SI{600}{\mega\hertz}$ from the atomic transition in the absence of a magnetic field.  
+
+The Zeeman slower is paired with a two-dimensional Magneto-Optical Trap (MOT), which is used to deviate the atoms by around $\SI{22}{\degree}$ into a flange connected to the glass cell. Here again, permanent magnets create the necessary magnetic field. However, we do not have access to more complete data about the operation of this device: AOSense only provides an instruction manual and the detailed working principles are kept secret.
+%
+\begin{figure}[htbp]
+	\centering
+	\def\svgwidth{0.7\linewidth}
+    \input{images/ZS.pdf_tex}
+	\caption{\small Sketch of the device from AOSense. The company indicates the powers, shapes, polarizations and detunings from the atomic transitions necessary for the Zeeman slower as well as the 2D MOT beams. The angle introduced by the 2D MOT allows us to easily switch on and off the atomic beam directed towards the glass cell by enabling the 2D MOT light.}
+    \label{fig:ZS}
+\end{figure}
+%
+
+AOSense simply communicates the characteristics of the atomic beam at the output of their device. At this point, the transverse temperature of the atoms is less than $\SI{3}{\milli\kelvin}$, and the longitudinal velocity is distributed around $\SI{40}{\metre\per\second}$. The flux is greater than $\SI{e11}{atoms\per\second}$. This atomic beam is then directed towards the glass cell. There it will be further cooled and loaded in the 3D Magneto-Optical Trap and the optical lattice, as we will see in section \ref{sec:clock_spectroscopy}. 
+
+\vspace{0.5cm}
+
+\begin{myblock}{}
+We have developed in this section some necessary tools to perform a cold atoms experiment: laser systems which are controlled in intensity thanks the Acousto-Optics Modulators, and in frequency by locking them to a high finesse cavity.
+
+Combined with an atom source and a ultra-high vacuum chamber, these tools will allow us to continue the cooling procedure, with the Magneto-Optical Trapping (section \ref{sec:MOT}) followed by clock spectroscopy measurements (section \ref{sec:clock}).
+\end{myblock}
+
+\newpage
+
+%-------------------------------------------------------------------------
+\section{Towards clock spectroscopy}
+\label{sec:clock_spectroscopy}
+%-------------------------------------------------------------------------
+
+As soon as the experimental apparatus, that is the atom source and the laser systems, is completed, the aim is to cool and trap the atoms in order to further manipulate them. The final assembly is presented in figure \ref{fig:setup} and we will detail each part along the next section. 
+
+%
+\begin{figure}[ht]
+	\centering
+	\def\svgwidth{0.7\linewidth}
+    \input{images/setup.pdf_tex}
+	\caption{\small Sketch of the different beams illuminating the atoms. The atomic beam exiting the Zeeman slower arrives in the glass cell. The slowing beams are used to bring the atoms ($\simeq \SI{40}{\metre\per\second}$) within the capture velocity of the MOT beams ($\simeq \SI{7}{\metre\per\second}$, see equation \eqref{eq:capture_velocity}). The latter are all retro-reflected, and a quarter waveplate is used in front of the mirrors to keep the correct circular polarization. An additional MOT beam along the $z$-direction is not drawn here. Once enough atoms are trapped, they are loaded into a one-dimensional optical lattice at the magic wavelength ($\SI{759}{\nano\metre}$). Thanks to several dichroic mirrors, the clock and repumper beams are aligned on the lattice beam: they are combined together on the dichroic 1, and with the lattice on the dichroic 2. We will later use the dichroic 3 to add the other magic beam (C-wave or Vexlum laser). Eventually, the cloud is imaged thanks to absorption imaging on the blue transition. The black spots represent the coils and pillar structure around the glass cell, in the center.}
+    \label{fig:setup}
+\end{figure}
+%
+
+\subsection{Magneto-Optical Trap}
+\label{sec:MOT}
+
+The main mechanism which is required to slow and confine the atoms is the \emph{Magneto-Optical Trap} (MOT). It combines Doppler cooling with a trapping force, thanks to the space dependent Zeeman shifts of the $m_J$ states created by coils in an anti-Helmholtz configuration. Details about the working principles of a MOT are given in appendix \ref{sec:MOT_theory}, and about the coils in appendix \ref{sec:coils}. The MOT is an essential tool in the cold atoms community  \citep[with a first demonstration by][]{1987_raab}, which is now used in most quantum gases experiments.
+
+We use the green $^1$S$_0 \, \rightarrow \, ^3$P$_1$ transition at $\SI{556}{\nano\metre}$, which has a linewidth $\Gamma / (2 \pi) = \SI{182}{\kilo\hertz}$. It offers the advantage of having a lower Doppler temperature, of only $T_\mathsc{D} = \SI{4.4}{\micro\kelvin}$, compared to e.g.$~T_\mathsc{D} = \SI{147}{\micro\kelvin}$ for Rubidium. However, the radiation pressure force on the atoms will be reduced to the same extent. In particular, it means that the capture velocity $v_\text{c}$, i.e.$~$the maximum velocity an atom can have to be trapped by the MOT, will be lessened. We can estimate that:
+%
+\begin{equation}
+	\label{eq:capture_velocity}
+	v_\text{c} = \sqrt{\frac{2 F_\text{max} D}{m}} \qq{with} F_\text{max} = \frac{\hbar k_\mathsc{L} \Gamma}{2}~,
+\end{equation}
+%
+where  $D$ is the beam diameter, $m$ the mass of an atom and $k_\mathsc{L}$ the wavevector of the light. Indeed, the energy transferred to an atom while it is in range of the trap is at most $F_\text{max} \cdot D$.  Thus, in order to be captured, the atoms should have $v_i < v_\text{c}$, for $i = x, y, z$. In our case,  each beam has a diameter $D \sim \SI{1}{\centi\metre}$ and a power $\sim \SI{60}{\milli\watt}$, giving $v_\text{c} \simeq \SI{7}{\metre\per\second}$.
+
+However, the atomic beam exiting the Zeeman slower has a longitudinal velocity of $\SI{40}{\metre\per\second}$ (with an unknown velocity distribution), hence the MOT will not be able to capture any atom directly. To solve this issue, we added two crossed \emph{slowing beams}  \citep[previously used by][for Yb]{2020_Plotkin-Swing}. They are red-detuned by $\delta \sim - \SI{90}{\mega\hertz}$ from the resonance, and placed at a $\SI{22}{\degree}$ angle, such that $\delta - \mathbf{k}_\mathsc{L} \cdot \mathbf{v}_\text{atoms} = 0$. An  alternative could have been to realize a two-color MOT \citep[see][for an example with Yb]{2015_kawasaki}, by copropagating blue beams with the actual green MOT beams. \\
+
+In practice, we have $I \sim 750 \times I_\text{sat}$ (with $I_\text{sat} = \SI{0.139}{\milli\watt\per\centi\metre\squared}$ for the green transition, defined in appendix \ref{sec:zeeman_theory}) during the loading stage of the MOT. Then, the Zeeman slower is turned off and the MOT is compressed; that is the intensity is lowered, the magnetic field gradient increased and the detuning is reduced ($- \Gamma / 2$  is the theoretical detuning to reach the Doppler temperature, see appendix \ref{sec:MOT_theory}). This procedure enables us to obtain colder temperatures, and a more confined MOT which can be transferred more efficiently to the lattice. We note that the lack of internal structure of the ground state of the bosonic isotopes of Yb does not allow for sub-Doppler cooling \citep{2003_maruyama}.
+A series of time of flight images enables us to retrieve the temperature of the atoms, as shown in figure \ref{fig:MOT}. These images are taken thanks to absorption imaging, a technique which is detailed in appendix \ref{sec:imaging}. We extract a cloud temperature of $\SI{38}{\micro\kelvin}$. This is well above the Doppler limit of $\SI{4.4}{\micro\kelvin}$. There are several reasons for that:
+\begin{itemize}
+	\item We control the intensity of the MOT beams thanks to a feedback loop based on the intensity signal on photodetectors. We already reduce the intensity by $\sim 500$ times during the compression. It is around the limit of the dynamic range of the photodetectors. Hence, we end up with $I \sim I_\text{sat}$ at the end of the compression, which does not fulfill the condition $I \ll I_\text{sat}$ necessary to reach $T_\mathsc{D}$.
+	\item The vertical MOT beams need to counteract the effect of gravity to prevent atom loss. The condition $I \ll I_\text{sat}$ would lead to a force too weak and we avoid this regime.
+	\item Our aim is primarily to load atoms into a one-dimensional lattice, which is around $\SI{40}{\micro\kelvin}$ deep (see section \ref{sec:lattice}). The temperatures we reach in the MOT are therefore sufficient for our purposes.
+\end{itemize}
+We achieve of loading rate of $\sim \num{40e6}\,$atoms/s. Our experiment does not involve any transport, thus the atoms are directly loaded into a one-dimensional lattice, whose characteristics are described in the next section.
+
+%
+\begin{figure}[t!]
+	\centering
+	%
+	\begin{subfigure}[b]{0.95\textwidth}
+    	\centering
+    	\small
+		\input{plot/im_tof.tex}
+		\vspace{-0.5cm}
+		\caption{\small A series of time of flight images ($t_\mathsc{TOF} = 2, 4, 6, 8, \SI{10}{\milli\second}$ from left to right).  The color scale represents the optical density (see appendix \ref{sec:imaging}) and is adjusted for each image to better see the atomic cloud.}
+		\label{fig:MOT_im}
+	\end{subfigure}	
+	\vspace{0.5cm}
+
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\small
+		\input{plot/gravity.tex}
+		\caption{\small }
+		\label{fig:MOT_gravity}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.49\textwidth}
+    	\centering
+    	\small
+		\input{plot/temperature.tex}
+		\caption{\small }
+		\label{fig:MOT_temperature}
+	\end{subfigure}	
+	%
+	\caption{\small A series of time of flights is given in (a). They are used both to determine accurately the magnification of our imaging system (b), and the temperature of the cloud (c). Indeed, the falling distance is precisely known ($= \frac{1}{2} g \, t_\mathsc{TOF}^2$, $g$ being the gravity of Earth). Fitting this distance enables us to retrieve the pixel size "at the position of the atoms", or equivalently the magnification of our imaging system. Besides, the cloud expands as a Gaussian, with a width given by the equation \eqref{eq:width_tof}, used to fit the data points in (c). We extract a temperature of $\SI{38\pm1}{\micro\kelvin}$.}
+    \label{fig:MOT}
+\end{figure}
+%
+
+\subsection{Magic lattice}
+\label{sec:lattice}
+
+Once the atoms are loaded and cooled in the MOT, they are transferred into a one-dimensional optical lattice. It consists of a beam focused to a waist of $\SI{66}{\micro\metre}$ at the position of the atoms, and retro-reflected by the dichroic 2, shown in figure \ref{fig:setup}. The position of the atoms in the MOT is adjusted thanks to the shim coils in order to optimize the overlap between them and the lattice beam. 
+Two beams are counter-propagating along $z$, creating a stationary wave (thanks to the boundary condition on the mirror). We can write the total field amplitude:
+%
+\begin{equation}
+	\mathcal{E}(\mathbf{r}, t) = 2 \mathcal{E}_0(x, y) \cos(kz) \cos(\omega t)~,
+\end{equation}
+%
+by choosing the reference of $z$, $t$ to cancel the phases of the beams. $k = 2 \pi / \lambda$ is the wavevector, $\omega$ the pulsation, and $\mathcal{E}_0$ the envelope of the electric field. We placed ourselves in the approximation $z \ll z_\mathsc{R} \,(= \SI{18}{\milli\metre})$ the Rayleigh length. We deduce from the equation \eqref{eq:dipole_pot} the potential energy felt by an atom:
+%
+\begin{equation}
+	\label{eq:lattice_potential}
+	V_\text{dip}(\mathbf{r}) = - \operatorname{Re}(\alpha(\omega))\, \mathcal{E}_0^2 (x,y) \cos(kz)^2~,
+\end{equation}
+%
+with $\alpha$ the polarizability at a given wavelength. An estimation of this quantity is plotted in figure \ref{fig:polarizability} for the levels $^1$S$_0$ and $^3$P$_0$. The lattice is placed at the \emph{magic wavelength} determined by \cite{2008_barber}, that is $\SI{394799475}{\mega\hertz}$ for $^{174}$Yb. At this frequency, the two levels are equally shifted and experience the same trap depth. This is crucial for the spectroscopy measurements and Raman sideband cooling we performed (see section \ref{sec:sideband_cooling}). Using a power of $\SI{4}{\watt}$, we manage to transfer around $\num{400e3}$ atoms in the lattice. The angle between the lattice and imaging beams allows us to estimate that $\sim 3400$ lattice sites are occupied ($\pm 2 \sigma$ of a Gaussian estimate), with $\sim 150$ atoms in the center site.\\
+
+Our lattice beam being in the TEM$_{00}$ mode, the atoms experience two different confinements, in the transverse direction (along $x$ and $y$, $x$ being aligned with gravity), and the longitudinal direction (along $z$) due to the vastly different gradients of $V_\text{dip}(\mathbf{r})$ in these two directions. We neglect for the moment the contribution of gravity, and the inhomogeneity brought by the finite Rayleigh range of our beam. 
+The depth $V_\text{dip}$ of the lattice should be compared with the other relevant energy scale involved: the \emph{recoil energy}, defined as $E_\text{r} = \hbar^2 k^2 / (2 m)$. For a deep enough lattice, that is $V_\text{dip} \gg E_\text{r}$, we can neglect the tunneling between different sites and approximate the potential as a harmonic oscillator:
+%
+\begin{equation}
+	V_\text{dip} (x=0, y=0, z) = \operatorname{Re}(\alpha(\omega))\, \mathcal{E}_0^2 \times k^2 z^2 \qq{,} V_\text{dip} (x, y=0, z=0) = \operatorname{Re}(\alpha(\omega))\, \mathcal{E}_0^2 \times \frac{2 x^2}{w_0^2} ~,
+\end{equation}
+%
+with $w_0$ the waist of the beam. We probe separately these two directions of the potential, in order to verify that our lattice is well-aligned (we should obtain similar values of $\operatorname{Re}(\alpha(\omega))$ with the two methods):
+%
+\begin{itemize}
+	\item We estimate the depth of the trap along the axis aligned with gravity by changing suddenly the trap depth (in practice in less than $\SI{1}{\micro\second}$, which is non adiabatic for the energy difference between two levels along this axis). Indeed, due to the gravitational tilt, changing the lattice depth slightly displaces the position of the lattice minimum. This induces oscillations at the trap frequency, which are illustrated in figure \ref{fig:lattice_sloshing}. We extract a trap frequency $f$, which we identify with the harmonic potential: $V_\text{dip} (x) = \frac{1}{2} m (2 \pi \, f)^2 x^2$. We obtain $\operatorname{Re}(\alpha) = \SI{3.5}{\hertz\per\watt\centi\metre\squared}$, by choosing the same units to express the polarizability as in figure \ref{fig:polarizability}.
+	\item In order to measure the trapping frequency along the longitudinal direction, we resort to \emph{parametric heating}. This technique consists in modulating the lattice intensity at a given frequency. This modulation remains small compared to the total lattice depth, and can be treated perturbatively in the harmonic oscillator Hamiltonian. \cite{1997_savard} showed that only transitions such that $n \rightarrow n \pm 2$ were occurring in this configuration (with $n$ the energy eigenstates of the harmonic oscillator). We thus expect to observe atom loss due to heating at twice the frequency of the harmonic confinement. This is illustrated in figure \ref{fig:lattice_para}. However, due to the anharmonicity of the trap and our atoms not being confined to the lower energy states, this spectrum is quite spread out in frequencies. Taking the frequency at the position of the maximum atom loss, we extract $f = \SI{90}{\kilo\hertz}$, and thus $\operatorname{Re}(\alpha) = \SI{4.35}{\hertz\per\watt\centi\metre\squared}$.
+	%Given that the gap between the energy bands in the lattice reduces with higher energies, this would suggest that the frequency of the harmonic oscillator approximation is the highest frequency where we still observe atom loss. We extract $f = \SI{110}{\kilo\hertz}$, and thus $\operatorname{Re}(\alpha) = \SI{6.5}{\hertz\per\watt\centi\metre\squared}$.
+\end{itemize}
+%
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\small
+   		\input{plot/lattice_sloshing_2.tex}
+		\caption{\small Transverse excitation of the lattice}
+		\label{fig:lattice_sloshing}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+    	\small
+    	\input{plot/lattice_parametric_2.tex}		
+		\caption{\small Axial excitation of the lattice}
+		\label{fig:lattice_para}
+	\end{subfigure}	
+	%
+	\caption{\small We evaluate the lattice depth by using both excitations in the transverse direction (a), fitted by an exponentially damped cosine, and the longitudinal direction (b), given with a guide to the eye. These two techniques enable us to evaluate the lattice frequency along these two axis. Unfortunately, the anharmonicity of the trap does not allow us to conclude about the trap depth or the lattice alignment.}
+    \label{fig:lattice_cara}
+\end{figure}
+%
+
+There is a reasonable agreement between the two values of the polarizability we obtained. However, we have seen in figure \ref{fig:lattice_para} that the approximation of the harmonic oscillator with only one energy scale is to coarse to fully interpret the data. Thus, the frequencies we extracted are to be taken cautiously, even if they are sufficient to justify the deep lattice approximation: we obtain $V_\text{dip} \sim 600 E_\text{r}$. We will discuss in the next section a more robust model of the lattice depth, and use the clock transition to better visualize the energy spectrum in our lattice.
+
+
+\subsection{Clock laser and spectroscopy}
+\label{sec:clock}
+
+Our experimental setup resembles closely that of from some clock spectroscopy experiments, with a one-dimensional magic lattice and the use of the bosonic isotopes of Yb \citep{2008_poli}. Indeed, the $^{174}$Yb atoms lack a hyperfine structure. In this case, it offers many advantages. When probing a $J=0 \, \rightarrow \, J'=0$ transition, such as the clock transition, there is no linear Zeeman effect, no optical pumping, etc. In addition, the vectorial and tensorial polarizabilities vanish, and do not cause any light shift. The clock transition is therefore very close to an ideal two-level system. The yellow laser is copropagated along the lattice, thanks to a dichroic (see figure \ref{fig:setup}), to address this transition.
+
+Probing the stark shift of the $^1$S$_0 \, \rightarrow \, ^3$P$_0$ transition will be our major tool in order to evaluate the magic wavelengths \citep[with a similar method as][who measured the $\SI{759}{\nano\metre}$ magic wavelength]{2008_barber}. It is therefore crucial to characterize our system, in particular the coherence and drifts of our clock laser, before proceeding with further measurements (in section \ref{sec:stark_shift}). First, we recall that the clock transition is completely forbidden for the bosonic isotopes. It can be weakly allowed by applying a magnetic field on the atoms \citep{2006_taichenachev}. This field induces a coupling with the $^3$P$_1$ state, thus allowing the clock transition. Even though there is no linear Zeeman shift, the magnetic field still induces a quadratic Zeeman shift. We measure it to be $\beta = \SI{-60\pm1}{\milli\hertz\per\gauss\squared}$, in agreement with the value given by \cite{2008_poli}.
+
+Besides the shift they cause, the light intensity and magnetic field also affect the linewidth of the transition. Indeed, the Rabi pulsation $\Omega$ of the clock transition is proportional to $\sqrt{I} \abs{\mathbf{B}}$, with $I$ the light intensity and $\mathbf{B}$ the magnetic field. Our goal will therefore be to maintain the coherence in our system while minimizing these two parameters, in order to obtain the narrowest linewidth (see the appendix \ref{sec:rabi_theory}). An example is shown in figure \ref{fig:clock_line}, where we obtain a full width half maximum (FWHM) around $\SI{33}{\hertz}$. We detail in appendix \ref{sec:cavity_appendix} some of the methods used to obtain this linewidth.  Some other techniques can be implemented to narrow down the accessible linewidth, such as fiber noise cancellation \citep{1994_ma} or the use of a vibration isolation stage underneath the cavity.
+
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\small
+   		\input{plot/spectro_rabi.tex}
+		\caption{\small Example of Rabi oscillations.}
+		\label{fig:clock_rabi}
+	\end{subfigure}
+	%
+	\hspace{0.4cm}
+	\begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+    	\small
+   		\input{plot/spectroscopy_narrow.tex}
+		\caption{\small Frequency scan of the clock transition.}
+		\label{fig:clock_line}
+	\end{subfigure}	
+	%
+	\caption{\small Placing ourselves at the transition frequency, we observe Rabi oscillations in (a), with nearly all the atoms being pumped to the excited state after a $\pi$-pulse, and a Rabi frequency around $\SI{2.2}{\kilo\hertz}$. Reducing the Rabi frequency while using coherent $\pi$-pulses, we can estimate the linewidth of our clock laser: when the probed linewidth of the transition stops reducing, even when decreasing $\abs{\mathbf{B}}$ and / or $I$, the linewidth becomes limited by that of the laser. In (b) the data remains well fitted by Rabi oscillations, showing that the laser is still coherent: the FWHM linewidth of the laser is slightly below $\SI{33}{\hertz}$. The excitation fraction corresponds to Population($^3$P$_0$) / (Population($^1$S$_0$) + Population($^3$P$_0$)). The excited state population is determined by using the repumper, which allows for the decay of excited atoms back to the ground state (see details in appendix \ref{sec:laser_appendix}).}
+    \label{fig:clock}
+\end{figure}
+%
+
+We recall that the atoms are in a lattice and we also need to take into account the motional states $n$ of the atoms when addressing an electronic transition. We have only addressed the transition $\ket{^1\text{S}_0, n} \, \rightarrow \, \ket{^3\text{P}_0, n}$ so far. Besides, we have $n = (n_x, n_y, n_z)$, with $n_i$ corresponding to the eigenstates of the energy bands along the axis $i$. However, changing the motional state $n$ while addressing the clock transition is suppressed by the Lamb-Dicke parameter $\eta = \sqrt{E_\text{r}/ (\hbar \omega)}$, with $E_\text{r}$ the recoil energy at the wavelength of the clock transition, and $\omega$ the frequency of the lattice, in the harmonic oscillator approximation. In our case, we obtain $\eta \simeq 0.2$ for the longitudinal excitation. In order to drive the transitions $\ket{^1\text{S}_0, n_z} \, \rightarrow \, \ket{^3\text{P}_0, n_z \pm 1}$ nonetheless, we use longer incoherent pulses when addressing these transitions. We can observe them using a larger detuning window, as shown in figure \ref{fig:sideband_spectrum}.
+
+The red (blue) sideband on the left (right) of the carrier is clearly asymmetric, showing the anharmonicity of the lattice experienced by the atoms. In order to quantitatively evaluate this phenomenon and extract the lattice depth, we follow the model developed by \cite{2009_blatt}. The first step is to expand the lattice potential beyond the harmonic oscillator approximation:
+%
+\begin{equation}
+	V_\text{dip} (r, z) \simeq V_0 \left( -1 + k^2 z^2 + \frac{2}{w_0^2} r^2 - \frac{k^4}{3}z^4 - \frac{2k^2}{w_0^2}z^2 r^2 \right)~,
+\end{equation}
+%
+where we have used the cylindrical symmetry of the lattice and introduced $r = \sqrt{x^2 + y^2}$. We note the apparition at this order of a coupling term between the $z$ and $r$ coordinates. Then, we estimate the amplitude of each transition $\ket{n_x, n_y, n_z} \, \rightarrow \ket{n_x, n_y, n_z \pm 1}$. Indeed, this amplitude depends on the radial motional numbers $n_x$ and $n_y$, due to the $r^2 z^2$ coupling, and on the different Boltzmann factors for each energy state. The frequency of the lattice is widely different along $z$ and $r$, it is thus necessary to introduce two different temperatures $T_z$ and $T_r$. With the lattice pulsation $\omega_z$, these temperatures are the 3 different parameters of the model. 
+
+However, determining these three unknowns at once is too difficult for a simple fitting function to converge robustly. We thus first estimate the temperature $T_z$ by comparing the data of the blue and red sidebands. Indeed, the only difference between them is that the transitions starting from $\ket{n_z = 0}$ are not appearing in the red sideband, thus reducing its amplitude. By noting $\sigma$ the area of a given sideband, we have:
+%
+\begin{equation}
+	\label{eq:T_z}
+	\frac{\sigma_\text{red}}{\sigma_\text{blue}} = 1 - \frac{\e{E_0 / (k_B T_z)}}{\sum_{n_z=0}^{N_z} \e{E_{n_z} / (k_B T_z)}}~,
+\end{equation}
+%
+with $E_{n_z} = \hbar \omega_z (n_z + 1/2) - E_\text{rec}/2 \,(n_z^2 + n_z + 1)$ the energy of the $n_z$ state, and $N_z$ the number of trapped levels along $z$. $\omega_z$ is approximated by taking the midpoint of the abrupt flank of the blue sideband. We can then numerically inverse the equation \eqref{eq:T_z} to find a first value of $T_z$. The parameters $\omega_z$ and $T_r$ are adjusted by the fitting function from \citet[eq. 11]{2009_blatt}. 
+Integrating the resulting sidebands yields a new value of $T_z$, which is taken for a new fit until the results converge. An example of such a sideband spectroscopy is given in figure \ref{fig:sideband_spectrum}, where the sidebands are fitted with the model we introduced here. We are finally able to provide an estimation of the lattice depth: $892(2)\,E_\text{rec}$, corresponding to a pulsation $\omega_z = 2 \pi \times \SI{116.8\pm0.1}{\kilo\hertz}$ and a temperature of $\SI{85.2\pm0.2}{\micro\kelvin}$.
+
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/sideband_ex.tex}
+	\caption{\small We perform sideband spectroscopy, which allows for a better characterization of both the depth of our lattice and the temperature of the atoms. We plot in this graph the population of excited atoms, and the dashed curve is the fitted function which yields $T_z = \SI{12.5}{\micro\kelvin}$ and $\omega_z = 2 \pi \times \SI{116.8\pm0.1}{\kilo\hertz}$. We deduce the mean motional state occupation $\expval{n_z} = 1.9$. We note that the carrier is fitted with a Lorentz distribution, due to the incoherent pulses addressing the transition.}
+    \label{fig:sideband_spectrum}
+\end{figure}
+%
+
+\subsection{Experimental sequence}
+
+We summarize in this short section the experimental sequence that was performed for the acquisition of clock spectroscopy data. The different stages of the sequence are the following:
+%
+\begin{itemize}
+	\item Loading of the MOT: the Zeeman slower, 2D MOT, slowing beams and 3D MOT are combined to capture the atoms from the oven.
+	\item Compression of the MOT: the Zeeman slower, 2D MOT and slowing beams are turned off. The power of the 3D MOT is decreased, while its frequency is increased closer to the atomic transition.
+	\item Loading of the lattice: the Ti:Sapph is ramped up while the atoms are still held in the MOT.
+	\item The MOT coils are turned off, and switched remotely to a Helmholtz configuration thanks to several MOSFETs.
+	\item Clock spectroscopy: after ramping up the MOT coils, a pulse of yellow light is shined on the atoms.
+	\item Imaging of the ground state atoms: only a $\SI{1}{\gauss}$ field is used along the $z-$direction to impose a quantization axis.
+	\item Repumping: the atoms in the excited states are transferred to the ground state by shining a pulse of $\sim \SI{1}{\milli\second}$ of the repumper laser.
+	\item Imaging \say{of the excited states atoms}: a second imaging blue pulse is used. It effectively counts the atoms which were previously in the excited state.
+	\item The lattice, which held the atoms in both ground and excited states, is turned off.
+\end{itemize}
+%
+Overall, one experimental sequence lasts around $\SI{1}{\second}$. The combined absence of evaporation and transport of the atoms enables us to reach this fast sequence. It offers many benefits: quicker data taking, easier optimization thanks to the fast feedback, etc.
+
+\vspace{0.5cm}
+
+\begin{myblock}{}
+We have detailed in this section the cooling and trapping systems employed for our Yb atoms, first with the Magneto-Optical Trap and then with the one-dimensional lattice at the magic wavelength.
+
+We have performed several measurements, such as time of flight imaging, parametric heating to specify the temperature of the atoms and the depth of the lattice respectively. Then, adding the yellow laser, which addresses the clock transition, we estimated the linewidth this laser was able to achieve. Such a narrow linewidth is also a useful tool to better characterize our lattice, thanks to sideband spectroscopy. 
+
+This system will now be exploited to measure the tune-out and magic wavelengths of Yb in the next section. We will focus on the methods which were used in section \ref{sec:methods}, before presenting the results we obtained in section \ref{sec:results}.
+\end{myblock}
+
+%\newpage
+
+%-------------------------------------------------------------------------
+\section{Magic \& tune-out wavelengths}
+\label{sec:measurements}
+%-------------------------------------------------------------------------
+
+As discussed in section \ref{sec:internship_project}, it is necessary to take into account many electrons to calculate the polarizability of a given state \citep{2010_dzuba}. This hard task results in uncertainties of several nanometers. Experimental determination of these wavelengths thus remains essential. Magic wavelengths can be estimated by measuring directly the differential light shift between these two states \citep{2008_barber}.
+
+For the tune-out wavelengths, several experimental methods have been performed on different atoms. We can mention \cite{2021_ratkata} who measured a $^7$Li tune-out wavelength thanks to atomic interferometry, or \cite{2019_copenhaver} who took advantage of the Kapitza-Dirac diffraction of a Bose Einstein condensate to probe a tune-out wavelength of $^{133}$Cs. In our experiment, we have a thermal cloud and resort to parametric heating, following what has been done in \cite{2020_heinz}. We will present in section \ref{sec:methods} the different methods we have performed to evaluate the magic and tune-out wavelengths of Yb. The results we obtained are summarized in section \ref{sec:results}.
+
+
+\subsection{Methods}
+\label{sec:methods}
+
+\subsubsection{Sideband cooling}
+\label{sec:sideband_cooling}
+
+Before exploring heating atoms, we perform Raman sideband cooling \citep[first experimented by][]{1989_diedrich}, in order to lower the motional number $n_z$ of the atoms in the magic lattice. A scheme of the technique is sketched in figure \ref{fig:sideband_cooling_scheme}. The atoms are trapped in the lattice, which is approximated by a harmonic potential (we focus first on the axial confinement). The spacing between each energy eigenstate is then given by $\hbar \omega$, with $\omega \sim \SI{100}{\kilo\hertz}$ in our case. Then, a laser is used to drive the transition between two states $\ket{g}$ and $\ket{e}$, but red-detuned by $\omega$ from the resonance $\omega_\text{eg}$. This allows for the resonant driving of the transition $\ket{g, n} \, \rightarrow \, \ket{e, n-1}$, and reduces the motional state $n$ by one. We require a transition with $\Gamma \ll \omega$, and a lattice such that the potential is identical for both $\ket{g}$ and $\ket{e}$ states. These conditions are respectively fulfilled by the clock transition, and our lattice at the $\SI{759}{\nano\metre}$ magic wavelength. 
+
+However, the lifetime of atoms in the $^3$P$_0$ state is on the order of several seconds, which is too long to wait for the decay $\ket{e, n-1} \, \rightarrow \, \ket{g, n-1}$ (decay to other motional states is suppressed by the Lamb-Dicke factor). Thus, we use the repumper laser to transfer the atoms to the $^3$D$_0$ level, which can decay to $^3$P$_1$ and then to $^1$S$_0$. For these states, the polarizability is different, but importantly keeps the same sign. This changes the trapping potential and introduces some coupling between the different motional states, affecting the efficiency of our cooling. This scheme still manages to reduce the value of the motional state of atoms, as highlighted by the reduction of the red sideband amplitude in spectroscopy scans (an example is shown in figure \ref{fig:sideband_cooling_results}).
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\small
+   		\input{images/sideband_cooling.pdf_tex}
+   		\vspace{0.3cm}
+		\caption{\small Scheme of the method}
+		\label{fig:sideband_cooling_scheme}
+	\end{subfigure}
+	%
+	\hspace{0.5cm}
+	\begin{subfigure}[b]{0.55\textwidth}
+    	\centering
+    	\small
+   		\input{plot/sideband_cooling.tex}
+   		\vspace{-0.1cm}
+		\caption{\small Sideband spectrum with / without cooling}
+		\label{fig:sideband_cooling_results}
+	\end{subfigure}	
+	%
+	\caption{\small Illustration of the Raman sideband cooling method (a). It aims at reducing the motional state $n$ in the lattice. The gray potential symbolizes the transition to the $^3$D$_0$ and the $^3$P$_1$ states. After a series of $80$ pulses alternating the clock laser and the repumper, we obtain the spectrum shown in blue in (b), with a mean motional state $\expval{n_z} = 0.17$, to be compared to the black spectrum taken without sideband cooling ($\expval{n_z} = 1.5$).}
+    \label{fig:sideband_cooling}
+\end{figure}
+%
+
+We use the method given in \cite{2009_blatt}, and already detailed in section \ref{sec:clock}, to extract the temperature of a given sideband spectrum. In the examples given in figure \ref{fig:sideband_cooling_results}, we obtain $T_z = \SI{2.7}{\micro\kelvin}$ and $T_z = \SI{9.7}{\micro\kelvin}$ with and without sideband cooling respectively. These temperature indicate a mean occupation number $\expval{n_z} = 0.17$ and $\expval{n_z} = 1.5$ (with $n_z = 0$ being the ground state). However, the cooling only affects the longitudinal degrees of motion, and the radial temperature barely changes: from $T_r = \SI{29}{\micro\kelvin}$ to $T_r = \SI{23}{\micro\kelvin}$. This was expected, given that the clock laser copropagates with the lattice and cannot transfer any radial momentum to change the occupation numbers $(n_x, n_y)$.
+
+This last point can limit us, because the rethermalization of the atoms redistributes the momentum along the different degrees of freedom. However, this process is hard to quantify, and in particular difficult to distinguish from intrinsic heating caused by the lattice intensity noise when monitoring the temperature $T_z$.
+
+Raman sideband cooling remains useful given the experiment we want to perform: the goal is to observe parametric heating generated by a lattice along $z$ close to the tune-out wavelength. With atoms deeper in the lattice, and mostly in the $n_z = 0$ band, they should be more sensitive to a modulation at $\omega_\text{mod} = 2 \omega_z$.
+
+\subsubsection{Parametric heating}
+\label{sec:para_heating}
+
+When evaluating the tune-out wavelengths, we slightly change the setup presented in figure \ref{fig:setup}. Indeed, the \say{magic beam}, which was placed in a dipole trap configuration, is realigned in order to copropagate with the lattice and be reflected on the dichroic 2. The wavelength is of course modified to get closer to the theoretical prediction. The atoms then experience a superposition of two lattices, at different wavelengths.
+
+We have discussed amplitude modulations of the magic lattice in section \ref{sec:lattice}: we observe parametric heating of the atoms, with only the transitions $n \rightarrow n + 2$ allowed. We would like to reproduce a similar result by modulating the tune-out lattice instead of the magic lattice. Indead, the point at which we observe no atom loss due to these modulations would indicate that the atoms do not \say{see} the lattice anymore: the polarizability cancels. However, due to the superposition of two lattices, the amplitude modulations of the tune-out lattice cause amplitude and phase modulations on the combined lattice experienced by the atoms. We illustrate qualitatively this effect in figure \ref{fig:tune_out}.
+
+%
+\begin{figure}[htbp]
+	\centering
+	\small
+	\def\svgwidth{0.65\linewidth}
+    \input{images/tune_out.pdf_tex}
+    \caption{\small Illustration of the effects of the modulation of the tune-out lattice when combined with the magic lattice. At the top we show the lattices separately, and they are added together at the bottom. We observe that the atoms experience different modulations from site to site, sometimes mainly in amplitude, sometimes mainly in phase. Figure inspired from \cite{2020_heinz}.}
+    \label{fig:tune_out}
+\end{figure}
+%
+
+As a result, the transition $n \rightarrow n+1$ also appears in the spectrum when varying the modulation frequency, as we can observe in figure \ref{fig:para_heating_freq}. Due to the anharmonicity of the lattice, the harmonic oscillator approximation is limited: we observe in this spectrum the same broadening as in the sideband spectrum (see figure \ref{fig:sideband_spectrum}). Nevertheless, we clearly identify the transitions $n_z \rightarrow n_z+1$ and $n_z \rightarrow n_z+2$.
+
+We place ourselves at a modulation frequency $\sim \SI{190}{\kilo\hertz}$, corresponding to the maximum atom loss of the parametric heating process. Then, we vary the modulation time and observe the loss rate of atoms, which is extracted from the data by an exponential fit. This value is compared to the loss rate without any modulation (the tune-out lattice is set to the mean intensity value). We show this differential loss rate in figure \ref{fig:para_heating_loss}, which evaluates to: $\Gamma_\text{mod} = 1/\tau_\text{mod} - 1/\tau_\text{no mod} = \SI{0.57}{\per\second}$. The goal is then to follow this value as a function of the wavelength of the tune-out lattice, and estimate the point at which it crosses zero.  
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\small
+   		\input{plot/vexlum_parametric.tex}
+		\caption{\small }
+		\label{fig:para_heating_freq}
+	\end{subfigure}
+	%
+	\hspace{0.4cm}
+	\begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+    	\small
+   		\input{plot/vexlum_lifetime.tex}
+		\caption{\small }
+		\label{fig:para_heating_loss}
+	\end{subfigure}	
+	%
+	\caption{\small When modulating the tune-out lattice at a given frequency, it can lead to atom loss if the frequency corresponds to an energy difference between two motional states of the lattice. We show this process in (a), and use a frequency leading to atom loss, e.g.$~\SI{190}{\kilo\hertz}$ here, to estimate the loss rate due to the modulation. (b) the comparison of lifetimes with (without) modulation, in blue (black) provides this differential loss rate. We also observe a short super-exponential decay at short times, which can be attributed to two-body decay.}
+    \label{fig:para_heating}
+\end{figure}
+%
+
+We note that the lifetime even without modulation is quite short (compared to the values in \cite{2020_heinz} for instance). This can have several causes: the intensity noise of the magic lattice, off-resonant scattering, or even some two-photon processes can heat the atoms out of the lattice. In order to better evaluate the contribution of the modulation and reduce these undesired effects, we decided for further measurements to lower the depth of the magic lattice. We then reach a compromise between atom number (and thus signal to noise ratio) and lifetime in the magic lattice by reducing the lattice depth by a factor of 2.
+
+\subsubsection{Differential light shift}
+\label{sec:stark_shift}
+
+Magic wavelengths are defined as points such that the differential light shift between two states vanishes. A simple method to determine a magic wavelength is then to probe such a light shift and follow its evolution when varying the wavelength: the point at which it crosses zero is the magic wavelength \citep[this has been done by e.g.][]{2008_barber}. We thus add a beam in a dipole trap configuration to our experimental setup, which overlaps with the lattice at the position of the atoms (see figure \ref{fig:setup}). The waist of this beam is larger than the lattice ($w_0 \sim \SI{110}{\micro\metre}$), to make sure that all atoms experience the same potential. Otherwise, a potential gradient at the position of the atoms would result in the broadening of the observed linewidth.
+
+We show in figure \ref{fig:light_shift_ex} an example of such a measurement. We place ourselves at the clock transition frequency and realize a scan similar to the one presented in figure \ref{fig:clock_line}, with either the additional beam on or not. We then record the power of this beam and vary it to extract the light shift as a function of the intensity (in figure \ref{fig:light_shift_total}). The shift varies linearly, as it was expected from the equation \eqref{eq:dipole_pot}. The slope encodes precisely the difference in polarizability between the two electronic states $^1$S$_0$ and $^3$P$_0$. Besides, it only depends on the wavelength of this new beam. 
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\small
+   		\input{plot/light_shift.tex}
+		\caption{\small Light shift of the clock transition}
+		\label{fig:light_shift_ex}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+    	\small
+   		\input{plot/polarizability.tex}
+		\caption{\small Measurements at $\SI{461.22}{\nano\metre}$}
+		\label{fig:light_shift_total}
+	\end{subfigure}	
+	%
+	\caption{\small (a) gives an example of light shift induced by a beam in a dipole trap configuration (in this case, the C-wave is set at $\SI{461.22}{\nano\metre}$). The black (blue) dots show a spectroscopy scan without (with) the C-wave illuminating the atoms. The lines are fitting functions from equation \eqref{eq:rabi_sinc}. We observe a shift of the clock transition of $\SI{42\pm1}{\hertz}$. We present in (b) a compilation of this type of measurements for different powers, in order to extract by a linear fit the "differential polarizability" at this wavelength. This value is given as a function of power, because of the systematic uncertainty linked to the knowledge of the light intensity at the position of the atoms. Since we do not change the pointing or size of the C-wave between series of measurements, this does not affect the results about the magic wavelengths given in section \ref{sec:results}.}
+    \label{fig:light_shift}
+\end{figure}
+%
+
+Then, it is necessary to change the wavelength of the C-wave / Vexlum laser to estimate once more the differential light shift, and repeat this operation to find the frequency at which it cancels. The corresponding data is presented in section \ref{sec:results}.
+
+\subsection{Results}
+\label{sec:results}
+
+All the measurements detailed here imply a precise knowledge of the wavelengths of the different lasers. Besides, for the magic and tune-out wavelengths, no atomic transition of Yb can be used to estimate their frequency. Thus, the wavelengths of the C-wave and Vexlum lasers were recorded on a \href{https://www.highfinesse.com/en/wavelengthmeter/wavelengthmeter-ws-8-2.html}{wavelengthmeter}. This device is calibrated thanks to the yellow laser using the clock spectroscopy measurements. Indeed, the transition frequency is well-known \citep{2008_poli} and the major shifts (quadratic Zeeman shift, light shift) can be calibrated. This process leads to a precision of $\SI{\pm10}{\mega\hertz}$ for our wavelengthmeter. This uncertainty is well below other uncertainty sources (see below) and can be neglected.
+
+\subsubsection{Magic wavelengths}
+\label{sec:magic_wavelengths}
+
+Using the differential light shift method presented in section \ref{sec:methods}, we measure two magic wavelengths. The data and extracted values are summarized in figure \ref{fig:magic}. The frequencies given in \ref{fig:magic_1} and \ref{fig:magic_2} translate to the following wavelengths: $\SI{459.619\pm0.007}{\nano\metre}$ and $\SI{552.6113\pm0.0002}{\nano\metre}$. They are within $\SI{5}{\nano\metre}$ of the values calculated by \cite{2010_dzuba}.
+
+%
+\begin{figure}[htb]
+	\centering
+	%
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+    	\small
+   		\input{plot/results_magic_1.tex}
+		\caption{\small Magic frequency = 652.263(9) THz}
+		\label{fig:magic_1}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.49\textwidth}
+    	\centering
+    	\small
+   		\input{plot/results_magic_2.tex}
+		\caption{\small Magic frequency = 542.5015(2) THz}
+		\label{fig:magic_2}
+	\end{subfigure}	
+	%
+	\caption{\small We present in (a) and (b) the data which allowed us to deduce the two magic wavelengths, making use the C-wave and Vexlum lasers respectively. Each point corresponds to a series of clock spectroscopy scans, as shown in figure \ref{fig:light_shift}. The error bar of each point is smaller than the marker.}
+    \label{fig:magic}
+\end{figure}
+%
+
+The uncertainties correspond to one standard deviation errors of the fitting parameters. We note that they vary by more than one order of magnitude between the two sets of data. This is partly due to some intrinsic differences between the C-wave and Vexlum lasers. Indeed, the output power of the latter is around 5 times greater than that of the former. Besides, we didn't manage to lock the frequency of the C-wave laser with a feedback loop including the measured wavelength. As a result, its frequency was oscillating by $\sim \SI{100}{\mega\hertz}$ during the data taking. More importantly, the slope of the differential light shift at $\SI{552.6}{\nano\metre}$ is around one order of magnitude larger than that at $\SI{459.6}{\nano\metre}$. This fact largely explains the difference in uncertainties between the two magic wavelengths.
+
+\subsubsection{Tune-out wavelengths}
+\label{sec:tune_out_wavelengths}
+
+In order to measure a tune-out wavelength, we first perform Raman sideband cooling, followed by parametric heating. The probe laser is thus aligned with the magic lattice, and retro-reflected on the dichroic 2 (see figure \ref{fig:setup}). Then, the differential loss rate, that is the additional loss rate caused by the modulation of the lattice, is recorded as a function of the wavelength. 
+We present the data concerning the tune-out wavelength of the state $^1$S$_0$ in figure \ref{fig:tune_out_results}. It allows us to deduce that this wavelength is equal to 
+$\SI{553.2936\pm0.0006}{\nano\metre}$.
+
+%
+\begin{figure}[htb]
+	\centering
+	\small
+    \input{plot/results_tune_out.tex}
+	\caption{\small We estimate the tune-out frequency of the $^1$S$_0$ state to be $\SI{541.8325\pm0.0006}{\tera\hertz}$. The differential loss rate ($1/\tau_\text{modulation} - 1/\tau_\text{no modulation}$) is fitted with a parabola. This model is discussed in \cite{2020_heinz} in the case of Strontium, and can be transposed for Yb.}
+    \label{fig:tune_out_results}
+\end{figure}
+%
+
+Unfortunately, we were not able to measure the tune-out wavelength of the $^3$P$_0$ state. Indeed, the data from figure \ref{fig:tune_out_results} was taken with the Vexlum laser, whereas only the C-wave laser was available around the frequency of the second tune-out. This lack of light intensity, in addition to the intrinsic reduced lifetime of the $^3$P$_0$ state in the lattice, resulted in the impossibility to take reliable data.
+
+\vspace{0.5cm}
+
+\begin{myblock}{}
+We have detailed in this section the methods we used and measurements we took to evaluate the magic and tune-out wavelengths of Yb. We were able to identify the two magic wavelengths estimated by \cite{2010_dzuba}, as well as one of the tune-out wavelengths. 
+
+Having a higher light intensity on the atoms, or improving the short and long term stability of the clock laser would enable us to reduce the uncertainties of the measurements. Nevertheless, the precision that we have achieved is sufficient to continue building this experimental platform, and in particular the tweezer arrays at the $^1$S$_0$ tune-out wavelength.
+
+\end{myblock}
+
+%\newpage
+
+%-------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+%-------------------------------------------------------------------------
+
+Quantum simulations is one of the broad goal of the ultracold atoms community. The new experimental platform from Prof.$\,$Aidelsburger will hopefully allow some progress in this direction, by performing simulations of lattice gauge theory. 
+
+An intermediate objective was to better characterize the polarizabilities of the clock states of Ytterbium, in order to later use its magic and tune-out wavelengths. This peculiar frequencies allow for a finer control of the atoms, by manipulating independently two electronic states.
+
+During my internship, we first constructed the platform necessary to measure these wavelengths. More precisely, we trapped the atoms in a one-dimensional optical lattice and probed their properties using either clock spectroscopy or parametric heating. These methods enabled us to precisely evaluate the frequencies of two magic wavelengths, as well as one tune-out wavelength.
+
+The next step would be to install a microscope objective, and to focus a tweezer array at the position of the atoms. This project was developed in parallel to the measurements presented in this report, and already yields promising results: figure \ref{fig:tweezers} shows a tweezer array realized on a test setup. The microscope objective will also allow for single site imaging of atoms in an optical lattice, enabling the real-time engineering of atomic arrays \citep{2016_barredo, 2016_endres}.
+
+%
+\begin{figure}[htb]
+	\centering
+   \includegraphics[width=0.4\textwidth]{tweezer_initial.png}
+	\caption{\small Example image of a tweezer array, created by an Acousto-Optic Deflector (AOD). By giving several frequencies at the input of the device, we can generate an array of beams. Focusing them then produces a tweezer array.}
+   \label{fig:tweezers}
+\end{figure}
+%
+
+In summary, we have developed some of the necessary tools to build a complex experimental platform. It will combine a local control of tunneling and engineering of optical potentials, as well as the precise manipulation of atoms and their electronic states. This versatile experimental apparatus will be able to simulate several different quantum models.
+
+
+\newpage
+
+\appendix	
+
+%-------------------------------------------------------------------------
+\section{Imaging the atoms}
+\label{sec:imaging}
+%-------------------------------------------------------------------------
+
+\subsection{Absorption imaging}
+
+In order to probe the atomic density, and thus the number of atoms in our system, we used a common technique called \emph{absorption imaging}. The idea is to shine quasi-resonant light on the atomic cloud (either \textit{in situ} or after a time of flight). When collecting the light with a \href{https://www.alliedvision.com/en/camera-selector/detail/mako/g-234/}{CCD camera}, we observe a dip in the intensity at the position of the atomic cloud. We assume it is a dilute cloud, so that there are no multiple scattering of photons, and a low intensity ($I \ll I_\text{sat}$). The evolution of the light intensity $I(\mathbf{r})$ during its propagation through the cloud is given by the Beer-Lambert law:
+%
+\begin{equation}
+	\label{eq:Beer_lambert}
+	\dv{I}{z}(\mathbf{r}) = - n(\mathbf{r}) \, \sigma(\delta) \, I(\mathbf{r})~,
+\end{equation}
+%
+with $n(\mathbf{r})$ the density of atoms and $\sigma(\delta)$ the effective cross-section for absorption. For a two-level atom, it depends on the detuning $\delta$ in the following way:
+%
+\begin{equation}
+	\sigma(\delta) = \frac{3 \lambda^2 / (2 \pi)}{1 + (2\delta / \Gamma)^2} = \frac{\sigma_0}{1 + (2\delta / \Gamma)^2}~.
+\end{equation}
+%
+Assuming that we use resonant light, we can replace $\sigma(\delta)$ with $\sigma_0$. This value is calculated for cycling transitions, we use in practice a superposition of $\si\sigma_+$ and $\sigma_-$ light. Integrating the equation \eqref{eq:Beer_lambert} yields:
+%
+\begin{equation}
+	I(x, y) = I_0(x, y) \exp(- \int n(\mathbf{r}) \sigma_0 \dd{z})~,
+\end{equation}
+%
+ with $I_0$ the intensity on the camera in the absence of atoms. This simple integration is not possible when the low intensity assumption breaks down. We will explore this case in details in section \ref{sec:high_intensity_imaging}. We then deduce the column density $\bar{n}(x, y)$:
+ %
+ \begin{equation}
+ 	\bar{n}(x, y) = \int n(\mathbf{r}) \dd{z} = - \frac{1}{\sigma_0} \ln(\frac{I(x, y)}{I_0(x,y)})~.
+ \end{equation}
+ %
+Therefore, it is simply necessary to capture two images: one in the absence of atoms, and the other in the presence of atoms in order to obtain the column density of the cloud (such as in figure \ref{fig:column_density}). The atom number is the sum over all pixels of the column density.
+ 
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\hspace{-1cm}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\small
+		\input{plot/raw_im_0.tex}
+		\caption{\small $I(x, y)$}
+		\label{fig:I}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\small
+		\input{plot/raw_im_1.tex}
+		\caption{\small $I_0(x, y)$}
+		\label{fig:I_0}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.32\textwidth}
+    	\centering
+    	\small
+		\input{plot/im_density.tex}
+		\vspace{-0.65cm}
+		\caption{\small $\bar{n}(x, y)$}
+		\label{fig:column_density}
+	\end{subfigure}	
+	%
+	\caption{\small Example of absorption imaging, with two images taken in the presence of atoms or not, respectively (a) and (b). The extracted column density is shown in (c). The total atom number then corresponds to the sum of the counts on image (c). The background needs to be subtracted, as done in (c), to not overestimate the atom number. We indicate the number of atoms/$\si{\micro\metre\squared}$ thanks to the calibration of the pixel size.}
+    \label{fig:absorption_imaging}
+\end{figure}
+%
+
+\subsection{Time of flight imaging}
+ 
+When the density of the cloud is too high (for an optical density $\gg 1$), the intensity $I(x,y)$ at the position of the atoms will be dominated by noise and in-situ measurement is not possible. To overcome this issue, we let the cloud expand for some time before imaging and take a so-called \emph{time of flight} measurement. \\
+
+We assume that there is no interaction between atoms during the expansion of the cloud, i.e.$~$each atom follows a ballistic trajectory. Then, the position of an atom being at a position $\mathbf{r}_0$ with momentum $\mathbf{p}_0$ at $t=0$ will evolve according to: $\mathbf{r} = \mathbf{r}_0 + \mathbf{p}_0 \, t /m$, with $m$ the mass of the atom. Supposing that the momentum distribution of the atoms follows the Maxwell-Boltzmann distribution (this is justified by the relatively high temperature of our cloud), we obtain the atomic density $n$ at a time $t$:
+%
+\begin{equation}
+	n(\mathbf{r}, t) = \frac{N_0}{(2 \pi \sigma_0^2)^{3/2}} \frac{1}{(m k_\mathsc{B} T)^{3/2}} \int \dd[3]{\mathbf{p}_0} \int \dd[3]{\mathbf{r}_0} \exp(- \frac{\mathbf{r}_0^2}{2 \sigma_0^2}) \exp(- \frac{\mathbf{p}_0^2}{2 m k_\mathsc{B}T}) \delta \left( \mathbf{r} - \mathbf{r}_0 - \frac{\mathbf{p}_0 t}{m}\right)~,
+\end{equation}
+%
+with $N_0$ the total number of atoms, $\sigma_0$ the initial size of the atomic cloud (supposed Gaussian), $k_\mathsc{B}$ the Boltzmann constant, $T$ the temperature of the cloud, and $\delta$ the usual Dirac distribution. Integrating out e.g.$~$the initial position:
+%
+\begin{align}
+	n(\mathbf{r}, t) &= \frac{N_0}{(2 \pi \sigma_0^2)^{3/2}} \frac{1}{(m k_\mathsc{B} T)^{3/2}} \int \dd[3]{\mathbf{p}_0} \exp(- \frac{(\mathbf{r} - \mathbf{p}_0 \, t /m )^2}{2 \sigma_0^2}) \exp(- \frac{\mathbf{p}_0^2}{2 m k_\mathsc{B}T}) ~\\
+									 & = \frac{N_0}{(2 \pi \sigma_0^2)^{3/2}} \frac{1}{(m k_\mathsc{B} T)^{3/2}} \left( \frac{\pi}{a}\right)^{3/2} \exp(-\frac{\mathbf{r}^2}{2 \sigma_0^2}+\frac{(\mathbf{r} t)^2/ (4 m^2 \sigma_0^4)}{4 a})~,
+\end{align}
+%
+where we have introduced $a = t^2/  (\sqrt{2} m \sigma_0)^2 + 1/ (2 m k_\mathsc{B}T)$ to lighten the notation. We can check that we retrieve the original atomic distribution when taking $t=0$. We are mainly interested in the width of this Gaussian distribution. The argument of the exponential reads:
+%
+\begin{align}
+ - \frac{\mathbf{r}^2}{2} \left( \frac{1}{\sigma_0^2} - \frac{t^2}{m^2 \sigma_0^4} \left[  \frac{t^2}{(m \sigma_0)^2} + \frac{1}{ m k_\mathsc{B}T} \right]^{-1} \right)
+ 										 &=- \frac{\mathbf{r}^2}{2 \sigma_0^2} \left( 1 - \left[ 1+ \frac{ m \sigma_0^2}{k_\mathsc{B} T t^2} \right]^{-1} \right) \\
+ 										 &= -\frac{\mathbf{r}^2}{2 \left(\sigma_0^2 + \frac{k_\mathsc{B} T}{m} t^2 \right)} = - \frac{\mathbf{r}^2}{2 \sigma(t)^2} ~.
+\end{align}
+%
+We eventually obtain that the atomic cloud expands with a Gaussian shape, with a width given by:
+%
+\begin{equation}
+	\label{eq:width_tof}
+	\sigma(t) = \sqrt{\sigma_0^2 + \frac{k_\mathsc{B} T}{m} t^2}~.
+\end{equation}
+%
+After a long time, the initial width of the cloud can be neglected and we retrieve a width increasing linearly with time. This formula is well illustrated in figure \ref{fig:MOT_temperature}.
+
+
+%We consider a non-interacting classical gas, with a phase space density given by $f(\mathbf{r}, \mathbf{p}, t)$. According to Liouville's theorem, $f(\mathbf{r}, \mathbf{p}, t) = f_0(\mathbf{r}_0, \mathbf{p}_0)$. Then, the density of the cloud becomes after expanding for a time $t$:
+%%
+%\allowdisplaybreaks
+%\begin{align}
+%	n(\mathbf{r, t}) & = \int \dd{\mathbf{p}} f(\mathbf{r}, \mathbf{p}, t) = \int \dd{\mathbf{p}} f_0\left(\mathbf{r} - \frac{\mathbf{p}t}{m}, \mathbf{p}_0 \right) \\
+%									 & =  \int \dd{\mathbf{r}_0'} \int \dd{\mathbf{p}} f_0\left(\mathbf{r}_0', \mathbf{p}_0 \right) \delta \left( \mathbf{r} - \frac{\mathbf{p}t}{m} - \mathbf{r}_0' \right) \\
+%									  & \simeq  \int \dd{\mathbf{r}_0'} \int \dd{\mathbf{p}} f_0\left(\mathbf{r}_0', \mathbf{p}_0 \right) \delta \left( \mathbf{r} - \frac{\mathbf{p}t}{m} \right)  \\
+%									  & =  \left( \frac{m}{t} \right)^3 \int \dd{\mathbf{r}_0'}  f_0\left(\mathbf{r}_0', \frac{m \mathbf{r}}{t} \right) =  \left( \frac{m}{t} \right)^3  \mathcal{P}_0 \left( \frac{m \mathbf{r}}{t} \right),~,
+%\end{align}
+%%
+%where we neglected the $\mathbf{r}_0'$ contribution in the $\delta$ distribution, and $\mathcal{P}_0$ is the initial momentum distribution. In our case, $\mathcal{P}_0$ is the Maxwell Boltzmann distribution, hence:
+%%
+%\begin{equation}
+%	n(\mathbf{r, t}) \propto  \left(  \frac{m^3}{2 \pi k_\mathsc{B} T t^2} \right)^{3/2} \exp(- \frac{m \mathbf{r}^2}{2 k_\mathsc{B}T t^2})~,
+%\end{equation}
+%%
+
+\subsection{High intensity imaging}
+\label{sec:high_intensity_imaging}
+
+In some situations, it is impossible to release the atoms and image them via a time of flight. In our case, it mainly concerns the successive imaging of the atoms in the ground and excited states of the clock transition: releasing the atoms when observing the ground state would lead to a loss of the atoms in the excited state. In situ imaging is therefore mandatory, and a higher intensity is necessary to have light penetrating through the cloud.
+
+Fortunately, it is possible to characterize our imaging system to correct for the non-linearity introduced in the Beer-Lambert law \eqref{eq:Beer_lambert}. The evolution of the light intensity through the atomic sample is now given by:
+%
+\begin{equation}
+	\label{eq:Beer-Lambert_2}
+	\dv{I}{z} \/ (\mathbf{r}) = - n(\mathbf{r}) \, \sigma_0 \frac{I(\mathbf{r})}{1 + I(\mathbf{r}) / I_\text{sat}}~,
+\end{equation}
+%
+where $I_\text{sat}$ is the saturation intensity of our transition (an explicit expression is given in appendix \ref{sec:theory}). The equation \eqref{eq:Beer-Lambert_2} can be readily integrated to obtain \citep{2007_reinaudi}:
+%
+\begin{equation}
+	\label{eq:column_density}
+	 \bar{n}(x, y) = - \frac{1}{\sigma_0} \left( \ln(\frac{I(x, y)}{I_0(x,y)}) + \frac{I_0(x,y) - I(x, y)}{I_\text{sat}}\right)~.
+\end{equation}
+%
+Correcting for high intensity seems straightforward. However, the light intensity at the position of the atoms is not known: we cannot calculate the ratio between $I$ and $I_\text{sat}$. The information we have is only in units of camera counts. The equation \eqref{eq:column_density} needs to be recast to better take this fact into account:
+%
+\begin{equation}
+	\label{eq:column_density_counts}
+	 \bar{n}(x, y) = - \frac{A}{\sigma_0} \left( \ln(\frac{C(x, y)}{C_0(x,y)}) + \frac{C_0(x,y) - C(x, y)}{C_\text{sat}}\right)~,
+\end{equation}
+%
+where $A$ is the pixel area (which calibration is shown in figure \ref{fig:MOT_gravity}), and $C$ ($C_0$) denotes the camera counts with (without) atoms. Note that $(x, y)$ are now discrete and simply refer to the pixel grid, $\bar{n}$ is thus an atom number, integrated over one pixel. In this case, $C_\text{sat}$ becomes an unknown parameter linked to our imaging system, which we need to determine. 
+
+We first take a series of images of the same atomic sample, but with vastly different imaging intensities. One needs to be careful to still have the imaging beam penetrating through the cloud even at the lowest intensities. Then, we know that each picture should indicate the same atomic density pixel by pixel. We therefore calculate the variance of the atomic density across the different images and minimize it as a function of the unknown parameter $C_\text{sat}$ (this process is shown in figure \ref{fig:high_intensity_var}). This method then allows us to use a high intensity beam during the imaging process, and still retrieve an atom number independent from the intensity (see figure \ref{fig:high_intensity_atom_count}).
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\small
+   		\input{plot/high_intensity_var.tex}
+		\caption{\small Minimization of the atom count variance.}
+		\label{fig:high_intensity_var}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+    	\small
+   		\input{plot/high_intensity_result.tex}
+		\caption{\small Corrected atom counts.}
+		\label{fig:high_intensity_atom_count}
+	\end{subfigure}	
+	%
+	\caption{\small We illustrate in (a) the variance in the atom count across the different images when changing the saturation count $C_\text{sat}$. We extract the minimum value (red cross) to correct for the atom count in (b) using the equation \eqref{eq:column_density_counts}. We show in light gray the atom count with $C_\text{sat} = \infty$ and in black with $C_\text{sat} =843$, the optimum value obtained in (a).}
+    \label{fig:high_intensity}
+\end{figure}
+%
+
+\newpage
+
+%-------------------------------------------------------------------------
+\section{Cavity}
+\label{sec:cavity_appendix}
+%-------------------------------------------------------------------------
+
+%\hspace{-\parindent}
+\begin{minipage}{0.5\linewidth}
+We use a Fabry-Pérot cavity, provided by \href{https://www.menlosystems.com/products/ultrastable-lasers/orc-cylindric-orc-cubic/}{Menlo} (ORC-cylindric), to lock the blue, green and yellow lasers to a stable frequency reference. A set of plano-convex mirrors is optically contacted on a Ultra Low Expansion (ULE) glass of length $L=\SI{12.1}{\centi\metre}$. This spacer is placed under vacuum, surrounded by thermal shields, and actively stabilized in temperature by a thermoelectric coupler (TEC). The cavity is also placed on a vibration isolation stage, which was however not used during this internship. All these precautions are necessary to minimize the frequency drifts of the lasers. In particular, this is crucial for the clock laser which will probe a sub-Hz transition.
+\end{minipage} \hfill
+\begin{minipage}{0.45\linewidth}
+	%\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Menlo_cylindrical_cavity}
+	\captionof{figure}{\small Picture of the cavity which was used, surrounded by the vacuum chamber, before installation in the experiment. Picture from Menlo.}
+	\label{sphere}
+	%\end{figure}
+\end{minipage}
+
+
+\subsection{Finesse \& loss measurements}
+
+Focusing only on the TEM$_{00}$ modes of the cavity, they are separated in frequency space by the free spectral range $\nu_\mathsc{FSR} = \frac{c}{2L}$, with $c$ the speed of light in vacuum and $L$ the length between the two mirrors of the cavity \citep[see for instance][for a more detailed theory of cavities]{2013_martin}. Let us consider a cavity with identical mirrors,  having reflection and transmission coefficients $R$ and $T$ respectively. In the case of an ideal (that is lossless) cavity, $R+T=1$. However, allowing for the possibility $R + T < 1$ enables us to consider losses on the cavity mirrors. This is of particular interest here, because the losses will heat the cavity mirrors, and could have some effect on our spectroscopy signal. 
+
+
+The light transmitted through the cavity as a function of its frequency is an Airy function, with peaks separated by $\nu_\mathsc{FSR}$ and of full width half maximum $\Delta \nu$. We represent an example of such a function in figure \ref{fig:cavity_transmission}. 
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/cavity.tex}
+	\caption{\small The fraction of light transmitted through the cavity is plotted against frequency, over two free spectral ranges, for a cavity finesse of $\simeq 61$ ($R = 0.95$). We vary the losses between the different curves.}
+    \label{fig:cavity_transmission}
+\end{figure}
+%
+
+We then define the finesse:
+%
+\begin{equation}
+	\mathcal{F} = \frac{\nu_\mathsc{FSR}}{\Delta \nu} = \frac{\pi \sqrt{R}}{1 - R}~.
+\end{equation}
+%
+This quantity can be estimated by locking the laser on the cavity, and suddenly turning off the incoming light: the light building up in the cavity will then slowly decay with a time constant $\tau = \mathcal{F} L /(\pi c)$ \citep{2013_martin}. In this sense, the finesse is also related to the quality of the resonator; a higher finesse allows for the resolution of smaller spectral features.  This technique has been performed on our cavity (by a previous intern), and yielded: $\mathcal{F}_{798} = \num{22e3}$, $\mathcal{F}_{1112} = \num{244.1e3}$, $\mathcal{F}_{1156} = \num{456.6e3}$, where the subscript indicates the wavelength. However, this method does not bring any information about the losses of the cavity since the finesse only depends on the reflection coefficient of the mirrors.
+
+One way to circumvent this issue is to measure the intensity that is coupled into the cavity when scanning the laser across one resonance. Indeed, if the sweep is sufficiently slow, some interferences will build into the cavity, before decaying as soon as the laser frequency changes. We can express the evolution of the electric field $E$ inside the cavity with the following differential equation:
+%
+\begin{equation}
+	\label{eq:cavity_field}
+	\dv{E}{t'} = - (1 - i \tilde{\nu} t') E + i \eta~,
+\end{equation}
+%
+with $t' = t / (2 \tau)$, $\eta = \sqrt{T} \mathcal{F} E_\mathrm{i} / \pi$ and $\tilde{\nu} = 4 \dot{\omega} \tau^2$ ($ \dot{\omega}$ is the laser sweep rate). We have also taken the reference of times such that $t'=0$ when the laser frequency matches a cavity resonance. Under the assumption that the scan begins far off resonance, we can solve analytically the equation \eqref{eq:cavity_field} and deduce the intensity reflected by the cavity:
+%
+\begin{equation}
+	\label{eq:cavity_sweep}
+	\frac{\abs{E_\text{r}}^2 }{\abs{E_\text{i}}^2 }= \abs{1-\frac{\beta}{\sqrt{\tilde{\nu}}} \left[ \sqrt{\frac{\pi}{2i}} \exp(-t' +\frac{i \tilde{\nu} t'^2}{2} - \frac{i}{2 \tilde{\nu}}) + \sqrt{2i} D\left( \frac{i+t' \tilde{\nu}}{\sqrt{2i \tilde{\nu}}} \right) \right] }^2~,
+\end{equation}
+%
+where $D(x) = \e{-x^2} \int_0^x \e{y^2} \dd{y}$ is the Dawson function; $\beta = T / (1 - R)$ determines the reflected and transmitted powers when the laser is locked on a cavity resonance, which are $(1 - \beta)^2$ and $\beta^2$ respectively (for a lossless cavity $\beta = 1$). The formula \eqref{eq:cavity_sweep} is then used to fit the experimental data, and deduce both the finesse of the cavity and the losses of the mirrors. An example of such a measurement is presented in figure \ref{fig:cavity_finesse} at $\SI{798}{\nano\metre}$.
+
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/cavity_finess.tex}
+	\caption{\small Intensity signal reflected from the cavity, while sweeping the laser frequency. The raw data is shown in light gray, with the dashed curve being the fitted function from equation \eqref{eq:cavity_sweep}. We extract: $ \mathcal{F} = \num{22300\pm700}$ and $\beta = \num{0.112\pm0.007}$, thus 
+ $R = 0.999859(4)$ and $T= \num{1.57\pm0.04}\times\num{e-5}$. This allows us to deduce that the maximum transmitted intensity is 1.2 \%.}
+    \label{fig:cavity_finesse}
+\end{figure}
+%
+
+Performing similar measurements at $\SI{1112}{\nano\metre}$ and $\SI{1156}{\nano\metre}$, we obtain respectively $\beta = \num{0.56\pm0.05}$ (maximum transmitted intensity: 52 \%), and $\beta = \num{0.50\pm0.06}$ (maximum transmitted intensity: 44 \%). 
+
+\subsection{Linear drift of the cavity}
+
+Due to the aging of the ULE glass, the space between the two mirrors slightly changes overtime.  It causes a frequency drift from one clock spectroscopy measurement to another, which we need to take into account to reliably estimate the clock transition frequency. We present in figure \ref{fig:linear_drift} the measurement of this drift. It is then automatically compensated afterwards during the data taking, by adjusting the frequency $\Omega_2$ of the offset lock (see figure \ref{fig:offset_lock}) before addressing the clock transition.
+
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/linear_drift.tex}
+	\caption{\small Evaluation of the linear drift rate of the cavity. It is shown as a frequency since we measure it through a series of spectroscopy of the clock state, and compensate it by changing directly the offset lock frequency $\Omega_2$.}
+    \label{fig:linear_drift}
+\end{figure}
+%
+
+\subsection{Thermal expansion coefficient}
+
+Thermal fluctuations can also impact the length of the ULE spacer. For this reason, the cavity is isolated from exterior temperature fluctuations and its temperature is consistently regulated. In order to minimize the impact of the remaining thermal fluctuations, the temperature of the cavity is adjusted to cancel the linear Coefficient of Thermal Ewxpansion (CTE). The total detuning caused by thermal length variations is proportional to the integral of the CTE, and thus has a quadratic dependence around the point at which the CTE equals zero. Changing the temperature of the cavity allows us to retrieve the so-called \emph{zero-crossing temperature}, shown in figure \ref{fig:zero_crossing}. We then set the temperature to $T_0$ for further clock spectroscopy measurements.
+
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/zero_crossing.tex}
+    \caption{\small We evaluate the zero-crossing temperature: after changing the setpoint of the TEC regulating the ULE temperature, we need to wait around 2 days for the system to equilibrate (this duration is given by Menlo). We obtain a temperature dependence of $\Delta \nu / \nu = \num{4.55\pm0.03}\times \SI{e-10}{\per\kelvin\squared}\, (T - T_0)^2$. The data is shown (and fitted) after removal of the linear drift. It was taken prior to my arrival thanks to the clock laser of another Yb experiment in the LMU building.}
+    \label{fig:zero_crossing}
+\end{figure}
+%
+
+\newpage
+
+%-------------------------------------------------------------------------
+\section{Laser systems}
+\label{sec:laser_appendix}
+%-------------------------------------------------------------------------
+
+We give in this section a few technical details about the laser systems, in particular about the management of the different frequencies and powers.
+
+\subsection*{Blue} 
+The blue transition has several purposes. It is therefore necessary to divide the power of the laser and place AOMs in order to change the frequency according to the use of each element. All the frequency changes are summed up in figure \ref{fig:blue_AOM}. We note that the detuning of the AOM leading to the imaging fiber is adjusted to make sure that this light is on resonance. 
+
+%
+\begin{figure}[htbp]
+	\centering
+	\def\svgwidth{0.55\linewidth}
+    \input{images/blue_AOM.pdf_tex}
+    \caption{\small The output light of the laser is divided several times. First to the Zeeman slower, in order to have $\sim \SI{250}{\milli\watt}$ on the experimental table. The remaining light goes through a double pass AOM at $\SI{105}{\mega\hertz}$ (intermediate AOM). It is divided between the 2D MOT ($\SI{30}{\milli\watt}$ are necessary on the table) and the two remaining AOMs for the slowing beams ($\sim \SI{5}{\milli\watt}$ ) and the imaging ($\sim \SI{5}{\milli\watt}$). The solid gray lines indicate the points at which light is coupled in a fiber towards the experimental table.}
+    \label{fig:blue_AOM}
+\end{figure}
+%
+
+An additional output of the laser, before the SHG cavity, leaks some light at $\SI{798}{\nano\metre}$. It is sent to the cavity for the PDH lock. The laser frequency is locked in order to reach the resonance frequency for the imaging light.
+
+\subsection*{Green}
+The laser is used for the 3D MOT only. The output light ($\sim \SI{1}{\watt}$) is then equally divided between three arms, each of them having an AOM at $\SI{80}{\mega\hertz}$ in a double pass configuration. In addition to the control of the intensity on the experimental table brought by the AOMs, the double pass configuration allows for changes in frequency without affecting the coupling efficiency in the fibers. This is very useful during the MOT compression, when the frequency of the MOT is swept by $\SI{3.5}{\mega\hertz}$ during $\SI{100}{\milli\second}$. 
+
+As for the blue laser, an additional output before frequency doubling is used to lock the laser to the ULE cavity, and achieve a frequency slightly red detuned from the resonance frequency in the MOT.
+
+\subsection*{Yellow} 
+We use the setup described in figure \ref{fig:laser_setup}. In the case of the clock transition, a particular care is taken to have a stable frequency. The linear drift of the ULE cavity (see figure \ref{fig:linear_drift}) is automatically compensated before each use of the yellow laser. This is done by changing the frequency $\Omega_2$ of the offset lock, thanks to a \href{https://www.wieserlabs.com/products/radio-frequency-generators/WL-FlexDDS-NG}{DDS} (Direct Digital Synthesis) which provides the frequency $\Omega_2$ and can be controlled remotely by a computer.
+
+The further change of frequency, in order to realize spectroscopy scans (shown in figure \ref{fig:clock_line} for instance), is performed by the AOM. Even though it is not in a double pass configuration, the change in frequency is on the order of $\SI{100}{\kilo\hertz}$ and does not degrade the fiber coupling. Up to $\SI{200}{\milli\watt}$ are brought to the experimental table.
+
+The infrared output is also used for the PDH lock. The difference with the blue and green setups is the temperature stabilization of the EOM, in order to prevent drifts of the laser frequency.
+
+\subsection*{Magic lattice laser}
+
+The output power of this laser is around $\SI{8}{\watt}$, and each step is carefully adjusted to obtain up to $\SI{5}{\watt}$ on the experimental table. We use a photonic-crystal fiber to avoid any damage caused by, for instance, stimulated Brillouin scattering.
+
+The frequency of the laser is monitored on the wavelengthmeter and adjusted by a digital PID controller acting on a piezoelectric which changes the length of the reference cavity the laser is locked onto. Its frequency can therefore be fixed to the magic wavelength, with a precision only limited by our wavelengthmeter, that is $\SI{\pm10}{\mega\hertz}$.
+
+\subsection*{Repumper} 
+The role of this laser is to optically pump the atoms from the $^3$P$_0$ state back to the ground state, in order to image them. We illustrate in figure \ref{fig:repumper} the relevant transitions.
+
+%
+\begin{figure}[htbp]
+	\centering
+	\def\svgwidth{0.5\linewidth}
+    \input{images/repumper.pdf_tex}
+    \caption{\small The repumper addresses the $^3$P$_0 \, \rightarrow \, ^3$D$_0$ transition, at a wavelength of $\SI{1388.8}{\nano\metre}$. This state decays predominantly back to $^3$P$_0$. However, the fraction of atoms decaying to the $^3$P$_1$ state only have a lifetime $\sim 1/\SI{182}{\kilo\hertz}$, and further decay to the ground state by emitting a green photon. The state $^3$P$_2$ is a dark state, and the atoms ending up in this state are lost. The repumper therefore performs optical pumping from $^3$P$_0$ to $^3$P$_1$, hence to the ground state, with only little losses.}
+    \label{fig:repumper}
+\end{figure}
+%
+
+The frequency of the repumper is adjusted by changing the temperature of the diode. We use a thermoelectric cooler (TEC) to maintain the diode at the desired temperature (and thus frequency).
+The wavelength of this laser can unfortunately not be determined by our wavelengthmeter, which is limited to $\SI{1180}{\nano\metre}$. The wavelength is set first thanks to an Optical Spectrum Analyzer. However, its resolution is limited to $\sim \SI{0.05}{\nano\metre}$. In order to allow for finer tuning, we shine the laser to the atoms during some clock spectroscopy measurement in order to observe the stark shift on the $^3$P$_0$ state (in a similar way as described in section \ref{sec:stark_shift}). The goal is here to maximize the stark shift, showing that the light gets closer to resonance. Eventually, we evaluate the fraction of atoms repumped to the ground state as a function of the diode temperature for even finer tuning.
+
+%\subsection*{OPO}
+%
+%why we use this laser, the previous calculations by Dzuba for the wavelengths, the uncertainties, etc
+%
+%\subsection*{Vexlum}
+%
+%Rin measurements? range tunability, output power?
+
+\newpage
+
+%-------------------------------------------------------------------------
+\section{Coils}
+\label{sec:coils}
+%-------------------------------------------------------------------------
+
+We use five pairs of coils during this experiment:
+\begin{itemize}
+	\item Three pairs of \emph{shim coils} along the $x$, $y$ and $z$ axis. They are used in a Helmholtz configuration once the atoms are loaded in the MOT to adjust their position and transfer them more efficiently in the lattice. 
+	\item One pair of \emph{compensation coils} along the vertical ($z$) axis, whose value is set to compensate the Earth's magnetic field (around $\SI{0.39}{\gauss}$). It is therefore used in a Helmholtz configuration, to create a constant magnetic field at the position of the atoms.
+	\item The last pair consists of the so-called \emph{MOT coils}, which are required to capture and trap the atoms (see section \ref{sec:MOT_theory}). They are used in an anti-Helmholtz configuration during the MOT loading in order to create a field gradient at the position of the atoms. The configuration can also be switched to Helmholtz, to apply a homogeneous field and perform for instance clock spectroscopy.
+\end{itemize} 
+
+ \subsection{Magnetic field calculation}
+
+To calculate the field produced by a circular coil, we first estimate the magnetic field $\mathbf{B}$ created by a loop of current of radius $R$. We place ourselves in polar coordinates $(\rho, \theta, z)$. Due to the symmetries and invariance of the system, $B_\theta = 0$ and $B_z = B_z(\rho, z)$, $B_\rho = B_\rho(\rho, z)$. Starting from the Biot and Savart law, one can obtain for a current $I$ in the loop \citep{1987_bergeman}:
+\begin{align}
+    B_z & = \frac{\mu_0 \, I / (2 \pi) }{\sqrt{(R + \rho)^2 + z^2}}  \left( \frac{R^2 - \rho^2 - z^2}{(R - \rho)^2 + z^2}  E(k) + K(k) \right)~, \\
+   B_\rho  &= \frac{\mu_0 \, I / (2 \pi) }{\sqrt{(R + \rho)^2 + z^2}}  \frac{z}{\rho}  \left( \frac{R^2 + \rho^2 + z^2}{((R - \rho)^2 + z^2}  E(k) - K(k) \right)~,
+\end{align}
+where we introduced:
+%
+\begin{equation*}
+k =\frac{ 4 R \rho}{(R + \rho)^2 + z^2}~, E(k) = \int_0^{\pi/2} \sqrt{1 - k^2 \sin^2 \theta} \dd{\theta} \qq{and} K(k) = \int_0^{\pi/2} \frac{\dd{\theta}}{\sqrt{1 - k^2 \sin^2 \theta}}~,
+\end{equation*}
+%
+and $\mu_0 = 4 \pi \times \SI{e-7}{\henry\per\metre}$ is the vacuum permeability. We can then sum over all the loops contained in each coil to obtain the total magnetic field created by a coil, and evaluate it at the expected position of the atoms (in the middle of the pair of coils). Summing with either the same or opposite currents allows us to calculate the field created in a Helmholtz configuration, or the gradient in an anti-Helmholtz configuration respectively. 
+The calculations (and designs) of the coils have been made by \'Etienne Staub, who estimated for instance a field of $\SI{7.23}{\gauss\per\ampere}$ for the MOT coils, which is in good agreement with the measured field of $\SI{7.30}{\gauss\per\ampere}$ (figure \ref{fig:calibration_MOT}). 
+
+\subsection{Magnetic field calibration}
+
+Thanks to the Zeeman effect, the atoms allow for a precise calibratation of the magnetic field at their position. For a weak field, the $m_J$ states (which are degenerate in energy) split with an energy $\Delta E = \mu_\mathsc{B}\, g \,  m_J \,B$, with  $\mu_\mathsc{B}$ the Bohr magneton, $g$ the Landé g-factor, and $B$ the amplitude of the applied magnetic field. Measuring the energy splitting enables us to retrieve $B$, given that the other components are well-known. \\
+The Langé g-factor, in the case of an atom with no nuclear spin ($I=0$) reads:
+%
+\begin{equation}
+	g = g_L \frac{J(J+1)+L(L+1)-S(S+1)}{2 J(J+1)} + g_S \frac{J(J+1)+S(S+1)-L(L+1)}{2 J(J+1)}~,
+\end{equation}
+%
+with $S$ the spin angular momentum, $L$ the orbital angular momentum and $J$ the total angular momentum. We can approximate the g-factors of an electron: $g_L = 1$ and $g_S=2.002$. We then obtain $g = 1.501$ for the level $^3$P$_1$ for instance. However, due to the spin-orbit coupling we recall that states with equal total angular momentum are mixed. This is the phenomenon weakly allowing the $^1$S$_0 \, \rightarrow \, ^3$P$_1$ transition in the first place. Thus, the bare state $^3$P$_1$ is no longer an eigenstate, but is slightly mixed with the $^1$P$_1$ state:
+%
+\begin{align}
+ 	\ket*{^3\text{P}_1} & = \alpha \ket*{^3\text{P}_1^0} - \beta \ket*{^3\text{P}_1^0} \\
+  	\ket*{^1\text{P}_1} & = \beta \ket*{^3\text{P}_1^0} + \alpha \ket*{^3\text{P}_1^0} 
+\end{align}
+%
+with $\alpha=0.99157$ and $\beta=-0.1295$ the mixing angles \citep{2019_riegger}, deduced from the respective lifetimes of the two states. We noted with a subscript $0$ the eigenstates without the spin-orbit coupling. Therefore, $g(^3\text{P}_1) = \alpha^2 g(^3\text{P}_1^0) + \beta^2 g(^3\text{P}_1^0)$; this yields $g = 1.493$. \\
+
+In order to measure $\Delta E$, the coils are set in the Helmholtz configuration, with atoms loaded in the lattice. Then, we shine a short pulse of light resonant with the $^1$S$_0 \, \rightarrow \, ^3$P$_1$ transition, with a polarization perpendicular to the field. The light can then be decomposed into a superposition of $\sigma_+$ and $\sigma_-$ light, which will drive the transition from $m_J = 0$ in the ground state to $m_J = \pm 1$ in the excited state. We perform a frequency scan of the light thanks to a double pass AOM, and identify the two resonance positions which correspond to the two $m_J$ states. The data is summarized in figure \ref{fig:coils}, where the resonance frequencies are given for different currents.
+
+%
+\begin{figure}[htbp]
+	\centering
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\small
+   		\input{plot/MOT_field_calibration.tex}
+   		\vspace{-0.4cm}
+		\caption{\small MOT coils}
+		\label{fig:calibration_MOT}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+    	\small
+    	\input{plot/shim_z_calibration.tex}		
+		\caption{\small Shim$-z$ coils}
+		\label{fig:calibration_shim}
+	\end{subfigure}	
+	%
+	\caption{\small Calibration of the magnetic field generated by the MOT coils (a) and the shim$-z$ coils (b). The blue (resp. red) dots give the position of the resonance of the $m_J =1$ (resp. $m_J = -1$) state. The two series of data are fitted together to extract the value of the field as a function of the current.}
+    \label{fig:coils}
+\end{figure}
+%
+
+Thanks to this calibration, we can also adjust the estimations of the magnetic field gradient during the MOT stage:
+\begin{itemize}
+	\item during the MOT loading, the vertical magnetic field gradient is $\SI{4.9}{\gauss\per\centi\metre}$ and the gradient in the $x-y$ plane is $\SI{2.45}{\gauss\per\centi\metre}$ (half of the vertical gradient, to satisfy the conservation of the flux).
+	\item the gradient is increased during the compression to $\SI{15.7}{\gauss\per\centi\metre}$ vertically and $\SI{7.9}{\gauss\per\centi\metre}$ in the $x-y$ plane.
+\end{itemize}
+
+
+\newpage
+
+%-------------------------------------------------------------------------
+\section{Theory}
+\label{sec:theory}
+%-------------------------------------------------------------------------
+
+\subsection{Zeeman slower}
+\label{sec:zeeman_theory}
+
+One of the first experimental demonstration of slowing atoms has been realized by \cite{1982_phillips} forty years ago thanks to Zeeman slowing. Several other techniques have been developed since, such as frequency-chirped slowing \citep{1985_ertmer}, or white light slowing \citep{1988_hoffnagle}. Nevertheless, Zeeman slowers remain a widespread tool in cold atoms experiments. Let us sketch in this section the theoretical principles.
+
+We describe the atom-light system in a semi-classical picture, and estimate the momentum transfer from the light to the atoms. We assume we can model the atom with a two-level description ($\hat{H}_0 = 0 \times \ket{g}\bra{g} + \hbar \omega_{eg} \ket{e}\bra{e} $) and an electric dipole interaction with the light field, that is:
+%
+\begin{equation}
+	\hat{H}_\text{int} = - \hat{\mathbf{d}} \cdot \boldsymbol{\epsilon} \, \mathcal{E}_0 \cos(\omega_\mathsc{L} t)~,
+\end{equation}
+with $\mathcal{E}_0$ the amplitude of a plane wave of pulsation $\omega_\mathsc{L}$ and polarization $\boldsymbol{\epsilon}$. $\hat{\mathbf{d}}$ is the quantum dipole operator. We have further assumed that the wavelength used is such that we can neglect the extension of the atom, hence the absence of spatial dependence in $\hat{H}_\text{int}$. We place ourselves in the interaction picture, with $\hat{U} = \exp(-i\, \omega_\mathsc{L} \ket{e}\bra{e} t)$, and use the Rotating Wave Approximation to eliminate the time dependence. The full Hamiltonian reads:
+%
+\begin{align}
+	\hat{H}_{\text{tot},\mathsc{I}} &= \hat{U}^{\dagger} \left( \hat{H}_0 + \hat{H}_\text{int} \right) \hat{U} \\
+	 										 &=  \hat{H}_0  - \frac{\hbar \Omega}{2} (\ket{e} \bra{g}  + \ket{g} \bra{e})~\\
+	 										 &=  \hbar \omega_\mathsc{L} \ket{e}\bra{e} + \underbrace{\hbar \delta  \ket{e}\bra{e} - \frac{\hbar \Omega}{2} (\ket{e} \bra{g}  + \ket{g} \bra{e})}_{ \hat{H}_\mathsc{I}}~,
+\end{align}
+%
+with $\Omega= \mathcal{E}_0 d_0/ \hbar$ the Rabi frequency ($d_0= -\mel{e}{\hat{\mathbf{d}} \cdot \boldsymbol{\epsilon}}{g}$), $\delta = \omega_\mathsc{L} - \omega_{eg}$ the detuning of the laser light.
+The evolution of the system is then captured by the density matrix $\hat{\rho}_\mathsc{I} = \hat{U}^{\dagger}\, \hat{\rho}\, \hat{U}$, which follows the Optical Bloch Equations (OBE):
+%
+\begin{equation}
+    \label{eq:OBE_tot}
+    \dv{\hat{\rho}_\mathsc{I} }{t} = - \frac{i}{\hbar} \left[\hat{H}_\mathsc{I},  \hat{\rho}_\mathsc{I}  \right] + \sum_{\nu \ne 0} \left( \tilde{L}_\nu \hat{\rho}_\mathsc{I}  \tilde{L}_\nu^\dagger - \frac{1}{2} \{ \tilde{L}_\nu^\dagger \tilde{L}_\nu, \hat{\rho}_\mathsc{I}  \} \right)~,
+\end{equation}
+%
+where we have introduced the Lindblad operators $\tilde{L}_\nu$ which take into account the relaxation and decoherence of the atoms. We can rewrite the different components of $\hat{\rho}_\mathsc{I} $:
+\allowdisplaybreaks
+\begin{align*}
+    \dv{\rho_{gg}}{t} & =\frac{i \Omega}{2} (\rho_{eg} -\rho_{ge}) + \Gamma \rho_{ee} ~,\\  
+     \stepcounter{equation}\tag{\theequation}\label{eq:OBE}
+    \dv{\rho_{ee}}{t} & = \frac{i \Omega}{2} (\rho_{ge} -\rho_{eg}) -\Gamma \rho_{ee}~,\\
+    \dv{\rho_{ge}}{t} & = \frac{i \Omega}{2} (\rho_{ee} -\rho_{gg}) -\left( \frac{\Gamma}{2} + i \delta \right) \rho_{ge}~,
+\end{align*}
+%
+where $\Gamma$ is the natural linewidth of the excited level. The decoherence terms originate from the coupling of the atom to the vacuum of the electromagnetic field. Solving in the steady state, we easily extract the scattering rate of an atom:
+%
+\begin{equation}
+	\label{eq:scattering}
+	\Gamma_\text{sc} = \rho_{ee} \, \Gamma = \frac{\Gamma}{2} \times \frac{s_0}{1 + s_0 + 4 \frac{\delta ^2}{\Gamma ^2}} ~,
+\end{equation}
+%
+with $s_0 = I/I_\text{sat} = 2 \Omega^2 / \Gamma^2$ the saturation parameter, where we introduced $I_\text{sat} = \frac{\pi h c}{3 \lambda^3} \Gamma$.  Thus, the force felt by the atom is $\mathbf{F} = \pm \Gamma_\text{sc} \mathbf{P}_\text{ph}$ where $\mathbf{P}_\text{ph} = \hbar \mathbf{k}_\text{ph}$ the momentum of the absorbed ($+$) or emitted ($-$) photon. The stimulated emission does not contribute to the average force (no momentum transfer in the total absorption and emission process), neither does the spontaneous emission because photons are emitted randomly into $4 \pi$. The average force then writes: $\mathbf{F} =  \Gamma_\text{sc} \, \hbar \mathbf{k}_\mathsc{L}$. It is reasonable to consider such an average if each absorption / emission process does not change too much the velocity of the atom. Formally, it means that the absorption of  one photon gives a change of the velocity $\Delta \mathbf{v}$ such that $\mathbf{k}_\mathsc{L} \cdot \Delta \mathbf{v} \ll \Gamma$: if the atom was on resonance before the absorption, it will stay on resonance. We can rewrite this condition: $\frac{\hbar k_\mathsc{L}^2}{2 m} \ll \Gamma$. This condition is met both for the blue and green transitions of the Ytterbium atom.\\
+
+The idea of the Zeeman slower is then to have a collimated stream of atoms, typically from an oven, and to shine a contrapropagating laser light. Having the light on resonance with the atomic transition ensures the most efficient slowing of atoms. The detuning brought by the Doppler effect (which shifts $\omega_\mathsc{L}$ to $\omega_\mathsc{L} - \mathbf{k}_\text{ph} \cdot \mathbf{v}$ in the moving frame of the atom) is compensated by the Zeeman shift of the atomic levels created by a magnetic field. Spatially changing the magnetic field along the stream of atoms allows the laser light to stay close to the atomic transition and ensures efficient slowing of the atoms. 
+
+\subsection{Magneto-Optical Trap}
+\label{sec:MOT_theory}
+
+As its name suggests, a Magneto-Optical Trap (MOT) takes advantage of two distinct effects to cool and confine the atoms: a radiative pressure force created by quasi-resonant light, and a magnetic field gradient. 
+
+In practice, we use the green $^1$S$_0 \, \rightarrow \, ^3$P$_1$ transition at $\SI{556}{\nano\metre}$, with a set of three pairs of counter-propagating beams. Let us focus on one pair, that we take in the $x$-direction. The radiative pressure force of one beam is still deduced from the scattering rate \eqref{eq:scattering}:
+%
+\begin{equation}
+	\label{eq:pressure_force}
+	\mathbf{F} = \frac{\Gamma \hbar \mathbf{k}_\mathsc{L}}{2} \times \frac{s_0}{1 + s_0 + 4 (\delta  - \mathbf{k}_\mathsc{L} \cdot \mathbf{v})^2 /\Gamma ^2} ~,
+\end{equation}
+%
+where we have considered the force acting on an atom moving at a velocity $\mathbf{v}$. In the limit of a small saturation parameter $s_0 \ll 1$, we can expand the expression \eqref{eq:pressure_force} and the response of the atom will remain linear. We can thus sum the forces of the two counter-propagating beams:
+%
+\begin{equation}
+	\label{eq:force_rad}
+ \mathbf{F}_\text{rad} = \mathbf{F}_+ + \mathbf{F}_- =  \frac{\Gamma \hbar \mathbf{k}_\mathsc{L}}{2} \times \frac{\Omega^2}{2} \left( \frac{1}{(\delta  - \mathbf{k}_\mathsc{L} \cdot \mathbf{v})^2 + \Gamma^2/4}  - \frac{1}{(\delta  + \mathbf{k}_\mathsc{L} \cdot \mathbf{v})^2 + \Gamma^2/4}  \right)~.
+\end{equation}
+% 
+We take advantage of the Doppler effect to create a velocity-dependent force that will on average slow down the atoms. Hence, the name of this technique: \emph{Doppler cooling}. When $\mathbf{k}_\mathsc{L} \cdot \mathbf{v} \ll \Gamma$, we can further approximate the value of the force to:
+%
+\begin{equation}
+	 F_\text{rad} = - \alpha v_x \qq{with} \alpha = \Gamma \hbar k_\mathsc{L}^2 \times \frac{-2 s_0 \delta}{\delta^2 + \Gamma^2 / 4}~.
+\end{equation}
+%
+We immediately notice that for $\delta =  \omega_\mathsc{L} - \omega_{eg} < 0$, that is a red-detuned beam, $F_\text{rad}$ corresponds to a viscous damping. We can observe this limit in figure \ref{fig:force_MOT}: the force becomes linear as a function of the velocity, and always acts to slow down atoms.
+%
+\begin{figure}[htbp]
+	\centering
+    \input{plot/force_MOT_compression.tex}
+	\caption{\small Radiative pressure force as a function of the velocity of atoms, in adimensionnalized units. The curves are plotted for typical experimental conditions. We note that the approximation $s \ll 1$ is not fulfilled during the loading phase of our MOT, and we approach it only at the end of the compression of the MOT, in the final cooling stage.}
+    \label{fig:force_MOT}
+\end{figure}
+%
+
+The force we have computed so far only corresponds to an average force, over many absorption / emission cycles. Therefore, the force experienced by an atom will fluctuate around this average, due to the random direction of photon emissions and the random number of absorptions. These elements will contribute to heat the atoms, it is therefore necessary to take them into account.
+
+We model the movement of an atom with a Brownian motion, characterized by a diffusion coefficient $D_\text{p}$. We write the force felt by an atom $F_\text{tot}(t) = F_\text{rad} + \delta F(t)$. The fluctuating part corresponds to the diffusion processes and we assume it has a short memory time: $\expval{\delta F(t) \delta F(t')} = 2 D_\text{p} \, \delta(t-t')$, with $\delta$ the usual Dirac distribution. Sticking to one dimension, an atom will perform a random walk in momentum space, with steps of size $\pm \hbar k_\mathsc{L}$. Thus, during a time $\Delta t$ an atom will experience a diffusion in momentum such that:
+%
+\begin{equation}
+	\langle \Delta p^2 \rangle  = (\hbar k_\mathsc{L})^2	\times \bar{N}_\text{step} =  \underbrace{(\hbar k_\mathsc{L})^2\, \Gamma_\text{sc}}_{=2 D_\text{p, rec}} \Delta t~,
+\end{equation}
+%
+with $\bar{N}_\text{step}$ the average number of steps in momentum space. Besides, the random number of absorption / emission cycles will also lead to fluctuations from the average force, and to momentum diffusion. Taking a poissonian statistics for the number of absorptions $N_\text{abs}$:
+%
+\begin{equation}
+	\langle \Delta p^2 \rangle  = (\hbar k_\mathsc{L})^2	\times\Delta N_\text{abs}^2 = (\hbar k_\mathsc{L})^2	\times\bar{N}_\text{abs} =  \underbrace{(\hbar k_\mathsc{ L})^2\, \Gamma_\text{sc}}_{=2 D_\text{p, abs}} \Delta t~,
+\end{equation}
+%
+where $\Delta N_\text{abs}^2$ notes the variance and $\bar{N}_\text{abs}$ the mean of the number of absorptions. These two numbers are equal in the case of poissonian statistics.
+The total diffusion coefficient $D_\text{p}$ is then equal to $D_\text{p, rec} +D_\text{p, abs} = (\hbar k_\mathsc{L})^2\, \Gamma_\text{sc}$. Then, the movement of an atom is described by the Langevin equation:
+%
+\begin{equation}
+	\label{eq:langevin}
+	\dv{v}{t} = - \frac{\alpha}{m} v(t) + \frac{\delta F(t)}{m}~,
+\end{equation}
+%
+where we replaced the average force by its approximation at low velocities, and $m$ is the mass of the atom. The equation \eqref{eq:langevin} describes the balance between the cooling force given by the radiation pressure and the heating originating from the fluctuations. This results in a state commonly known as an \textit{optical molasse}. The main question is: at what temperature do we obtain an equilibrium? Solving the equation \eqref{eq:langevin} for $v$, wa can retrieve $\langle \Delta v^2 \rangle $:
+%
+%\begin{align}
+%	v(t) & = v(0) \e{-\alpha t/m} + \frac{1}{m} \int \delta F(t') \e{- \alpha (t - t') / m} \dd{t'}~,\\
+%	\expval{v} &= v(0) \e{-\alpha t/m}~, \\
+%	\langle \Delta v^2 \rangle & = \frac{1}{m^2} \int \int \langle\delta F(t')\delta F(t")\rangle \, \e{- \alpha (2t - t' - t") / m} \dd{t'} \dd{t"} \underset{t \,\gg\, m/\alpha}{=} \frac{D_\text{p}}{m \alpha}~,
+%\end{align}
+%
+\begin{equation}
+	\langle \Delta v^2 \rangle = \frac{1}{m^2} \int \int \langle\delta F(t')\delta F(t")\rangle \, \e{- \alpha (2t - t' - t") / m} \dd{t'} \dd{t"} \underset{t \,\gg\, m/\alpha}{=} \frac{D_\text{p}}{m \alpha}~,
+\end{equation}
+%
+where the averages are computed over different realizations. Defining the temperature as $\frac{1}{2} k_\mathsc{B} T = \frac{1}{2} m \langle \Delta v^2 \rangle$, we obtain in the limit $s_0, \frac{\delta^2}{\Gamma^2} \ll 1$:
+%
+\begin{equation}
+	k_\mathsc{B} T = \frac{\hbar \Gamma}{4} \left( \frac{2 \abs{\delta}}{\Gamma} + \frac{\Gamma}{2 \abs{\delta}} \right)~.
+\end{equation}
+%
+This temperature is minimal for $\delta = - \Gamma / 2$. At this value, the atom reaches the equilibrium temperature $k_\mathsc{B} T_\mathsc{D} = \frac{\hbar \Gamma}{2} $, the so-called \emph{Doppler temperature}. It is the lowest temperature atoms can reach using Doppler cooling only. In the case of Ytterbium, we have $T_\mathsc{D} = \SI{4.4}{\micro\kelvin}$ for the green transition. \\
+
+This configuration allows for an efficient cooling of atoms, but unfortunately the diffusion will lead to an overall expansion of the cloud and the atoms are not trapped in a single place. This issue is solved by adding a magnetic field gradient at the position of the atoms: the combination of the magnetic field and an optical molasse creates a Magneto-Optical Trap. 
+
+In practice, we use a pair of coils centered around the position of the atoms in an anti-Helmholtz configuration. It creates a gradient $\mathbf{B}(\mathbf{r}) = (b' x, b'y, -2b'z)$, which splits the $m_J$ states thanks to the linear Zeeman effect as illustrated in figure \ref{fig:MOT_theory}. In our case, the ground state is $^1$S$_0$, with $J=0$ and the excited state is $^3$P$_1$ with $J=1$ which is then split into three $m_J$ states. The radiative pressure force now becomes state, and thus space, dependent.
+%
+\begin{figure}[htbp]
+	\centering
+    \input{images/MOT_theory.pdf_tex}
+	\caption{\small One dimensional scheme of the working principles of a MOT. The radiation pressure force is dependent on the position of the atoms, and the beams are polarized such that they drive only the transition towards one $m_J$ state. This configuration thus creates an additional restoring force to $x=0$.}
+    \label{fig:MOT_theory}
+\end{figure}
+%
+
+The $\sigma^+$-polarized beam for instance will drive the $\ket{m_\mathsc{g}=0} \rightarrow \ket{m_\mathsc{e}=1}$ transition only. The detunings become $\delta_\pm = \delta \mp \left( k_\mathsc{L} v + \frac{\mu x b'}{\hbar} \right)$, where $\mu = \mu_\mathsc{B} g$ is the magnetic moment in the excited state (details about the Landé g-factor $g$ are given in section \ref{sec:coils}). Assuming a low intensity ($s_0 \ll 1$), we can repeat the same calculations as in equation \eqref{eq:force_rad} in order to obtain the radiation pressure force, with the new values of the detunings. When the atoms are slow and close to the center of the trap, that is $\abs{k_\mathsc{L}v + \mu b' x} \ll \delta$, we can further approximate the force to:
+%
+\begin{equation}
+	F_\text{rad} = - \alpha v - \beta x \qq{with} \alpha = \Gamma \hbar k_\mathsc{L}^2 \times \frac{-2 s_0 \delta}{\delta^2 + \Gamma^2 / 4} ~,~ \beta =\Gamma k_\mathsc{L} \mu b' \times \frac{-2 s_0 \delta}{\delta^2 + \Gamma^2 / 4} ~. 
+\end{equation}
+%
+For $\delta < 0$, the MOT thus creates a \emph{viscous damping} with a friction coefficient $\alpha$ and a \emph{harmonic trapping} with a frequency $\sqrt{\beta}$. Finally, the atoms are trapped around the $x=0$ position, and can be cooled down to the Doppler temperature.
+
+%Tuning the magnetic field gradient thus enables us to change the size of the cloud of atoms.
+
+\subsection{Dipole force \& Stark shift}
+\label{sec:lattice_theory}
+
+We derived the radiative pressure force from the optical Bloch equations in the section \ref{sec:zeeman_theory}. However, we used a plane wave, which lead us to overview a second force acting on the atoms: the \emph{dipole force}. Let us now take a more realistic laser field $\bm{\mathcal{E}}(\mathbf{r}, t) = \bm{\epsilon} \,\mathcal{E}(\mathbf{r}) \cos(\omega t + \phi(\mathbf{r}))$, with $\bm{\epsilon}$ the polarization of the field, $\omega$ its pulsation and $\mathcal{E}(\mathbf{r})$ its amplitude. \\
+Under the electric dipolar approximation, the interaction between light and the two-level atom we consider is:
+%
+\begin{equation}
+	\hat{V}_\text{int}(\hat{\mathbf{r}}, t) = -  \hat{\mathbf{d}} \cdot \bm{\mathcal{E}}(\hat{\mathbf{r}}, t) \qq{with}   \hat{\mathbf{d}} = d_0 (\ket{e}\bra{g} + \ket{g} \bra{e})~
+\end{equation}
+%
+where $\hat{\mathbf{r}}$ is the position operator of the center of mass of the atom, and $d_0$ is the atomic dipole. The full Hamiltonian reads:
+%
+\begin{equation}
+	\hat{H} = \hbar \omega_{eg} \ket{e}\bra{e} + \frac{\hat{\mathbf{p}}^2}{2m} + \hat{V}_\text{int}(\hat{\mathbf{r}}, t)~.
+\end{equation}
+%
+ The momentum variation of the atom can then be expressed thanks to the Ehrenfest theorem:
+%
+\begin{equation}
+	\dv{t} \expval*{\hat{\mathbf{p}}} = \frac{1}{i \hbar} \expval{\comm*{\hat{\mathbf{p}}}{\hat{H}}} = - \expval{\grad \hat{V}_\text{int}(\hat{\mathbf{r}}, t)} \simeq - \grad \hat{V}_\text{int}(\expval{\hat{\mathbf{r}}}, t)~.
+\end{equation}
+%
+The contribution of the vacuum of the electromagnetic field, not written here, gives a zero average momentum change. Indeed, it generates the spontaneous emission randomly into $4 \pi$, hence averaging to zero. We will now write $\mathbf{r} = \expval{\hat{\mathbf{r}}}$. The force felt by the atoms is thus:
+%
+\begin{align}
+	\mathbf{F}(\mathbf{r}, t) &= - \grad \hat{V}_\text{int}(\mathbf{r}, t) \\
+															 &=  \cos(\omega t + \phi(\mathbf{r})) \hbar \grad \Omega (\mathbf{r}, t) - \hbar \Omega (\mathbf{r}, t) \sin(\omega t + \phi(\mathbf{r})) \grad \phi(\mathbf{r}) ~,
+\end{align}
+%
+where $\hbar \Omega (\mathbf{r}, t)  = \expval*{ \hat{\mathbf{d}}  \cdot \bm{\epsilon}}(t) \,\mathcal{E}(\mathbf{r})$. The stationary solution is obtained after a characteristic time $\Gamma^{-1}$, and is deduced from the optical Bloch equations \eqref{eq:OBE}. The average over one optical period of the force felt by an atom in the ground state is:
+%
+\begin{equation}
+	\mathbf{F}(\mathbf{r}) =\underbrace{ -\frac{\delta s_0}{1+s_0 + 4 \delta^2 / \Gamma^2} \frac{\hbar\grad \Omega(\mathbf{r})}{\Omega(\mathbf{r})}}_{\mathbf{F}_\text{dip}(\mathbf{r})} \underbrace{- \frac{\Gamma s_0/2}{1+s_0+ 4 \delta^2 / \Gamma^2} \hbar \grad \phi(\mathbf{r})}_{\mathbf{F_\text{rad}(\mathbf{r})}}~,
+\end{equation}
+%
+where now $\hbar \Omega = d_0 \mathcal{E}(\mathbf{r})$, and $s_0$ is the saturation parameter defined in section \ref{sec:zeeman_theory}. We notice that the dipole force $\mathbf{F}_\text{dip}$ vanishes on resonance, and is negligible compared to $\mathbf{F}_\text{rad}$ close to the atomic transition (note also that for a plane wave we recover the expression obtained in section \ref{sec:zeeman_theory}). On the contrary, when $\delta \gg \Omega, \Gamma$:
+%
+\begin{equation}
+	\mathbf{F}(\mathbf{r}) = - \frac{\Gamma^2 s_0}{4 \delta} \frac{\hbar\grad \Omega(\mathbf{r})}{\Omega(\mathbf{r})} - \frac{\Gamma^3 s_0}{8 \delta^2}  \hbar \grad \phi(\mathbf{r})~.
+\end{equation}
+%
+For $\delta$ sufficiently large, the radiation pressure force becomes negligible, due to the $1/\delta^2$ dependence. Rewriting the force using the definition of $s_0$, we obtain:
+%
+\begin{equation}
+	\label{eq:force_dip}
+	\mathbf{F}_\text{dip}(\mathbf{r}) = - \frac{\hbar \grad \Omega^2(\mathbf{r})}{4 \delta} = \frac{d_0^2 \grad \mathcal{E}^2(\mathbf{r})}{4 \hbar \delta}= - \grad V_\text{dip}(\mathbf{r})~.
+\end{equation}
+%
+This force can be seen as resulting from a potential, whose depth is proportional to the light intensity. This image becomes clear in the dressed-state picture, where we see that the eigenstates of the atom \& field system are displaced by the energy $V_\text{dip}(\mathbf{r})$. 
+
+This potential is commonly used to trap atoms in the ground state thanks to powerful red-detuned beams: the atoms are attracted by the light maxima. This is also the phenomenon at stake in optical lattices, where the standing wave created engineers a peculiar potential (a sinusoidal potential in our case with a simple one-dimensional lattice). We need to highlight a small caveat here: for a beam too far detuned, the Rotating Wave Approximation becomes invalid. However, in this regime ($\delta \sim \omega_{eg} \gg \Gamma$) we can approximate $\rho_{ee} \simeq 0$ and then obtain a similar result, by simply replacing $\delta \rightarrow \tilde{\delta}$ in equation \eqref{eq:force_dip}, with $1/ \tilde{\delta} = 1 / \delta + 1 / (\omega_{eg} + \omega_\mathsc{L})$ \citep{2000_grimm}. \\
+
+The potential $V_\text{dip}$ has a simple physical interpretation: it corresponds to the interaction energy between the field $\bm{\mathcal{E}}$ and the induced dipole $\mathbf{d} = \alpha(\omega) \bm{\mathcal{E}}$, with $\alpha$ the polarizability of the atom. The interaction energy is then $- \frac{1}{2} \mathbf{d}\cdot \bm{\mathcal{E}}$. Averaging this expression over time, we recover the equation \eqref{eq:force_dip} by taking $\operatorname{Re}(\alpha) = -d_0^2 /(\hbar \delta)$, the polarizability of a two-level atom. More generally, the dipolar potential reads:
+%
+\begin{equation}
+	\label{eq:dipole_pot}
+	V_\text{dip}(\mathbf{r}) = -\frac{\operatorname{Re}(\alpha(\omega))}{4} \, \mathcal{E}^2 (\mathbf{r})~.
+\end{equation}
+%
+This shifting of energy levels of an atom is called Autler-Townes effect or AC Stark effect. 
+Note that the dipolar potential only involves the real part of the polarizability. The imaginary part corresponds to the out-of-phase induced dipole, and is linked to the radiation pressure force. \\
+
+In this work, we have been mostly interested in the polarizability of the states $^1$S$_0$ and $^3$P$_0$, and in particular to the values of $\omega$ at which these polarizabilities are equal (magic wavelength), or one of them cancels (tune-out wavelength). The methods we used become clear with the formula $\eqref{eq:dipole_pot}$: we try to identify the points where the potential felt by the two levels is the same (section \ref{sec:stark_shift}), or where it becomes zero (section \ref{sec:para_heating}).
+
+\subsection{Rabi oscillations}
+\label{sec:rabi_theory}
+
+In the context of clock spectroscopy, we are interested in the coherent interaction between light and a two-level system. Then, we cannot use the stationary solution of \eqref{eq:OBE}. Besides, we consider a fully coherent process, without any decay term. The population of the excited state can then be written explicitly as a function of time \citep[see for instance][eq. 5.60]{2021_steck}, assuming an atom initially in the ground state at $t=0$ and a continuous interaction with light during a time $t$: 
+%
+\begin{equation}
+	P_e(t) = \frac{\Omega^2}{\vphantom{\Big(}\tilde{\Omega}^2} \sin(\frac{1}{2}\tilde{\Omega}t)^2~,
+\end{equation}
+%
+where $\Omega$ is the Rabi frequency introduced above, and $\tilde{\Omega} = \sqrt{\Omega^2 + \delta^2}$ is the generalized Rabi frequency, taking into account the detuning $\delta$. In the case of the clock transition, $\Omega$ is proportional to the magnetic field applied on the atoms. We note that when on resonance, that is with $\delta=0$, the population in the excited state reaches 1 after a time $t = \pi/\Omega$. This interaction time is a so-called \emph{$\pi$-pulse} time.
+
+When fixing the interaction time to this value, we can also vary the detuning. Then:
+%
+\begin{equation}
+	\label{eq:rabi_sinc}
+	P_e(\delta) = \frac{\Omega^2}{\vphantom{\Big(}\tilde{\Omega}^2} \sin(\frac{\pi}{2} \times \frac{\tilde{\Omega}}{\Omega})^2~.
+\end{equation}
+%
+This corresponds to the square of a sinc function, which oscillations are clearly visible in figure \ref{fig:clock_line}. They are the marks of a coherent process, and are absent when the transition is driven incoherently. The latter leads to a Lorentzian line shape (corresponding to the steady-state expression of $\rho_{ee}$ in \ref{sec:zeeman_theory}). Thus, observing a sinc function in figure \ref{fig:clock_line} indicates that the laser stays coherent during the process: we deduce that its linewidth is not limiting the measurement.
+
+\newpage
+
+\bibliographystyle{humannat}
+\bibliography{rapport}
+
+\end{document}

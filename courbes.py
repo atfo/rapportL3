@@ -89,7 +89,8 @@ depp = {
         'yerr': 0.5,
         'ylims': (0, 2000),
         'func': quadra,
-        'fitlbl': "$\\alpha = \\frac{{P_2}}{{P_1^2}} = {:.3} \mathrm{{W/W^2}}$"
+        'fitlbl': "$\\alpha = \\frac{{P_2}}{{P_1^2}} = {:.2} \mathrm{{W/W^2}}$",
+        'datalbl': "Puissance doublée"
 }
 
 def gprofile(z,w0,z0, lmbd=1.064):
@@ -105,11 +106,11 @@ waist = {
         'xdata': 1.2+np.array([41, 26.5, 5, 3.5, 9.2, 3, 14, 27, 20]), # distance au bord de la lentille (cm), +1.2cm à cause de la profondeur caméra
         'xerr': 0.3,
         'xlims': (0,45),
-        'ylabel': r"waist ($\mathrm{\mu m}$)",
-        'ydata': np.array([3990, 2486, 200, 136, 602, 174, 1070, 2580, 1820])/2,  # waist horizontal (um)
-        'yerr': np.array([200]+[80]*8)/2,
+        'ylabel': r"waist ($\mathrm{mm}$)",
+        'ydata': np.array([3990, 2486, 200, 136, 602, 174, 1070, 2580, 1820])/2 * 1e-3,  # waist horizontal (um)
+        'yerr': np.array([200]+[80]*8)/2 * 1e-3,
         'y2data': np.array([4100, 2740, 206, 133, 622, 184, 1230, 2780, 2040])/2,
-        'ylims': (0,2000),
+        'ylims': (0,2.5),
         'func': gprofile,
         'fitlbl': "$w_0=$ {:.1f} $\\mathrm{{\\mu m}}$, $z_0=$ {:.1f} $\\mathrm{{cm}}$",
         'datalbl': "waist mesuré",
@@ -298,7 +299,8 @@ depTbP = {
     'func': lambda T,zr,lp,c: balpha(zr,T,lp,c),
     'p0': [1.2,6.8741,0.143],
     'bounds': ([0.5,]),
-    'fitlbl': 'Ajustement'#' à la théorie de Boyd-Kleinman (zr = {}, lp = {}, c = {})'
+    'fitlbl': 'Ajustement', #' à la théorie de Boyd-Kleinman (zr = {}, lp = {}, c = {})',
+    'datalbl': r'$\alpha$'
 }
 
 d75mf = idata('f75malfoc.csv')
@@ -322,18 +324,22 @@ depT75mf = {
 }
 
 plot_data(waist)
-plot_data(profil_vert)
-plt.figure()
-plt.scatter(waist['xdata'],waist['ydata'], label='fondamental')
-plt.scatter(profil_vert['xdata'],profil_vert['ydata'], label='seconde harmonique')
-plt.legend()
-plt.xlabel(waist['xlabel'])
-plt.ylabel(waist['ylabel'])
+savefig("waist")
+# plot_data(profil_vert)
+# plt.figure()
+# plt.scatter(waist['xdata'],waist['ydata'], label='fondamental')
+# plt.scatter(profil_vert['xdata'],profil_vert['ydata'], label='seconde harmonique')
+# plt.legend()
+# plt.xlabel(waist['xlabel'])
+# plt.ylabel(waist['ylabel'])
+#savefig("comparaison-profils")
 
 #plot_data(depTbP)
 #plot_data(depTbP, p=[2.48,6.862,0.097*(17/14)**2])
 #plot_data(depT75mf, p=[1.7,6.862,0.097*(17/14)**2])
-savefig("comparaison-profils")
+
+#plot_data(depp)
+
 plt.show()
 
 

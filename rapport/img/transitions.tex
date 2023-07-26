@@ -1,3 +1,5 @@
+\newcommand\mysc{0 em}
+
 \begin{tikzpicture}[
 level/.style = {
         ultra thick,
@@ -22,14 +24,15 @@ level/.style = {
         text width=2cm
     }
 ]
+
     % Draw all levels
     \draw[level] (0,0) --  +(-2,0) node[left] {$5S_{1/2}$} ;
-    \draw[level] (0,4) --  +(-2,0) node[left] {$5P_{1/2}$} ;
-    \draw[level] (0,4.5) --  +(-2,0) node[left] {$5P_{3/2}$};
-    \draw[laser] (0,6) --  +(-2,0) node[left] {laser};
+    \draw[level] (0,5) --  +(-2,0) node[left] {$5P_{1/2}$} ;
+    \draw[level] (0,5.5) --  +(-2,0) node[left] {$5P_{3/2}$};
+    \draw[laser] (0,8.5) --  +(-2,0) node[left] {laser};
     
-    \draw[trans] (-1.1,0) -- +(0,4) node[pos=0.4,left] {794.8 nm}; %794.8
-    \draw[trans] (-1,0) -- +(0,4.5) node[pos=0.6,left] {780.0 nm}; %780.0
-    \draw[trans] (-0.5,0) -- +(0,6) node[pos=0.85,left] {532 nm};
+    \draw[trans] (-1.1,0) -- +(0,5) node[pos=0.4,left] {$\SI{794.8}{nm}$}; %794.8
+    \draw[trans] (-1,0) -- +(0,5.5) node[pos=0.6,left] {$\SI{780.0}{nm}$}; %780.0
+    \draw[trans] (-0.5,0) -- +(0,8.5) node[pos=0.85,left] {$\SI{532}{nm}$};
     
 \end{tikzpicture}

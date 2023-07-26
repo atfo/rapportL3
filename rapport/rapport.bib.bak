@@ -1,0 +1,284 @@
+@book{boyd,
+    author = {Boyd, Robert W.},
+    title = {Nonlinear Optics, Third Edition},
+    year = {2008},
+    isbn = {0123694701},
+    publisher = {Academic Press, Inc.},
+    address = {USA},
+    edition = {3rd}
+}
+
+@inproceedings{jensen,
+author = {Ole Bjarlin Jensen and Anders Kragh Hansen and Andr{\'e} M{\"u}ller and Bernd Sumpf and Paul Michael Petersen and Peter E. Andersen},
+title = {{3.5 W of diffraction-limited green light at 515 nm from SHG of a single-frequency tapered diode laser}},
+volume = {10088},
+booktitle = {Nonlinear Frequency Generation and Conversion: Materials and Devices XVI},
+editor = {Konstantin L. Vodopyanov and Kenneth L. Schepler},
+organization = {International Society for Optics and Photonics},
+publisher = {SPIE},
+pages = {1008803},
+keywords = {Tapered diode laser, Second harmonic generation, Visible laser, 515 nm},
+year = {2017},
+doi = {10.1117/12.2249671},
+URL = {https://doi.org/10.1117/12.2249671}
+}
+
+@ARTICLE{fejer,
+
+  author={Fejer, M.M. and Magel, G.A. and Jundt, D.H. and Byer, R.L.},
+
+  journal={IEEE Journal of Quantum Electronics}, 
+
+  title={Quasi-phase-matched second harmonic generation: tuning and tolerances}, 
+
+  year={1992},
+
+  volume={28},
+
+  number={11},
+
+  pages={2631-2654},
+
+  doi={10.1109/3.161322}}
+
+
+@article{kontur,
+author = {F. J. Kontur and I. Dajani and Yalin Lu and R. J. Knize},
+journal = {Opt. Express},
+keywords = {Harmonic generation and mixing ; Nonlinear optics, materials; Fiber lasers; Laser beams; Laser ranging; Lithium niobate; Nonlinear optical crystals; Sum frequency generation},
+number = {20},
+pages = {12882--12889},
+publisher = {Optica Publishing Group},
+title = {Frequency-doubling of a CW fiber laser using PPKTP, PPMgSLT, and PPMgLN},
+volume = {15},
+month = {Oct},
+year = {2007},
+url = {https://opg.optica.org/oe/abstract.cfm?URI=oe-15-20-12882},
+doi = {10.1364/OE.15.012882},
+abstract = {Second-harmonic generation (SHG) in PPKTP, PPMgSLT, and PPMgLN crystals is analyzed by frequency-doubling CW light from a 1064 nm fiber laser over a range of powers up to 10 W. Data for fundamental powers less than 3 W is used to determine the effects of the fundamental laser linewidth on SHG and to identify imperfections in the periodicity and boundary sharpness of the crystals' poled domains which can reduce SHG. Data for fundamental powers greater than 3 W is used to diagnose and model limiting effects on SHG such as pump depletion and thermal dephasing. Thermal dephasing was found to reduce second-harmonic power by 25\% or more for input fundamental powers approaching 10 W.},
+}
+
+
+@Article{balliu,
+AUTHOR = {Balliu, Enkeleda and Engholm, Magnus and Digonnet, Michel J. F. and Nilsson, Hans-Erik},
+TITLE = {Quasi-CW Pumping of a Single-Frequency Fiber Amplifier for Efficient SHG in PPLN Crystals with Reduced Thermal Load},
+JOURNAL = {Applied Sciences},
+VOLUME = {12},
+YEAR = {2022},
+NUMBER = {1},
+ARTICLE-NUMBER = {285},
+URL = {https://www.mdpi.com/2076-3417/12/1/285},
+ISSN = {2076-3417},
+ABSTRACT = {Single-frequency lasers are essential for high-resolution spectroscopy and sensing applications as they combine high-frequency stability with low noise and high output power stability. For many of these applications, there is increasing interest in power-scaling single-frequency sources, both in the near-infrared and visible spectral range. We report the second-harmonic generation of 670 µJ at 532 nm of a single-frequency fiber amplifier signal operating in the quasi-continuous-wave mode in a 10-mm periodically poled Mg-doped lithium niobate (MgO:PPLN) crystal, while increasing compactness. To the best of our knowledge, this is the highest pulse energy generated in this crystal, which may find applications in the visible and UV such as remote Raman spectroscopy.},
+DOI = {10.3390/app12010285}
+}
+
+@incollection{grimm,
+title = {Optical Dipole Traps for Neutral Atoms},
+editor = {Benjamin Bederson and Herbert Walther},
+series = {Advances In Atomic, Molecular, and Optical Physics},
+publisher = {Academic Press},
+volume = {42},
+pages = {95-170},
+year = {2000},
+issn = {1049-250X},
+doi = {10.1016/S1049-250X(08)60186-X},
+url = {https://www.sciencedirect.com/science/article/pii/S1049250X0860186X},
+author = {Rudolf Grimm and Matthias Weidemüller and Yurii B. Ovchinnikov},
+}
+
+@phdthesis{brice,
+  TITLE = {{Testing scale invariance in a two-dimensional Bose gas : preparation and characterization of solitary waves}},
+  AUTHOR = {Bakkali-Hassani, Brice},
+  URL = {https://theses.hal.science/tel-03591031},
+  NUMBER = {2021SORUS375},
+  SCHOOL = {{Sorbonne Universit{\'e}}},
+  YEAR = {2021},
+  MONTH = Dec,
+  KEYWORDS = {Bose-Einstein condensates ; Two-dimensional gases ; Binary mixtures ; Solitons ; Planar solitary waves ; Condensats de Bose-Einstein ; Gaz bidimensionnels ; M{\'e}lange binaire ; Physique non lin{\'e}aire ; Solitons ; Invariance d'{\'e}chelle},
+  TYPE = {Theses},
+  PDF = {https://theses.hal.science/tel-03591031/file/BAKKALI_HASSANI_Brice_2021.pdf},
+  HAL_ID = {tel-03591031},
+  HAL_VERSION = {v1},
+}
+
+@ARTICLE{russell2006,
+
+  author={Russell, Philip St. J.},
+
+  journal={Journal of Lightwave Technology}, 
+
+  title={Photonic-Crystal Fibers}, 
+
+  year={2006},
+
+  volume={24},
+
+  number={12},
+
+  pages={4729-4749},
+
+  doi={10.1109/JLT.2006.885258}}
+
+@article{russell2007,
+author = {Russell, Philip St. J.},
+journal = {Opt. Photon. News},
+keywords = {General; Holey fibers; Hollow core fibers; Microstructured fibers; Photonic crystal fibers; Photonic crystals; Step index fibers},
+number = {7},
+pages = {26--31},
+publisher = {Optica Publishing Group},
+title = {Photonic Crystal Fiber:Finding the Holey Grail},
+volume = {18},
+month = {Jul},
+year = {2007},
+url = {https://www.optica-opn.org/abstract.cfm?URI=opn-18-7-26},
+doi = {10.1364/OPN.18.7.000026},
+abstract = {Photonic crystal fiber (PCF) permits much wider adjustment of key characteristics such as modal phase index, dispersion, nonlinearity and birefringence than is possible in conventional fiber, opening the door to new applications in telecommunications and beyond. PCF can be used to maintain light in a tight focus over kilometer distances inside a hollow core, for example, to laser-guide small particles, molecules or atoms along a curved path, and to fashion a whole range of in-fiber devices and low-loss transitions.},
+}
+
+@unpublished{joffre,
+  TITLE = {{Optique non-lin{\'e}aire en r{\'e}gimes continu et femtoseconde}},
+  AUTHOR = {Joffre, Manuel},
+  URL = {https://cel.hal.science/cel-00092964},
+  NOTE = {Lecture},
+  TYPE = {Master},
+  ADDRESS = {Ce cours a {\'e}t{\'e} enseign{\'e} au master Concepts fondamentaux de la Physique (ENS - Ecole Polytechnique - Paris VI - Paris XI) entre 2000 et 2012},
+  PAGES = {229},
+  YEAR = {2010},
+  PDF = {https://cel.hal.science/cel-00092964v4/file/cours2014.pdf},
+  HAL_ID = {cel-00092964},
+  HAL_VERSION = {v4},
+}
+
+@article{gayer,
+  doi = {10.1007/s00340-008-2998-2},
+  url = {https://doi.org/10.1007/s00340-008-2998-2},
+  year = {2008},
+  month = apr,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {91},
+  number = {2},
+  pages = {343--348},
+  author = {O. Gayer and Z. Sacks and E. Galun and A. Arie},
+  title = {Temperature and wavelength dependent refractive index equations for {MgO}-doped congruent and stoichiometric {LiNbO}3},
+  journal = {Applied Physics B}
+}
+
+@misc{covesion,
+	author = {Covesion},
+	title = {{M}aterial {P}roperties of {L}ithium {N}iobate},
+	howpublished = {\url{https://covesion.com/en/resource/material-properties-of-lithium-niobate/}},
+	year = {},
+	note = {[consulté le 11 juillet 2023]},
+}
+
+@article{ville,
+  title = {Loading and compression of a single two-dimensional Bose gas in an optical accordion},
+  author = {Ville, J. L. and Bienaim\'e, T. and Saint-Jalm, R. and Corman, L. and Aidelsburger, M. and Chomaz, L. and Kleinlein, K. and Perconte, D. and Nascimb\`ene, S. and Dalibard, J. and Beugnon, J.},
+  journal = {Phys. Rev. A},
+  volume = {95},
+  issue = {1},
+  pages = {013632},
+  numpages = {7},
+  year = {2017},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.95.013632},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.95.013632}
+}
+
+@article{anderson,
+  doi = {10.1126/science.269.5221.198},
+  url = {https://doi.org/10.1126/science.269.5221.198},
+  year = {1995},
+  month = jul,
+  publisher = {American Association for the Advancement of Science ({AAAS})},
+  volume = {269},
+  number = {5221},
+  pages = {198--201},
+  author = {M. H. Anderson and J. R. Ensher and M. R. Matthews and C. E. Wieman and E. A. Cornell},
+  title = {Observation of Bose-Einstein Condensation in a Dilute Atomic Vapor},
+  journal = {Science}
+}
+
+@article{davis,
+  title = {Bose-Einstein Condensation in a Gas of Sodium Atoms},
+  author = {Davis, K. B. and Mewes, M. -O. and Andrews, M. R. and van Druten, N. J. and Durfee, D. S. and Kurn, D. M. and Ketterle, W.},
+  journal = {Phys. Rev. Lett.},
+  volume = {75},
+  issue = {22},
+  pages = {3969--3973},
+  numpages = {0},
+  year = {1995},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.75.3969},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.75.3969}
+}
+
+@article{bloch,
+  title = {Many-body physics with ultracold gases},
+  author = {Bloch, Immanuel and Dalibard, Jean and Zwerger, Wilhelm},
+  journal = {Rev. Mod. Phys.},
+  volume = {80},
+  issue = {3},
+  pages = {885--964},
+  numpages = {0},
+  year = {2008},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/RevModPhys.80.885},
+  url = {https://link.aps.org/doi/10.1103/RevModPhys.80.885}
+}
+
+@article{greiner,
+  doi = {10.1038/415039a},
+  url = {https://doi.org/10.1038/415039a},
+  year = {2002},
+  month = jan,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {415},
+  number = {6867},
+  pages = {39--44},
+  author = {Markus Greiner and Olaf Mandel and Tilman Esslinger and Theodor W. H\"{a}nsch and Immanuel Bloch},
+  title = {Quantum phase transition from a superfluid to a Mott insulator in a gas of ultracold atoms},
+  journal = {Nature}
+}
+
+@INPROCEEDINGS{batchko,
+
+  author={Batchko, R.G. and Miller, G.D. and Alexandrovski, A. and Fejer, M.M. and Byer, R.L.},
+
+  booktitle={Technical Digest. Summaries of Papers Presented at the Conference on Lasers and Electro-Optics. Conference Edition. 1998 Technical Digest Series, Vol.6 (IEEE Cat. No.98CH36178)}, 
+
+  title={Limitations of high-power visible wavelength periodically poled lithium niobate devices due to green-induced infrared absorption and thermal lensing}, 
+
+  year={1998},
+
+  volume={},
+
+  number={},
+
+  pages={75-76},
+
+  doi={10.1109/CLEO.1998.675885}
+}
+
+@article{10.1063/1.1359137,
+    author = {Furukawa, Y. and Kitamura, K. and Alexandrovski, A. and Route, R. K. and Fejer, M. M. and Foulon, G.},
+    title = "{Green-induced infrared absorption in MgO doped LiNbO3}",
+    journal = {Applied Physics Letters},
+    volume = {78},
+    number = {14},
+    pages = {1970-1972},
+    year = {2001},
+    month = {04},
+    abstract = "{Green-induced infrared absorption (GRIIRA) was investigated by a photothermal technique for undoped and Mg-doped LiNbO3 crystals that have different Li/Nb ratios. Threshold effect on GRIIRA was found, threshold MgO concentrations being the same for GRIIRA and photorefraction. We suggest that GRIIRA is associated with the formation of the small polaron that is located on Nb antisite defect. The remarkable decrease of GRIIRA in Mg:LiNbO3 can then be attributed to the elimination of this intrinsic defect, Nb in Li, following the incorporation of Mg on Li sites. For nonlinear optical applications, LiNbO3 doped with MgO at concentrations over threshold has a combined advantage of having almost no GRIIRA and photorefraction.}",
+    issn = {0003-6951},
+    doi = {10.1063/1.1359137},
+    url = {https://doi.org/10.1063/1.1359137},
+    eprint = {https://pubs.aip.org/aip/apl/article-pdf/78/14/1970/10187358/1970\_1\_online.pdf},
+}
+
+
+

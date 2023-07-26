@@ -1,23 +1,23 @@
 \babel@toc {french}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Expériences de rubidium}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Utilisation des lasers à 532 nm}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.2}Utilisation des lasers à 532 nm}{1}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Objectif du stage}{2}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Couplage de la fibre à cristaux photoniques}{2}{section.2}%
-\contentsline {section}{\numberline {3}Principe de la génération de seconde harmonique ( SHG)}{5}{section.3}%
+\contentsline {section}{\numberline {2}Couplage de la fibre à cristaux photoniques}{3}{section.2}%
+\contentsline {section}{\numberline {3}Principe de la génération de seconde harmonique (SHG)}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Polarisation non linéaire et seconde harmonique}{5}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Le problème de l'accord de phase}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Cas des faisceaux gaussiens}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Cas des faisceaux gaussiens}{8}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Réalisation de la génération de seconde harmonique}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Choix du cristal doubleur}{10}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Montage et alignement}{10}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Étude à basse puissance}{12}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Efficactité de conversion}{12}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Profil du faisceau généré (TODO, ou pas)}{14}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Étude à haute puissance}{15}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Caractérisation à haute puissance}{15}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Stabilité de la génération à haute puissance}{16}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Conclusion}{17}{section.7}%
-\contentsline {section}{\numberline {A}\'Equation d'onde non-linéaire}{19}{appendix.A}%
-\contentsline {section}{\numberline {B}Validité de l'hypothèse de non déplétion}{19}{appendix.B}%
-\contentsline {section}{\numberline {C}Efficacité de conversion dans un cristal périodiquement pôlé}{19}{appendix.C}%
+\contentsline {subsection}{\numberline {6.2}Stabilité de la génération à haute puissance}{15}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Conclusion}{18}{section.7}%
+\contentsline {section}{\numberline {A}\'Equation d'onde non-linéaire}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}Validité de l'hypothèse de non déplétion}{20}{appendix.B}%
+\contentsline {section}{\numberline {C}Faisceaux gaussiens}{21}{appendix.C}%
+\contentsline {section}{\numberline {D}Démonstration alternative du résultat de Boyd et Kleinman}{22}{appendix.D}%

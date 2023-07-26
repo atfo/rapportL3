@@ -1,53 +1,63 @@
-This is BibTeX, Version 0.99d (TeX Live 2023)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: rapport.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
 A level-1 auxiliary file: ./img/qpm.aux
+Reallocating 'name_of_file' (item size: 1) to 34 items.
 A level-1 auxiliary file: ./img/waist_faisceau_incident.aux
-A level-1 auxiliary file: ./img/sellmeier.aux
-A level-1 auxiliary file: ./img/topt.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: ./img/quadra.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: ./img/alphaT.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
 The style file: abbrvnatnourl.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: ./img/depl0.1.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: ./img/depl8.aux
 Database file #1: rapport.bib
 Warning--empty booktitle in grimm
 Warning--empty year in covesion
-You've used 9 entries,
+You've used 15 entries,
             2746 wiz_defined-function locations,
-            681 strings with 6784 characters,
-and the built_in function-call counts, 3346 in all, are:
-= -- 286
-> -- 159
-< -- 8
-+ -- 66
-- -- 48
-* -- 259
-:= -- 557
-add.period$ -- 35
-call.type$ -- 9
-change.case$ -- 18
-chr.to.int$ -- 9
-cite$ -- 11
-duplicate$ -- 166
-empty$ -- 296
-format.name$ -- 57
-if$ -- 698
+            740 strings with 8591 characters,
+and the built_in function-call counts, 6329 in all, are:
+= -- 526
+> -- 363
+< -- 9
++ -- 140
+- -- 110
+* -- 546
+:= -- 1049
+add.period$ -- 60
+call.type$ -- 15
+change.case$ -- 30
+chr.to.int$ -- 15
+cite$ -- 17
+duplicate$ -- 290
+empty$ -- 534
+format.name$ -- 125
+if$ -- 1316
 int.to.chr$ -- 1
-int.to.str$ -- 10
-missing$ -- 7
-newline$ -- 60
-num.names$ -- 27
-pop$ -- 70
+int.to.str$ -- 16
+missing$ -- 13
+newline$ -- 97
+num.names$ -- 45
+pop$ -- 110
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 15
 quote$ -- 0
-skip$ -- 93
+skip$ -- 158
 stack$ -- 0
-substring$ -- 130
-swap$ -- 29
-text.length$ -- 2
+substring$ -- 289
+swap$ -- 54
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 102
 warning$ -- 2
-while$ -- 26
+while$ -- 49
 width$ -- 0
-write$ -- 137
+write$ -- 229
 (There were 2 warnings)

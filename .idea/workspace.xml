@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4be91e97-b1c1-486f-aa2f-74ecd444592b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Documents/dep en basse puissance.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cristal3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depletion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/dt.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/dt.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/etude.py" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/etude.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparaison-profils.tex" beforeDir="false" afterPath="$PROJECT_DIR$/comparaison-profils.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courbes.py" beforeDir="false" afterPath="$PROJECT_DIR$/courbes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/PP.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/PP.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/PP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/PP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/bk-factor.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/bk-factor.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/comparaison-profils.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/comparaison-profils.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/cristal clair.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/cristal clair.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/dt.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/dt.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/mesc1.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc1.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/mesc1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/mesc2.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc2.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/mesc2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/qpm.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/qpm.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/schema couplage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/schema couplage.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/schema.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/schema.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/sellmeier.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/sellmeier.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/topt.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/topt.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/transitions.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/transitions.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.bbl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.bib" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.blg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/schema couplage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/schema couplage.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/schema cristal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/schema cristal.svg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SvOxvrsGx8O1p9n0KMjmfbNUkd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/rapportL3/Documents"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\GitHub\rapportL3\Documents" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.depletion">
+    <configuration name="courbes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rapportL3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/courbes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="depletion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rapportL3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/depletion.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="etude" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rapportL3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Documents" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Documents/etude.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.depletion" />
+        <item itemvalue="Python.etude" />
+        <item itemvalue="Python.courbes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4be91e97-b1c1-486f-aa2f-74ecd444592b" name="Changes" comment="" />
+      <created>1690023838060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690023838060</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Documents/etude.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

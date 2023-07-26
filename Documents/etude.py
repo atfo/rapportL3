@@ -12,6 +12,9 @@ import sys, argparse
 import matplotlib as mpl
 import tikzplotlib
 import scienceplots
+import scipy.stats as st
+
+from scipy.optimize import curve_fit
 
 plt.style.use('science')
 mpl.rcParams['lines.linewidth'] = 3
@@ -39,8 +42,8 @@ cexp, T0 = 1.5e-5, 20 # coeff dilat thermique
 bb = np.linspace(-20,20,1000)
 TT = np.linspace(50,150,500)
 
-def idata(fname):
-    return np.genfromtxt('./'+fname, delimiter=',', skip_header=1, usemask=True)
+def idata(fname, mask=True):
+    return np.genfromtxt('./'+fname, delimiter=',', skip_header=1, usemask=mask)
 
 def n(T,lmbd):
     a = np.array([5.756, 0.0983, 0.2020, 189.32, 12.52, 1.32e-2])#.reshape(6,1)
@@ -51,10 +54,10 @@ def n(T,lmbd):
     return inds
 
 def n1(T):
-    return n(T,lmbd1)
+    return n(T, lmbd1)
 
 def n2(T):
-    return n(T,lmbd2)
+    return n(T, lmbd2)
 
 def bT(T,lp,zr):
     lpT = lp*(1+cexp*(T-20))
@@ -83,6 +86,8 @@ def h(a,b):
     #print(f_array.shape)
     integral = np.trapz(f_array, x_array, axis=0)
     return 1 / (4*a) * np.square(np.abs(integral))
+
+#print(h(2.8,0.56))
 
 def h_shift(a,b):
     ''' Si focalisé au bord du cristal comme on le craint '''
@@ -134,17 +139,117 @@ def caract(zr,lp):
     }
     return c
 
-caract(2.4,6.9)
+#caract(2.4,6.9)
 
 
 if __name__ == "__main__":
     if False:
-        depT = idata('dep T basse P.csv')
+        ddepp = idata('dep en basse puissance.csv',mask=False)
+        conv = 233
+        puissances = ddepp[:,0]*conv
+        vert = ddepp[:,1] * 1e-3
+        pe = 0.01 * conv
+        ve = 2e-2
+        print(vert)
+        def quadra(x, a):
+            return a * x ** 2
+        popt,pcov = curve_fit(quadra,puissances,vert,p0=[0.02])
+        with plt.style.context(['science','scatter']):
+            plt.errorbar(puissances,vert,xerr=pe,yerr=ve,marker=',')
+            p_arr = np.linspace(0,350,500)
+            plt.plot(p_arr, quadra(p_arr,*popt), 'g--', label=r'$\alpha={}$'.format(popt[0]))
+        plt.legend()
+        savefig("quadra")
+        plt.show()
+    #exit(0)
+
+    if False:
+        for zr in [0.5,1,1.5,2,2.5]:
+            T_arr = np.linspace(50,90,500)
+            #plt.plot(T_arr, [h(1/zr, bT(T,6.9,zr)) for T in T_arr])
+            #plt.show()
+            dT = (fwhmf(T_arr, [h(1/zr, bT(T,6.9,zr))[0] for T in T_arr]))
+            print(zr,dT, dT[1]-dT[0])
+            #plt.show()
+
+    def interval(data):
+        return st.t.interval(alpha=0.2, df=len(data) - 1, loc=np.mean(data), scale=st.sem(data))
+
+    if True:
+        depT = idata('dep T basse P.csv', mask=False)
         dataT = depT[:,3]
         dataa = depT[:,4]
-        plt.scatter(dataT, dataa)
-        plt.figure()
-        
+
+        temps = np.unique(dataT)
+        alphas = np.zeros_like(temps)
+        dalphas = np.zeros_like(temps)
+        #dalphas = np.zeros((temps.size,2))
+        print(temps)
+        # for i,T in enumerate(temps):
+        #     alphasT = dataa[dataT==T]
+        #     alphas[i] = np.mean(alphasT)
+        #     #dalphas[i] = np.std(alphasT, ddof=1)
+        #     if len(alphasT>1):
+        #         int = interval(alphasT)
+        #         alphal,alphau = int[0],int[1]
+        #         dalphas[i] = [alphal,alphau]
+        #     else:
+        #         dalphas[i] = [5e-4, 5e-4]
+        # dalphas = dalphas.transpose()
+        for i,T in enumerate(temps):
+            alphasT = dataa[dataT==T]
+            alphas[i] = np.mean(alphasT)
+            #dalphas[i] = np.std(alphasT, ddof=1)
+            size = alphasT.size
+            if size>1:
+                ecarttypes = np.std(alphasT, ddof=1)  # écart-types
+                size = alphasT.size
+                sigma_moyenne = ecarttypes / np.sqrt(size)  # écart-types sur la moyenne
+                #############
+                ##correction par le facteur de student
+                #############
+                sigma_corrige = sigma_moyenne * st.t.interval(0.95, size - 1)[1]
+                dalphas[i] = sigma_corrige
+            else:
+                dalphas[i] = dalphas[i-1] if i>0 else 1e-5
+            print(size, dalphas[i])
+        dalphas = dalphas.transpose()
+
+        print('--------------')
+        print(dalphas)
+
+        with plt.style.context(['science', 'scatter']):
+            plt.errorbar(temps, alphas*100, xerr=0.05, yerr=dalphas*100, marker='.')
+
+
+            c = 0.08
+            c1 = 5.8/2.4
+            T0 = 83.5
+
+            zr = 2.4
+            def f_fit(T,c,c1,T0):
+                return c*h(1/zr,-zr*c1*(T-T0))
+
+            popt, pcov = curve_fit(f_fit,temps,alphas, p0=[c,c1,T0])
+            print(zr,popt)
+
+            TT = np.linspace(75,95,500)
+
+            #plt.plot(TT, [c*h(1/zr,-zr*c1*(T-T0)) for T in TT], 'g--')
+            plt.plot(TT, [f_fit(T,*popt)*100 for T in TT], 'g--', label='ajustement pour zr={} cm ($\kappa={}$ %/W, $pdv={}$ K-1)'.format(zr,c,c1))
+
+            zr = 1.4
+            def f_fit(T, c, c1, T0):
+                return c * h(1 / zr, -zr * c1 * (T - T0))
+            popt, pcov = curve_fit(f_fit, temps, alphas, p0=[c, c1, T0])
+            print(zr,popt)
+            plt.plot(TT, [f_fit(T, *popt)*100 for T in TT], 'k--', label='ajustement pour zr={} cm ($\kappa={}$ %/W, $pdv={}$ K-1)'.format(zr,c,c1))
+            plt.legend()
+            plt.xlabel("T (°C)")
+            plt.ylabel(r"$\alpha$")
+            #savefig("alphaT")
+        #plt.figure()
+    if False:
         plt.scatter(TT,[lpopt(T) for T in TT])
         plt.figure()
         
@@ -181,18 +286,19 @@ if __name__ == "__main__":
         plt.ylabel("$\delta b$ FWHM")
         plt.legend()
         savefig("dbaffine")
-    plt.figure()
-    if False:    
+        plt.figure()
+    if False:
         zr_arr = np.linspace(0.1,3,40)
-        #with plt.style.context(['science']):#, 'scatter']):
-        for lp in [6.85,6.86,6.87,6.88,6.9]:
-            print(lp)
-            plt.plot(zr_arr, [-caract(zr,lp)['dT'] for zr in zr_arr], label='$\Lambda = {}$'.format(lp))#, marker = '+')
-            plt.legend()
-            plt.xlabel("$z_R$ (cm)")
-            plt.ylabel("$\delta T$ FWHM (°C)")
-            #savefig("dt")
-    if True:
+        markers = ['s','o','^']
+        with plt.style.context(['science', 'scatter']):
+            for i, lp in enumerate([6.87,6.88,6.9]):
+                print(lp)
+                plt.plot(zr_arr, [-caract(zr,lp)['dT'] for zr in zr_arr], label='$\Lambda = {}$'.format(lp), marker=markers[i])#, marker = '+')
+                plt.legend()
+                plt.xlabel("$z_R$ (cm)")
+                plt.ylabel("$\delta T$ FWHM (°C)")
+                savefig("dt")
+    if False:
         plt.plot(TT, [(n2(T)-n1(T))*1e2 for T in TT], label='équation de Sellmeier')
         plt.ylabel(r'$n_2-n_1$ $\left(\times 10^{-2}\right)$')
         plt.xlabel(r'T (°C)')

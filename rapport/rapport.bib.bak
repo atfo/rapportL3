@@ -264,7 +264,7 @@ abstract = {Photonic crystal fiber (PCF) permits much wider adjustment of key ch
   doi={10.1109/CLEO.1998.675885}
 }
 
-@article{10.1063/1.1359137,
+@article{furukawa,
     author = {Furukawa, Y. and Kitamura, K. and Alexandrovski, A. and Route, R. K. and Fejer, M. M. and Foulon, G.},
     title = "{Green-induced infrared absorption in MgO doped LiNbO3}",
     journal = {Applied Physics Letters},
@@ -280,5 +280,9 @@ abstract = {Photonic crystal fiber (PCF) permits much wider adjustment of key ch
     eprint = {https://pubs.aip.org/aip/apl/article-pdf/78/14/1970/10187358/1970\_1\_online.pdf},
 }
 
-
+@article{steck2001rubidium,
+  title={Rubidium 87 D line data},
+  author={Steck, Daniel A},
+  year={2001}
+}
 

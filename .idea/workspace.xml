@@ -2,43 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4be91e97-b1c1-486f-aa2f-74ecd444592b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Documents/dep en basse puissance.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cristal3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depletion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documents/dt.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/dt.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documents/etude.py" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/etude.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparaison-profils.tex" beforeDir="false" afterPath="$PROJECT_DIR$/comparaison-profils.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courbes.py" beforeDir="false" afterPath="$PROJECT_DIR$/courbes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/PP.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/PP.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/PP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/PP.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/bk-factor.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/bk-factor.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/comparaison-profils.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/comparaison-profils.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/cristal clair.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/cristal clair.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/dt.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/dt.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/mesc1.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc1.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/mesc1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/mesc2.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc2.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/mesc2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/mesc2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/accordeon-dmd.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/accordeon-dmd.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/alphaT.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/alphaT.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/depl0.1.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/depl0.1.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/depl8.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/depl8.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/img/qpm.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/qpm.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/quadra.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/quadra.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/img/schema couplage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/schema couplage.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/schema.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/schema.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/sellmeier.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/sellmeier.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/topt.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/topt.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/img/transitions.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/transitions.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.log" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/img/waist_faisceau_incident.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.bbl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.bib" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport/rapport.bib.bak" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.bib.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.blg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.blg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/rapport.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rapport/schema couplage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/schema couplage.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapport/schema cristal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rapport/schema cristal.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
